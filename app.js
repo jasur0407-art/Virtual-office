@@ -255,11 +255,26 @@ select(start);
 if(!svg.querySelector(".room.sel"))select("recep");
 
 
+// Kun va tun: Toshkent vaqtiga qarab (07:00-19:00 kunduz)
+var override=null, root=document.documentElement, clk=document.getElementById("clock"), dnb=document.getElementById("daynight");
+function tashkentTime(){
+  try{var parts=new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Tashkent",hour:"2-digit",minute:"2-digit",hour12:false}).format(new Date());return parts}
+  catch(e){var d=new Date(Date.now()+(new Date().getTimezoneOffset()+300)*60000);return ("0"+d.getHours()).slice(-2)+":"+("0"+d.getMinutes()).slice(-2)}
+}
+function tick(){
+  var t=tashkentTime(), h=parseInt(t,10), real=(h>=7&&h<19)?"day":"night", mode=override||real;
+  root.setAttribute("data-time",mode);
+  clk.textContent=(mode==="day"?"☀ Kunduz":"☾ Tun")+" · Toshkent "+t+(override?" (sinov)":"");
+  dnb.textContent=mode==="day"?"Tunni ko'rish":"Kunduzni ko'rish";
+}
+dnb.addEventListener("click",function(){var cur=root.getAttribute("data-time");override=cur==="day"?"night":"day";tick()});
+tick();setInterval(tick,30000);
+
 // Quest jurnali. Holat: active (jarayonda), done (tugagan), stuck (to'xtagan).
 // Qadam: [matn, "ok" | "now" | ""]
 var QUESTS=[
  {id:"ofis",name:"Virtual ofis qal'asi",state:"active",desc:"Agentlar joylashadigan shaxsiy virtual ofis: sayt, Telegram va qal'a dizayni.",
-  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Qal'a dizayni","ok"],["NPC qahramonlar","ok"],["Quest jurnali","ok"],["Kun va tun","now"],["Ovoz",""],["3D ko'rinish",""],["Birinchi agentni chaqirish",""]],
+  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Qal'a dizayni","ok"],["NPC qahramonlar","ok"],["Quest jurnali","ok"],["Kun va tun","ok"],["Ovoz","now"],["3D ko'rinish",""],["Birinchi agentni chaqirish",""]],
   reward:"Har kuni reja beradigan, agentlar ishlaydigan ofis"},
  {id:"l2",name:"L2 Interlude server",state:"stuck",desc:"O'z L2 Interlude serverini ishga tushirish. Oxirgi marta \"client topilmadi\" xatosida to'xtagan.",
   steps:[["Server fayllarini tayyorlash","ok"],["\"Client topilmadi\" xatosini tuzatish","now"],["Serverga kirib sinash",""]],

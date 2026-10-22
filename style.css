@@ -145,4 +145,15 @@ svg text{font-family:var(--display);fill:var(--gold-hi)}
 .qsteps li.now::before{background:var(--mana);border-color:var(--mana)}
 .qreward{font-size:14px;border-top:1px solid var(--wall);padding-top:10px;color:var(--gold)}
 .qnote{color:var(--muted);font-size:14px;margin:14px 0 0}
+/* kun va tun */
+.hero{position:relative;transition:background 1.5s}
+:root[data-time="night"] .hero{background:radial-gradient(1.6px 1.6px at 12% 18%,#fff 50%,transparent 51%),radial-gradient(1.6px 1.6px at 32% 8%,#fff 50%,transparent 51%),radial-gradient(2px 2px at 58% 14%,#fff 50%,transparent 51%),radial-gradient(1.6px 1.6px at 76% 6%,#fff 50%,transparent 51%),radial-gradient(1.6px 1.6px at 88% 22%,#fff 50%,transparent 51%),radial-gradient(1.6px 1.6px at 44% 26%,#cfe3ff 50%,transparent 51%),radial-gradient(circle at calc(86% + 9px) calc(9% - 5px),#0c1325 0 19px,transparent 20px),radial-gradient(circle at 86% 9%,#f3ecd2 0 21px,rgba(243,236,210,.16) 25px,transparent 100px),linear-gradient(#0a1020,transparent 420px)}
+:root[data-time="day"] .hero{background:radial-gradient(circle at 86% 9%,#fff1b8 0 22px,rgba(255,200,90,.45) 27px,rgba(255,180,70,.12) 60px,transparent 130px),linear-gradient(#3a2c18,transparent 420px)}
+.map svg{transition:filter 1.5s}
+:root[data-time="day"] .map svg{filter:brightness(1.45) saturate(1.15)}
+:root[data-time="day"] .map svg [fill="url(#torchglow)"]{opacity:.25}
+:root[data-time="night"] .map svg{filter:brightness(.92)}
+.clock{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:16px;font-size:15px;color:var(--gold-hi)}
+.dn-btn{font:inherit;font-size:13px;background:#000;color:var(--muted);border:1px solid var(--wall);border-radius:3px;padding:4px 10px;cursor:pointer}
+.dn-btn:hover{color:var(--gold-hi);border-color:var(--gold)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
