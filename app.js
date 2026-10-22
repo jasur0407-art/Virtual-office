@@ -11,7 +11,7 @@ var ROOMS=[
  {id:"tech",name:"Texnik bo'lim",sub:"x900 server",cmd:"x900: ...",agent:"Server ustasi",ready:true,desc:"x900 serveri bo'yicha mutaxassis: custom item va ekipirovka balansi, config fayllar (rate, drop, enchant), haftalik eventlar, loglardagi xatolar, donat do'koni va o'zbek-rus tilidagi patch notes. Server fayllari bo'lmasa, faqat maslahat beradi."},
  {id:"studio",name:"Media studiya",sub:"Foto, video, dizayn",cmd:"studiya: ...",agent:"Rejissyor",ready:true,desc:"Foto, video, dizayn va montaj. G'oyangizdan ssenariy, rasm va tayyor video yasaydi, kerakli joyda maslahat beradi. Shaxsiy ma'lumot va tasdiq kerak bo'lgan joyda sizdan so'raydi."},
  {id:"recep",name:"Qabulxona",sub:"Kirish",cmd:"istalgan xabar",agent:"Administrator",ready:true,desc:"Ofisning kirishi. Siz shu yerga yozasiz, administrator topshiriqni kerakli bo'limga yuboradi va javobni sizga qaytaradi."},
- {id:"write",name:"Yozuv bo'limi",sub:"Matnlar",cmd:"yoz: ...",agent:"Kotib",desc:"Matn, e'lon, post va hujjatlar. O'zbek, rus yoki ingliz tilida yozadi."},
+ {id:"write",name:"Yozuv bo'limi",sub:"Instagram kontent",cmd:"insta: ...",agent:"SMM menejer",ready:true,desc:"Instagram sahifasini yuritadi: haftalik kontent reja, post matnlari va hashtaglar, Reels g'oyalari va ssenariylari, Stories, statistika tahlili. Rasm va videoni Rejissyorga topshiradi. O'zi hech narsa joylamaydi va parol so'ramaydi."},
  {id:"check",name:"Nazorat",sub:"Sifat tekshiruvi",cmd:"tekshir",agent:"Nazoratchi",desc:"Har qanday ishni tekshiradi va zaif joyni yumshatmasdan aytadi."},
  {id:"arch",name:"Arxiv",sub:"Xotira",cmd:"—",agent:null,desc:"Qarorlar, loyihalar ro'yxati va fayllar shu yerda saqlanadi. Bu yerda agent emas, xotira turadi."}
 ];
@@ -209,7 +209,7 @@ DRAW.bonsai=(function(f){return function(g,o,T){if(o.z){var oo={};for(var k in o
   el("path",{d:"M"+c[0]+" "+c[1]+" q-3 -5 1 -8",fill:"none",stroke:"#6b4a2b","stroke-width":2.4},g);var lg=el("g",{"class":"leaf"},g);
   [[-4,-9,5,3],[4,-12,5.5,3],[0,-16,4,2.6]].forEach(function(e){el("ellipse",{cx:c[0]+e[0],cy:c[1]+e[1],rx:e[2],ry:e[3],fill:"#4f8a3c"},lg)});return}f(g,o,T)}})(DRAW.bonsai);
 DRAW.rug=(function(f){return function(g,o,T){poly(g,[P(o.x,o.y,.01),P(o.x+o.w,o.y,.01),P(o.x+o.w,o.y+o.d,.01),P(o.x,o.y+o.d,.01)],o.c?T[o.c]:T.rug)}})();
-var LOOK={studio:{shirt:"#e8644a",hair:"#2b1d14"},tech:{shirt:"#3f6fd8",hair:"#5a3a1c"}};
+var LOOK={studio:{shirt:"#e8644a",hair:"#2b1d14"},tech:{shirt:"#3f6fd8",hair:"#5a3a1c"},write:{shirt:"#c13584",hair:"#1a1a1a"}};
 var WALK=[[7.3,13.4],[7.3,4.3],[.8,4.3],[7.3,4.3],[7.3,5.5],[10.4,5.5],[10.4,4.95],[10.4,5.5],[7.3,5.5],[7.3,7.9],[2.4,7.9],[7.3,7.9],[7.3,9.0],[5.3,9.0],[5.3,11.4],[5.3,9.0],[7.3,9.0]];
 var ROOM_BY={};ROOMS.forEach(function(r){ROOM_BY[r.id]=r});
 
@@ -572,7 +572,7 @@ tick();setInterval(tick,30000);
 // Qadam: [matn, "ok" | "now" | ""]
 var QUESTS=[
  {id:"ofis",name:"Virtual ofis",state:"active",desc:"Agentlar joylashadigan shaxsiy virtual ofis: sayt, Telegram va izometrik ofis dizayni.",
-  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Ofis dizayni","ok"],["Agentlar uchun joylar","ok"],["Loyihalar ro'yxati","ok"],["Kun va tun","ok"],["Ovoz","ok"],["3D ko'rinish","ok"],["Birinchi agentni chaqirish: Rejissyor","ok"],["Rejissyorga birinchi vazifa","ok"],["Ikkinchi agent: Server ustasi (x900)","ok"],["Izometrik ofis: Quyoshli studiya","ok"],["L2 uslubidan oddiy uslubga o'tish","ok"],["Ofisni 2 baravar kattalashtirish","ok"],["Mushuklar burchagi va qushxona","ok"],["Shamollatish va gullar","ok"]],
+  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Ofis dizayni","ok"],["Agentlar uchun joylar","ok"],["Loyihalar ro'yxati","ok"],["Kun va tun","ok"],["Ovoz","ok"],["3D ko'rinish","ok"],["Birinchi agentni chaqirish: Rejissyor","ok"],["Rejissyorga birinchi vazifa","ok"],["Ikkinchi agent: Server ustasi (x900)","ok"],["Izometrik ofis: Quyoshli studiya","ok"],["L2 uslubidan oddiy uslubga o'tish","ok"],["Ofisni 2 baravar kattalashtirish","ok"],["Mushuklar burchagi va qushxona","ok"],["Shamollatish va gullar","ok"],["Uchinchi agent: SMM menejer (Instagram)","ok"]],
   reward:"Har kuni reja beradigan, agentlar ishlaydigan ofis"},
  {id:"l2",name:"L2 Interlude server",state:"stuck",desc:"O'z L2 Interlude serverini ishga tushirish. Oxirgi marta \"client topilmadi\" xatosida to'xtagan.",
   steps:[["Server fayllarini tayyorlash","ok"],["\"Client topilmadi\" xatosini tuzatish","now"],["Serverga kirib sinash",""]],
