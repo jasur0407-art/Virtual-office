@@ -115,4 +115,11 @@ svg text{font-family:var(--display);fill:var(--gold-hi)}
 .note b{font-family:var(--display)}
 .note p{margin:0}
 .foot{border-top:1px solid var(--wall);padding-block:22px;color:var(--muted);font-size:13px}
+.ghost{animation:ghost 3.2s ease-in-out infinite}
+@keyframes ghost{50%{opacity:.45;transform:translateY(-3px)}}
+.stat{display:grid;grid-template-columns:28px 1fr 40px;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.stat b{font-weight:500;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+.stat i{display:block;height:100%}
+.hp{background:linear-gradient(#e0605a,var(--blood))}
+.mp{background:linear-gradient(#8cc8ff,var(--mana))}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}

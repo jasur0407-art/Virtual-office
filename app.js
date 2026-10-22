@@ -45,6 +45,58 @@ function torch(x,y,p,delay){
   el("path",{class:"flame",d:"M"+x+" "+(y-8)+" q3 4 0 6 q-3 -2 0 -6z",fill:"var(--ember)",style:"animation-delay:"+(delay+.1)+"s"},p);
 }
 
+// Har xonaning qahramoni (NPC). Agent qo'shilganda "ready: true" bo'ladi va qahramon jonlanadi.
+var HEROES={
+ plan:{type:"knight",cls:"Ritsar",lvl:1,hp:100,mp:30},
+ idea:{type:"mage",cls:"Sehrgar",lvl:1,hp:60,mp:100},
+ tech:{type:"dwarf",cls:"Gnom usta",lvl:1,hp:90,mp:40},
+ recep:{type:"steward",cls:"Saroy boshlig'i",lvl:10,hp:100,mp:100},
+ write:{type:"scribe",cls:"Kotib",lvl:1,hp:50,mp:80},
+ check:{type:"archer",cls:"Kamonchi",lvl:1,hp:80,mp:50}
+};
+function figure(cx,cy,type,ghost,p){
+  var st=ghost?{stroke:"var(--mana)","stroke-width":1.2,"stroke-dasharray":"3 2"}:{stroke:"#000","stroke-width":.8};
+  function S(a){for(var k in st)a[k]=st[k];if(ghost&&a.fill&&a.fill!=="none")a.fill="rgba(74,163,255,.18)";return a}
+  var robe={knight:"#8a9099",mage:"#3b4f8a",dwarf:"#7a4a2a",scribe:"#6b2b4a",archer:"var(--moss)",steward:"var(--gold)"}[type];
+  if(type==="dwarf"){
+    el("rect",S({x:cx-12,y:cy-2,width:24,height:20,rx:4,fill:robe}),p);
+    el("circle",S({cx:cx,cy:cy-8,r:7,fill:"#d9a77a"}),p);
+    el("path",S({d:"M"+(cx-7)+" "+(cy-6)+" L"+cx+" "+(cy+8)+" L"+(cx+7)+" "+(cy-6)+"z",fill:"#c27a3a"}),p);
+    el("path",S({d:"M"+(cx-8)+" "+(cy-12)+" q8 -9 16 0z",fill:"#555b61"}),p);
+    el("line",S({x1:cx+14,y1:cy-8,x2:cx+14,y2:cy+16,fill:"none"}),p).setAttribute("stroke",ghost?"var(--mana)":"var(--wood)");
+    el("rect",S({x:cx+8,y:cy-12,width:12,height:7,fill:"#555b61"}),p);
+    return;
+  }
+  el("path",S({d:"M"+(cx-12)+" "+(cy+18)+" L"+(cx-8)+" "+(cy-4)+" Q"+cx+" "+(cy-9)+" "+(cx+8)+" "+(cy-4)+" L"+(cx+12)+" "+(cy+18)+"z",fill:robe}),p);
+  el("circle",S({cx:cx,cy:cy-12,r:6,fill:"#d9a77a"}),p);
+  if(type==="knight"){
+    el("rect",S({x:cx-7,y:cy-20,width:14,height:11,rx:2,fill:"#a7adb5"}),p);
+    el("rect",{x:cx-5,y:cy-15,width:10,height:1.5,fill:ghost?"var(--mana)":"#000"},p);
+    el("path",S({d:"M"+(cx-20)+" "+(cy-2)+" h12 v10 q-6 8 -12 0z",fill:"var(--blood)"}),p);
+    el("line",S({x1:cx+14,y1:cy-14,x2:cx+14,y2:cy+12,fill:"none"}),p).setAttribute("stroke",ghost?"var(--mana)":"#cfd5dc");
+    el("line",S({x1:cx+10,y1:cy+4,x2:cx+18,y2:cy+4,fill:"none"}),p).setAttribute("stroke",ghost?"var(--mana)":"var(--gold)");
+  }
+  if(type==="mage"){
+    el("path",S({d:"M"+(cx-10)+" "+(cy-14)+" L"+(cx+2)+" "+(cy-36)+" L"+(cx+10)+" "+(cy-14)+"z",fill:robe}),p);
+    el("line",S({x1:cx+15,y1:cy-20,x2:cx+15,y2:cy+18,fill:"none"}),p).setAttribute("stroke",ghost?"var(--mana)":"var(--wood)");
+    el("circle",{class:"orb",cx:cx+15,cy:cy-22,r:4,fill:ghost?"rgba(74,163,255,.4)":"url(#orbg)"},p);
+  }
+  if(type==="scribe"){
+    el("path",S({d:"M"+(cx-8)+" "+(cy-8)+" Q"+cx+" "+(cy-26)+" "+(cx+8)+" "+(cy-8)+"z",fill:robe}),p);
+    el("rect",S({x:cx+8,y:cy-2,width:7,height:14,fill:"var(--parch)"}),p);
+  }
+  if(type==="archer"){
+    el("path",S({d:"M"+(cx-8)+" "+(cy-8)+" Q"+cx+" "+(cy-26)+" "+(cx+8)+" "+(cy-8)+"z",fill:robe}),p);
+    var bow=el("path",{d:"M"+(cx+12)+" "+(cy-16)+" Q"+(cx+26)+" "+(cy-2)+" "+(cx+12)+" "+(cy+12),fill:"none","stroke-width":2,stroke:ghost?"var(--mana)":"var(--wood)"},p);
+    el("line",{x1:cx+12,y1:cy-16,x2:cx+12,y2:cy+12,stroke:ghost?"var(--mana)":"var(--parch)","stroke-width":.8},p);
+  }
+  if(type==="steward"){
+    el("path",S({d:"M"+(cx-7)+" "+(cy-16)+" l3 -6 l4 4 l4 -4 l3 6z",fill:"var(--gold-hi)"}),p);
+    el("line",{x1:cx-15,y1:cy-18,x2:cx-15,y2:cy+18,stroke:"var(--wood)","stroke-width":2},p);
+    el("circle",{class:"glow",cx:cx-15,cy:cy-20,r:3.5,fill:"var(--ember)"},p);
+  }
+}
+
 var doors=[];
 ROOMS.forEach(function(r,idx){
   var g=el("g",{class:"room",tabindex:"0",role:"button","aria-label":r.name+", "+r.sub,"data-id":r.id});
@@ -68,18 +120,12 @@ ROOMS.forEach(function(r,idx){
   // NPC joyi
   var cx=r.x+r.w/2, cy=r.y+r.h/2+18;
   if(r.agent){
-    if(r.ready){
-      el("ellipse",{cx:cx,cy:cy+16,rx:20,ry:6,fill:"#000",opacity:.4},g);
-      el("path",{d:"M"+(cx-15)+" "+(cy+16)+" L"+cx+" "+(cy-14)+" L"+(cx+15)+" "+(cy+16)+"z",fill:"var(--gold)"},g);
-      el("circle",{cx:cx,cy:cy-14,r:9,fill:"var(--wood)",stroke:"var(--gold)","stroke-width":2},g);
-      el("circle",{class:"glow",cx:cx,cy:cy-14,r:3,fill:"var(--ember)"},g);
-    }else{
-      el("circle",{class:"summon",cx:cx,cy:cy,r:20,fill:"none",stroke:"var(--mana)"},g);
-      el("circle",{cx:cx,cy:cy,r:20,fill:"rgba(74,163,255,.12)",stroke:"var(--mana)","stroke-width":1},g);
-      el("circle",{class:"rune",cx:cx,cy:cy,r:15,fill:"none",stroke:"var(--mana)","stroke-dasharray":"3 4","stroke-width":1.5},g);
-      el("text",{x:cx,y:cy+6,"text-anchor":"middle","font-size":18,"font-weight":800,style:"fill:var(--mana)"},g).textContent="+";
-    }
-    el("text",{x:cx,y:cy+40,"text-anchor":"middle","font-size":10,"letter-spacing":"1",style:"fill:var(--muted)"},g).textContent=r.ready?r.agent.toUpperCase()+" ISHLAYAPTI":"NPC JOYI BO'SH";
+    var H=HEROES[r.id];
+    el("ellipse",{class:r.ready?"":"summon",cx:cx,cy:cy+18,rx:20,ry:6,fill:r.ready?"#000":"rgba(74,163,255,.25)",stroke:r.ready?"none":"var(--mana)",opacity:r.ready?.45:1},g);
+    var sg=el("g",{transform:"translate("+cx+" "+cy+") scale(1.45) translate("+(-cx)+" "+(-cy)+")"},g);
+    var fg=el("g",{class:r.ready?"":"ghost"},sg);
+    figure(cx,cy,H.type,!r.ready,fg);
+    el("text",{x:cx,y:cy+48,"text-anchor":"middle","font-size":10,"letter-spacing":"1",style:"fill:"+(r.ready?"var(--gold-hi)":"var(--muted)")},g).textContent=r.ready?r.agent.toUpperCase()+" · LV."+H.lvl:H.cls.toUpperCase()+" KUTILMOQDA";
   }
   g.addEventListener("click",function(){select(r.id)});
   g.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();select(r.id)}});
@@ -192,6 +238,15 @@ function select(id){
   card.appendChild(txt("p",null,r.desc));
   var r1=txt("div","row");r1.appendChild(txt("span",null,"Buyruq"));var s=txt("span");s.appendChild(txt("span","cmd",r.cmd));r1.appendChild(s);card.appendChild(r1);
   var r2=txt("div","row");r2.appendChild(txt("span",null,"NPC"));r2.appendChild(txt("span",r.agent&&!r.ready?"empty":null,agentLabel(r)));card.appendChild(r2);
+  var H=HEROES[r.id];
+  if(H){
+    var r3=txt("div","row");r3.appendChild(txt("span",null,"Klass"));r3.appendChild(txt("span",null,H.cls+(r.ready?" · Lv. "+H.lvl:" · chaqirilmagan")));card.appendChild(r3);
+    [["HP",H.hp,"hp"],["MP",H.mp,"mp"]].forEach(function(b){
+      var row=txt("div","stat");row.appendChild(txt("span",null,b[0]));
+      var tr=txt("div","track");var f=txt("i",b[2]);f.style.width=(r.ready?b[1]:0)+"%";tr.appendChild(f);row.appendChild(tr);
+      row.appendChild(txt("b",null,r.ready?b[1]+"%":"—"));card.appendChild(row);
+    });
+  }
   card.appendChild(txt("p","hint","Boshqa xonani ko'rish uchun xaritadagi xonani bosing."));
   try{localStorage.setItem("qala-room",id)}catch(e){}
 }
