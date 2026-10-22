@@ -248,12 +248,45 @@ function select(id){
     });
   }
   card.appendChild(txt("p","hint","Boshqa xonani ko'rish uchun xaritadagi xonani bosing."));
+  if(typeof pluck==="function"&&sndOn)pluck(SCALE[7],.08,.9);
   try{localStorage.setItem("qala-room",id)}catch(e){}
 }
 var start="recep";try{start=localStorage.getItem("qala-room")||"recep"}catch(e){}
 select(start);
 if(!svg.querySelector(".room.sel"))select("recep");
 
+
+// Ovoz: brauzerning o'zida sintez qilinadi (tashqi fayl yo'q)
+var AC=null, master=null, sndOn=false, melodyTimer=null, crackTimer=null, sbtn=document.getElementById("sound");
+var SCALE=[146.83,164.81,174.61,196,220,246.94,261.63,293.66,329.63,349.23]; // D dorian
+function pluck(f,vol,len){
+  if(!AC||!sndOn)return;
+  var t=AC.currentTime, o=AC.createOscillator(), o2=AC.createOscillator(), g=AC.createGain(), lp=AC.createBiquadFilter();
+  o.type="triangle";o.frequency.value=f;o2.type="sine";o2.frequency.value=f*2;
+  lp.type="lowpass";lp.frequency.value=2200;
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+len);
+  o.connect(lp);o2.connect(lp);lp.connect(g);g.connect(master);o.start(t);o2.start(t);o.stop(t+len+.05);o2.stop(t+len+.05);
+}
+function startAudio(){
+  AC=new (window.AudioContext||window.webkitAudioContext)();
+  master=AC.createGain();master.gain.value=.7;master.connect(AC.destination);
+  // past bordun ovozi
+  var lp=AC.createBiquadFilter();lp.type="lowpass";lp.frequency.value=380;var dg=AC.createGain();dg.gain.value=.035;lp.connect(dg);dg.connect(master);
+  [73.42,110,146.83].forEach(function(f,i){var o=AC.createOscillator();o.type=i?"sine":"sawtooth";o.frequency.value=f;o.detune.value=(i-1)*4;o.connect(lp);o.start()});
+  // mash'al chirsillashi uchun shovqin
+  var buf=AC.createBuffer(1,AC.sampleRate*.05,AC.sampleRate),d=buf.getChannelData(0);for(var i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,3);
+  function crack(){if(sndOn){var s=AC.createBufferSource();s.buffer=buf;var bp=AC.createBiquadFilter();bp.type="bandpass";bp.frequency.value=1500+Math.random()*2500;var g=AC.createGain();g.gain.value=.02+Math.random()*.05;s.connect(bp);bp.connect(g);g.connect(master);s.start()}crackTimer=setTimeout(crack,80+Math.random()*420)}
+  crack();
+  // sekin lyutnya kuyi
+  var idx=4;
+  function melody(){if(sndOn){idx=Math.max(0,Math.min(SCALE.length-1,idx+[-2,-1,-1,1,1,2,0][Math.floor(Math.random()*7)]));pluck(SCALE[idx],.07,1.6);if(Math.random()<.3)setTimeout(function(){pluck(SCALE[Math.max(0,idx-2)],.045,1.2)},260)}melodyTimer=setTimeout(melody,[520,520,780,1040][Math.floor(Math.random()*4)])}
+  melody();
+}
+sbtn.addEventListener("click",function(){
+  sndOn=!sndOn;
+  try{ if(sndOn){ if(!AC)startAudio(); else AC.resume(); } else if(AC){ AC.suspend(); } }catch(e){sndOn=false}
+  sbtn.setAttribute("aria-pressed",sndOn?"true":"false");sbtn.textContent=sndOn?"♪ Ovozni o'chirish":"♪ Ovozni yoqish";
+});
 
 // Kun va tun: Toshkent vaqtiga qarab (07:00-19:00 kunduz)
 var override=null, root=document.documentElement, clk=document.getElementById("clock"), dnb=document.getElementById("daynight");
@@ -274,7 +307,7 @@ tick();setInterval(tick,30000);
 // Qadam: [matn, "ok" | "now" | ""]
 var QUESTS=[
  {id:"ofis",name:"Virtual ofis qal'asi",state:"active",desc:"Agentlar joylashadigan shaxsiy virtual ofis: sayt, Telegram va qal'a dizayni.",
-  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Qal'a dizayni","ok"],["NPC qahramonlar","ok"],["Quest jurnali","ok"],["Kun va tun","ok"],["Ovoz","now"],["3D ko'rinish",""],["Birinchi agentni chaqirish",""]],
+  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Qal'a dizayni","ok"],["NPC qahramonlar","ok"],["Quest jurnali","ok"],["Kun va tun","ok"],["Ovoz","ok"],["3D ko'rinish","now"],["Birinchi agentni chaqirish",""]],
   reward:"Har kuni reja beradigan, agentlar ishlaydigan ofis"},
  {id:"l2",name:"L2 Interlude server",state:"stuck",desc:"O'z L2 Interlude serverini ishga tushirish. Oxirgi marta \"client topilmadi\" xatosida to'xtagan.",
   steps:[["Server fayllarini tayyorlash","ok"],["\"Client topilmadi\" xatosini tuzatish","now"],["Serverga kirib sinash",""]],
