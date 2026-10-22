@@ -76,7 +76,7 @@ svg text{font-family:var(--display);fill:var(--gold-hi)}
 /* dialog oynasi (NPC suhbat oynasi kabi) */
 .dialog{background:linear-gradient(#1f1a14,#15120e);border:2px solid var(--wall);outline:1px solid var(--gold);outline-offset:-5px;border-radius:4px;padding:20px;display:flex;flex-direction:column;gap:12px;min-width:0;box-shadow:0 10px 40px rgba(0,0,0,.6)}
 .dialog h3{font-size:20px}
-.dialog .sub{font-size:13px;color:var(--gold);letter-spacing:.06em;text-transform:uppercase;font-family:var(--display)}
+.dialog .sub,.qdetail .sub{font-size:13px;color:var(--gold);letter-spacing:.06em;text-transform:uppercase;font-family:var(--display)}
 .dialog p{margin:0;color:var(--muted);font-size:15px}
 .cmd{font-family:ui-monospace,monospace;font-size:13px;background:#000;color:var(--gold-hi);border:1px solid var(--wall);padding:2px 8px;border-radius:3px}
 .row{display:flex;justify-content:space-between;gap:10px;font-size:15px;border-top:1px solid var(--wall);padding-top:10px}
@@ -122,4 +122,27 @@ svg text{font-family:var(--display);fill:var(--gold-hi)}
 .stat i{display:block;height:100%}
 .hp{background:linear-gradient(#e0605a,var(--blood))}
 .mp{background:linear-gradient(#8cc8ff,var(--mana))}
+.questlog{display:grid;grid-template-columns:300px minmax(0,1fr);background:linear-gradient(#1f1a14,#15120e);border:2px solid var(--wall);outline:1px solid var(--gold);outline-offset:-5px;border-radius:4px;min-height:280px}
+@media (max-width:720px){.questlog{grid-template-columns:1fr}}
+.qlist{list-style:none;margin:0;padding:10px;border-right:1px solid var(--wall);display:flex;flex-direction:column;gap:4px}
+@media (max-width:720px){.qlist{border-right:0;border-bottom:1px solid var(--wall)}}
+.qlist button{width:100%;text-align:left;background:none;border:1px solid transparent;color:var(--ink);font:inherit;padding:10px 12px;border-radius:3px;cursor:pointer;display:flex;flex-direction:column;gap:6px}
+.qlist button:hover{border-color:var(--wall)}
+.qlist button[aria-current="true"]{background:rgba(201,162,74,.12);border-color:var(--gold)}
+.qname{display:flex;justify-content:space-between;gap:8px;font-weight:700}
+.qtag{font-size:11px;padding:1px 7px;border-radius:2px;white-space:nowrap;font-weight:500}
+.qtag.active{background:var(--mana);color:#04121f}.qtag.done{background:var(--gold);color:#1a1408}.qtag.stuck{background:var(--blood);color:var(--ink)}
+.qbar{height:6px;background:#000;border:1px solid var(--wall)}
+.qbar i{display:block;height:100%;background:linear-gradient(var(--gold-hi),var(--gold))}
+.qdetail{padding:20px 22px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.qdetail h3{font-size:20px}
+.qdetail p{margin:0;color:var(--muted)}
+.qsteps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.qsteps li{display:flex;gap:10px;align-items:flex-start}
+.qsteps li::before{content:"";flex:none;width:14px;height:14px;margin-top:4px;border:1px solid var(--gold);transform:rotate(45deg)}
+.qsteps li.ok{color:var(--muted);text-decoration:line-through}
+.qsteps li.ok::before{background:var(--gold)}
+.qsteps li.now::before{background:var(--mana);border-color:var(--mana)}
+.qreward{font-size:14px;border-top:1px solid var(--wall);padding-top:10px;color:var(--gold)}
+.qnote{color:var(--muted);font-size:14px;margin:14px 0 0}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}

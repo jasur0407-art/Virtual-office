@@ -254,6 +254,41 @@ var start="recep";try{start=localStorage.getItem("qala-room")||"recep"}catch(e){
 select(start);
 if(!svg.querySelector(".room.sel"))select("recep");
 
+
+// Quest jurnali. Holat: active (jarayonda), done (tugagan), stuck (to'xtagan).
+// Qadam: [matn, "ok" | "now" | ""]
+var QUESTS=[
+ {id:"ofis",name:"Virtual ofis qal'asi",state:"active",desc:"Agentlar joylashadigan shaxsiy virtual ofis: sayt, Telegram va qal'a dizayni.",
+  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Qal'a dizayni","ok"],["NPC qahramonlar","ok"],["Quest jurnali","ok"],["Kun va tun","now"],["Ovoz",""],["3D ko'rinish",""],["Birinchi agentni chaqirish",""]],
+  reward:"Har kuni reja beradigan, agentlar ishlaydigan ofis"},
+ {id:"l2",name:"L2 Interlude server",state:"stuck",desc:"O'z L2 Interlude serverini ishga tushirish. Oxirgi marta \"client topilmadi\" xatosida to'xtagan.",
+  steps:[["Server fayllarini tayyorlash","ok"],["\"Client topilmadi\" xatosini tuzatish","now"],["Serverga kirib sinash",""]],
+  reward:"O'yinga o'z serveringizdan kirish"},
+ {id:"launcher",name:"Launcher fon videosi",state:"done",desc:"Launcher uchun fon video tayyorlandi va arxivga qo'yildi.",
+  steps:[["Videoni tayyorlash","ok"],["Arxivga joylash","ok"]],
+  reward:"Launcher uchun tayyor fon"}
+];
+var qlist=document.getElementById("qlist"), qdetail=document.getElementById("qdetail");
+var TAG={active:"Jarayonda",done:"Tugagan",stuck:"To'xtagan"};
+function qprog(q){var n=q.steps.filter(function(s){return s[1]==="ok"}).length;return Math.round(n/q.steps.length*100)}
+function showQuest(id){
+  var q=QUESTS.filter(function(x){return x.id===id})[0];if(!q)return;
+  Array.prototype.forEach.call(qlist.querySelectorAll("button"),function(b){b.setAttribute("aria-current",b.getAttribute("data-q")===id?"true":"false")});
+  qdetail.innerHTML="";
+  qdetail.appendChild(txt("div","sub",TAG[q.state]+" · "+qprog(q)+"%"));
+  qdetail.appendChild(txt("h3",null,q.name));
+  qdetail.appendChild(txt("p",null,q.desc));
+  var ul=txt("ul","qsteps");q.steps.forEach(function(s){ul.appendChild(txt("li",s[1],s[0]))});qdetail.appendChild(ul);
+  qdetail.appendChild(txt("div","qreward","Mukofot: "+q.reward));
+}
+QUESTS.forEach(function(q){
+  var li=txt("li");var b=txt("button");b.type="button";b.setAttribute("data-q",q.id);
+  var nm=txt("span","qname");nm.appendChild(txt("span",null,q.name));nm.appendChild(txt("span","qtag "+q.state,TAG[q.state]));b.appendChild(nm);
+  var bar=txt("span","qbar");var f=txt("i");f.style.width=qprog(q)+"%";bar.appendChild(f);b.appendChild(bar);
+  b.addEventListener("click",function(){showQuest(q.id)});li.appendChild(b);qlist.appendChild(li);
+});
+showQuest("ofis");
+
 // xonalar ro'yxati
 var list=document.getElementById("rooms");
 ROOMS.forEach(function(r){
