@@ -288,6 +288,13 @@ sbtn.addEventListener("click",function(){
   sbtn.setAttribute("aria-pressed",sndOn?"true":"false");sbtn.textContent=sndOn?"♪ Ovozni o'chirish":"♪ Ovozni yoqish";
 });
 
+// 3D ko'rinish (izometrik diorama). Katta ekranda o'zi yoqiladi.
+var mapEl=document.getElementById("map"), isoBtn=document.getElementById("iso");
+function setIso(on){mapEl.classList.toggle("iso",on);isoBtn.setAttribute("aria-pressed",on?"true":"false");isoBtn.textContent=on?"2D xarita":"3D ko'rinish";try{localStorage.setItem("qala-iso",on?"1":"0")}catch(e){}}
+var isoPref=null;try{isoPref=localStorage.getItem("qala-iso")}catch(e){}
+setIso(isoPref!==null?isoPref==="1":window.innerWidth>=900);
+isoBtn.addEventListener("click",function(){setIso(!mapEl.classList.contains("iso"))});
+
 // Kun va tun: Toshkent vaqtiga qarab (07:00-19:00 kunduz)
 var override=null, root=document.documentElement, clk=document.getElementById("clock"), dnb=document.getElementById("daynight");
 function tashkentTime(){
@@ -307,7 +314,7 @@ tick();setInterval(tick,30000);
 // Qadam: [matn, "ok" | "now" | ""]
 var QUESTS=[
  {id:"ofis",name:"Virtual ofis qal'asi",state:"active",desc:"Agentlar joylashadigan shaxsiy virtual ofis: sayt, Telegram va qal'a dizayni.",
-  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Qal'a dizayni","ok"],["NPC qahramonlar","ok"],["Quest jurnali","ok"],["Kun va tun","ok"],["Ovoz","ok"],["3D ko'rinish","now"],["Birinchi agentni chaqirish",""]],
+  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Qal'a dizayni","ok"],["NPC qahramonlar","ok"],["Quest jurnali","ok"],["Kun va tun","ok"],["Ovoz","ok"],["3D ko'rinish","ok"],["Birinchi agentni chaqirish","now"]],
   reward:"Har kuni reja beradigan, agentlar ishlaydigan ofis"},
  {id:"l2",name:"L2 Interlude server",state:"stuck",desc:"O'z L2 Interlude serverini ishga tushirish. Oxirgi marta \"client topilmadi\" xatosida to'xtagan.",
   steps:[["Server fayllarini tayyorlash","ok"],["\"Client topilmadi\" xatosini tuzatish","now"],["Serverga kirib sinash",""]],

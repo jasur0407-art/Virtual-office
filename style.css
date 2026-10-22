@@ -159,4 +159,12 @@ svg text{font-family:var(--display);fill:var(--gold-hi)}
 .clock{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:16px;font-size:15px;color:var(--gold-hi)}
 .dn-btn{font:inherit;font-size:13px;background:#000;color:var(--muted);border:1px solid var(--wall);border-radius:3px;padding:4px 10px;cursor:pointer}
 .dn-btn:hover{color:var(--gold-hi);border-color:var(--gold)}
+/* 3D (izometrik) ko'rinish */
+.map{position:relative}
+.map svg{transform-origin:50% 50%;transition:transform .9s cubic-bezier(.3,.7,.2,1),filter .9s}
+.map.iso{perspective:1800px;overflow:hidden}
+.map.iso svg{transform:translateY(-2%) rotateX(52deg) rotateZ(-30deg) scale(.86);filter:drop-shadow(0 1px 0 #2c241b) drop-shadow(0 1px 0 #2c241b) drop-shadow(0 2px 0 #3a3026) drop-shadow(0 3px 0 #3a3026) drop-shadow(0 4px 0 #2a2219) drop-shadow(0 18px 18px rgba(0,0,0,.6))}
+:root[data-time="day"] .map.iso svg{filter:brightness(1.45) saturate(1.15) drop-shadow(0 1px 0 #2c241b) drop-shadow(0 1px 0 #2c241b) drop-shadow(0 2px 0 #3a3026) drop-shadow(0 3px 0 #3a3026) drop-shadow(0 4px 0 #2a2219) drop-shadow(0 18px 18px rgba(0,0,0,.6))}
+.iso-btn{position:absolute;z-index:2;top:12px;right:12px;font:inherit;font-size:13px;background:rgba(0,0,0,.75);color:var(--gold-hi);border:1px solid var(--gold);border-radius:3px;padding:5px 11px;cursor:pointer}
+.iso-btn[aria-pressed="true"]{background:var(--gold);color:#1a1408}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
