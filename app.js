@@ -6,9 +6,10 @@ function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttr
 
 // Xonalar. Agent qo'shilganda o'sha xonaga "ready: true" qo'yiladi.
 var ROOMS=[
- {id:"plan",name:"Urush xonasi",sub:"Rejalashtirish",x:20,y:20,w:290,h:230,door:"b",c:"--r1",prop:"wartable",cmd:"kun · hafta",agent:"Strateg",desc:"Kechki 3-4 soatingizni taqsimlaydi. Bugungi reja va haftalik xulosa shu stol ustidagi xaritada tuziladi."},
- {id:"idea",name:"Sehrgar minorasi",sub:"G'oyalar",x:310,y:20,w:290,h:230,door:"b",c:"--r2",prop:"orb",cmd:"g'oya: ...",agent:"Bashoratchi",desc:"Yangi g'oyani billur sharda ko'radi: kimga kerak, qancha vaqt oladi, qanday xavflari bor. Qilish yoki qilmaslik bo'yicha aniq xulosa beradi."},
- {id:"tech",name:"Gnomlar ustaxonasi",sub:"Texnik bo'lim",x:600,y:20,w:280,h:230,door:"b",c:"--r3",prop:"forge",cmd:"texnik: ...",agent:"Usta gnom",desc:"Server, kod va GitHub shu sandonda yasaladi. L2 server va launcher kabi texnik ishlar shu yerda."},
+ {id:"plan",name:"Urush xonasi",sub:"Rejalashtirish",x:20,y:20,w:215,h:230,door:"b",c:"--r1",prop:"wartable",cmd:"kun · hafta",agent:"Strateg",desc:"Kechki 3-4 soatingizni taqsimlaydi. Bugungi reja va haftalik xulosa shu stol ustidagi xaritada tuziladi."},
+ {id:"idea",name:"Sehrgar minorasi",sub:"G'oyalar",x:235,y:20,w:215,h:230,door:"b",c:"--r2",prop:"orb",cmd:"g'oya: ...",agent:"Bashoratchi",desc:"Yangi g'oyani billur sharda ko'radi: kimga kerak, qancha vaqt oladi, qanday xavflari bor. Qilish yoki qilmaslik bo'yicha aniq xulosa beradi."},
+ {id:"tech",name:"Gnomlar ustaxonasi",sub:"Texnik bo'lim",x:450,y:20,w:215,h:230,door:"b",c:"--r3",prop:"forge",cmd:"texnik: ...",agent:"Usta gnom",desc:"Server, kod va GitHub shu sandonda yasaladi. L2 server va launcher kabi texnik ishlar shu yerda."},
+ {id:"studio",name:"Ko'zgu zali",sub:"Media studiya",x:665,y:20,w:215,h:230,door:"b",c:"--r8",prop:"studio",cmd:"studiya: ...",agent:"Rejissyor",ready:true,desc:"Foto, video, dizayn va montaj. G'oyangizdan ssenariy, rasm va tayyor video yasaydi, kerakli joyda maslahat beradi. Shaxsiy ma'lumot va tasdiq kerak bo'lgan joyda sizdan so'raydi."},
  {id:"recep",name:"Qal'a zali",sub:"Qabulxona",x:20,y:310,w:250,h:230,door:"t",c:"--r7",prop:"throne",cmd:"istalgan xabar",agent:"Saroy boshlig'i",ready:true,desc:"Qal'aning kirishi. Siz shu yerga yozasiz, saroy boshlig'i topshiriqni kerakli xonaga yuboradi va javobni sizga qaytaradi."},
  {id:"write",name:"O'ramlar kutubxonasi",sub:"Yozuv",x:270,y:310,w:220,h:230,door:"t",c:"--r5",prop:"scrolls",cmd:"yoz: ...",agent:"Kotib",desc:"Matn, e'lon, post va hujjatlar. O'zbek, rus yoki ingliz tilida yozadi."},
  {id:"check",name:"Qorovul minorasi",sub:"Nazorat",x:490,y:310,w:200,h:230,door:"t",c:"--r6",prop:"watch",cmd:"tekshir",agent:"Qorovul",desc:"Har qanday ishni minoradan kuzatadi va zaif joyni yumshatmasdan aytadi."},
@@ -52,12 +53,13 @@ var HEROES={
  tech:{type:"dwarf",cls:"Gnom usta",lvl:1,hp:90,mp:40},
  recep:{type:"steward",cls:"Saroy boshlig'i",lvl:10,hp:100,mp:100},
  write:{type:"scribe",cls:"Kotib",lvl:1,hp:50,mp:80},
- check:{type:"archer",cls:"Kamonchi",lvl:1,hp:80,mp:50}
+ check:{type:"archer",cls:"Kamonchi",lvl:1,hp:80,mp:50},
+ studio:{type:"illusionist",cls:"Illyuzionist",lvl:1,hp:70,mp:100}
 };
 function figure(cx,cy,type,ghost,p){
   var st=ghost?{stroke:"var(--mana)","stroke-width":1.2,"stroke-dasharray":"3 2"}:{stroke:"#000","stroke-width":.8};
   function S(a){for(var k in st)a[k]=st[k];if(ghost&&a.fill&&a.fill!=="none")a.fill="rgba(74,163,255,.18)";return a}
-  var robe={knight:"#8a9099",mage:"#3b4f8a",dwarf:"#7a4a2a",scribe:"#6b2b4a",archer:"var(--moss)",steward:"var(--gold)"}[type];
+  var robe={illusionist:"#5a2a7a",knight:"#8a9099",mage:"#3b4f8a",dwarf:"#7a4a2a",scribe:"#6b2b4a",archer:"var(--moss)",steward:"var(--gold)"}[type];
   if(type==="dwarf"){
     el("rect",S({x:cx-12,y:cy-2,width:24,height:20,rx:4,fill:robe}),p);
     el("circle",S({cx:cx,cy:cy-8,r:7,fill:"#d9a77a"}),p);
@@ -89,6 +91,14 @@ function figure(cx,cy,type,ghost,p){
     el("path",S({d:"M"+(cx-8)+" "+(cy-8)+" Q"+cx+" "+(cy-26)+" "+(cx+8)+" "+(cy-8)+"z",fill:robe}),p);
     var bow=el("path",{d:"M"+(cx+12)+" "+(cy-16)+" Q"+(cx+26)+" "+(cy-2)+" "+(cx+12)+" "+(cy+12),fill:"none","stroke-width":2,stroke:ghost?"var(--mana)":"var(--wood)"},p);
     el("line",{x1:cx+12,y1:cy-16,x2:cx+12,y2:cy+12,stroke:ghost?"var(--mana)":"var(--parch)","stroke-width":.8},p);
+  }
+  if(type==="illusionist"){
+    el("path",S({d:"M"+(cx-9)+" "+(cy-15)+" q9 -10 18 0 l-2 -3 q-7 -6 -14 0z",fill:"#2a1a3a"}),p);
+    el("ellipse",S({cx:cx-1,cy:cy-17,rx:10,ry:3,fill:"#2a1a3a"}),p);
+    el("path",S({d:"M"+(cx-24)+" "+(cy+2)+" q-4 -10 6 -12 q10 -1 8 8 q-2 4 -6 2 q-3 -1 -4 3 q-1 4 -4 -1z",fill:"#d9c39a"}),p);
+    ["var(--blood)","var(--mana)","var(--ember)"].forEach(function(c,i){el("circle",{cx:cx-22+i*4,cy:cy-5+(i%2)*3,r:1.6,fill:ghost?"var(--mana)":c},p)});
+    el("line",{x1:cx+12,y1:cy-4,x2:cx+20,y2:cy-14,stroke:ghost?"var(--mana)":"var(--wood)","stroke-width":2},p);
+    el("circle",{class:"glow",cx:cx+20,cy:cy-15,r:2.5,fill:ghost?"var(--mana)":"#c77dff"},p);
   }
   if(type==="steward"){
     el("path",S({d:"M"+(cx-7)+" "+(cy-16)+" l3 -6 l4 4 l4 -4 l3 6z",fill:"var(--gold-hi)"}),p);
@@ -139,7 +149,7 @@ function banner(x,y,col,g){
 function prop(r,g){
   var i, R=r.x+r.w, B=r.y+r.h;
   if(r.prop==="wartable"){
-    var tx=R-62, ty=r.y+72;
+    var tx=R-48, ty=r.y+74;
     el("circle",{cx:tx,cy:ty,r:32,fill:"var(--wood)",stroke:"var(--wood2)","stroke-width":4},g);
     el("rect",{x:tx-20,y:ty-14,width:40,height:28,fill:"var(--parch)",transform:"rotate(-8 "+tx+" "+ty+")"},g);
     el("path",{d:"M"+(tx-14)+" "+(ty+4)+" q8 -14 16 -2 t12 -6",fill:"none",stroke:"var(--wood2)","stroke-width":1.5},g);
@@ -152,8 +162,8 @@ function prop(r,g){
     el("circle",{class:"rune rev",cx:ox,cy:oy,r:26,fill:"none",stroke:"var(--mana)","stroke-dasharray":"10 4",opacity:.5},g);
     el("rect",{x:ox-8,y:oy+6,width:16,height:10,fill:"var(--wall-hi)"},g);
     el("circle",{class:"orb",cx:ox,cy:oy,r:13,fill:"url(#orbg)"},g);
-    for(i=0;i<3;i++)el("rect",{x:r.x+22+i*16,y:B-58,width:12,height:34,fill:["var(--blood)","var(--moss)","var(--mana)"][i],stroke:"#000","stroke-width":.5},g);
-    el("rect",{x:r.x+18,y:B-24,width:56,height:4,fill:"var(--wood)"},g);
+    for(i=0;i<3;i++)el("rect",{x:r.x+22+i*14,y:r.y+58,width:10,height:28,fill:["var(--blood)","var(--moss)","var(--mana)"][i],stroke:"#000","stroke-width":.5},g);
+    el("rect",{x:r.x+18,y:r.y+86,width:48,height:4,fill:"var(--wood)"},g);
   }
   if(r.prop==="forge"){
     var fx=R-70, fy=r.y+60;
@@ -194,6 +204,23 @@ function prop(r,g){
     for(i=0;i<8;i++){var a=i*Math.PI/4;el("rect",{x:wx+Math.cos(a)*20-3,y:wy+Math.sin(a)*20-3,width:6,height:6,fill:"var(--wall-hi)"},g)}
     el("circle",{class:"glow",cx:wx,cy:wy,r:6,fill:"var(--ember)"},g);
   }
+  if(r.prop==="studio"){
+    // sehrli ko'zgu (ekran) va molbert
+    var mx=R-52, my=r.y+66;
+    el("ellipse",{cx:mx,cy:my,rx:22,ry:28,fill:"var(--wall)",stroke:"var(--gold)","stroke-width":3},g);
+    el("ellipse",{class:"orb",cx:mx,cy:my,rx:16,ry:22,fill:"#3a2a5a"},g);
+    el("path",{class:"glow",d:"M"+(mx-6)+" "+(my-8)+" l12 8 l-12 8z",fill:"#e6d6ff"},g);
+    var ex=r.x+30, ey=B-62;
+    el("path",{d:"M"+(ex-14)+" "+(ey+40)+" L"+ex+" "+(ey-4)+" L"+(ex+14)+" "+(ey+40),fill:"none",stroke:"var(--wood)","stroke-width":3},g);
+    el("rect",{x:ex-16,y:ey,width:32,height:24,fill:"var(--parch)",stroke:"var(--wood2)","stroke-width":2},g);
+    el("path",{d:"M"+(ex-12)+" "+(ey+20)+" l8 -9 l6 6 l5 -7 l7 10z",fill:"var(--moss)"},g);
+    el("circle",{cx:ex+8,cy:ey+6,r:3,fill:"var(--ember)"},g);
+    // klapper
+    var kx=R-62, ky=B-40;
+    el("rect",{x:kx,y:ky,width:30,height:18,fill:"#111",stroke:"var(--parch)","stroke-width":1},g);
+    var clap=el("rect",{class:"clap",x:kx,y:ky-7,width:30,height:6,fill:"var(--parch)"},g);
+    clap.style.transformOrigin=kx+"px "+(ky-1)+"px";
+  }
   if(r.prop==="chests"){
     function chest(x,y,s){
       el("rect",{x:x,y:y,width:34*s,height:22*s,rx:3,fill:"var(--wood)",stroke:"var(--wood2)","stroke-width":2},g);
@@ -208,7 +235,7 @@ function prop(r,g){
 }
 
 // Burgut: qal'a zalidan har bir xonaga xat olib boradi
-var order=[0,1,2,6,5,4], home=doors[3];
+var order=[0,1,2,3,7,6,5], home=doors[4];
 var d="M"+home.x+" "+home.y+" L"+home.x+" 280"+order.map(function(i){return " L"+doors[i].x+" 280 L"+doors[i].x+" "+doors[i].y+" L"+doors[i].x+" 280"}).join("")+" L"+home.x+" 280 L"+home.x+" "+home.y;
 el("path",{d:d,fill:"none",stroke:"var(--parch)","stroke-width":1,"stroke-dasharray":"1 7",opacity:.5});
 var bird=el("g",{});
@@ -314,7 +341,7 @@ tick();setInterval(tick,30000);
 // Qadam: [matn, "ok" | "now" | ""]
 var QUESTS=[
  {id:"ofis",name:"Virtual ofis qal'asi",state:"active",desc:"Agentlar joylashadigan shaxsiy virtual ofis: sayt, Telegram va qal'a dizayni.",
-  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Qal'a dizayni","ok"],["NPC qahramonlar","ok"],["Quest jurnali","ok"],["Kun va tun","ok"],["Ovoz","ok"],["3D ko'rinish","ok"],["Birinchi agentni chaqirish","now"]],
+  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Qal'a dizayni","ok"],["NPC qahramonlar","ok"],["Quest jurnali","ok"],["Kun va tun","ok"],["Ovoz","ok"],["3D ko'rinish","ok"],["Birinchi agentni chaqirish: Rejissyor","ok"],["Rejissyorga birinchi vazifa","now"]],
   reward:"Har kuni reja beradigan, agentlar ishlaydigan ofis"},
  {id:"l2",name:"L2 Interlude server",state:"stuck",desc:"O'z L2 Interlude serverini ishga tushirish. Oxirgi marta \"client topilmadi\" xatosida to'xtagan.",
   steps:[["Server fayllarini tayyorlash","ok"],["\"Client topilmadi\" xatosini tuzatish","now"],["Serverga kirib sinash",""]],

@@ -3,7 +3,7 @@
   --bg:#0e0c0a; --stone:#1b1814; --stone2:#26211b; --wall:#4a3f31; --wall-hi:#6b5a43;
   --gold:#c9a24a; --gold-hi:#f0d58a; --parch:#e9dcb8; --ink:#ece3cf; --muted:#a99b80;
   --mana:#4aa3ff; --fire:#ff8a2a; --ember:#ffcf5a; --blood:#9b2b2b; --moss:#4f7a45; --wood:#6b4a2b; --wood2:#4a321d;
-  --r1:#2a3140; --r2:#2e2639; --r3:#33251c; --r4:#262c22; --r5:#30222a; --r6:#2a2a33; --r7:#2f2a1e;
+  --r1:#2a3140; --r2:#2e2639; --r3:#33251c; --r4:#262c22; --r5:#30222a; --r6:#2a2a33; --r7:#2f2a1e; --r8:#2b2034;
   --display:"Cinzel",Georgia,serif; --body:"Alegreya Sans",system-ui,sans-serif;
   color-scheme:dark;
 }
@@ -167,4 +167,6 @@ svg text{font-family:var(--display);fill:var(--gold-hi)}
 :root[data-time="day"] .map.iso svg{filter:brightness(1.45) saturate(1.15) drop-shadow(0 1px 0 #2c241b) drop-shadow(0 1px 0 #2c241b) drop-shadow(0 2px 0 #3a3026) drop-shadow(0 3px 0 #3a3026) drop-shadow(0 4px 0 #2a2219) drop-shadow(0 18px 18px rgba(0,0,0,.6))}
 .iso-btn{position:absolute;z-index:2;top:12px;right:12px;font:inherit;font-size:13px;background:rgba(0,0,0,.75);color:var(--gold-hi);border:1px solid var(--gold);border-radius:3px;padding:5px 11px;cursor:pointer}
 .iso-btn[aria-pressed="true"]{background:var(--gold);color:#1a1408}
+.clap{transform-box:view-box;animation:clap 2.4s ease-in-out infinite}
+@keyframes clap{0%,70%,100%{transform:rotate(0)}80%{transform:rotate(-28deg)}90%{transform:rotate(0)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
