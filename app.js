@@ -311,6 +311,7 @@ function startAudio(){
 }
 sbtn.addEventListener("click",function(){
   sndOn=!sndOn;
+  if(sndOn&&typeof dionStop==="function"&&!document.getElementById("player").hidden)dionStop();
   try{ if(sndOn){ if(!AC)startAudio(); else AC.resume(); } else if(AC){ AC.suspend(); } }catch(e){sndOn=false}
   sbtn.setAttribute("aria-pressed",sndOn?"true":"false");sbtn.textContent=sndOn?"♪ Ovozni o'chirish":"♪ Ovozni yoqish";
 });
@@ -322,6 +323,18 @@ var isoPref=null;try{isoPref=localStorage.getItem("qala-iso")}catch(e){}
 setIso(isoPref!==null?isoPref==="1":window.innerWidth>=900);
 isoBtn.addEventListener("click",function(){setIso(!mapEl.classList.contains("iso"))});
 
+// Dion shahri musiqasi: YouTube pleyeri orqali (fayl saytga ko'chirilmaydi)
+var dionBtn=document.getElementById("dion"), player=document.getElementById("player"), pframe=document.getElementById("player-frame");
+function dionStop(){pframe.innerHTML="";player.hidden=true;dionBtn.setAttribute("aria-pressed","false")}
+dionBtn.addEventListener("click",function(){
+  if(!player.hidden){dionStop();return}
+  if(sndOn)sbtn.click();
+  var f=document.createElement("iframe");
+  f.src="https://www.youtube-nocookie.com/embed/62Nl7CmdwUU?autoplay=1&loop=1&playlist=62Nl7CmdwUU&playsinline=1";
+  f.title="Dion shahri musiqasi";f.allow="autoplay; encrypted-media";f.allowFullscreen=true;
+  pframe.appendChild(f);player.hidden=false;dionBtn.setAttribute("aria-pressed","true");
+});
+document.getElementById("player-x").addEventListener("click",dionStop);
 // Kun va tun: Toshkent vaqtiga qarab (07:00-19:00 kunduz)
 var override=null, root=document.documentElement, clk=document.getElementById("clock"), dnb=document.getElementById("daynight");
 function tashkentTime(){
