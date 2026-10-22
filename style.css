@@ -47,7 +47,7 @@ nav a:hover{color:var(--gold-hi)}
 @media (max-width:900px){.grid{grid-template-columns:1fr}}
 .map{background:var(--stone);border:2px solid var(--wall);outline:1px solid var(--gold);outline-offset:-6px;border-radius:4px;overflow-x:auto;min-width:0;padding:6px;box-shadow:0 10px 40px rgba(0,0,0,.6)}
 .map svg{display:block;width:100%;min-width:640px;height:auto}
-svg text{font-family:var(--display);fill:var(--gold-hi)}
+svg text{font-family:var(--display)}
 .room{cursor:pointer;outline:none}
 .room .fl{transition:filter .2s}
 .room:hover .fl{filter:brightness(1.25)}
@@ -179,3 +179,68 @@ svg text{font-family:var(--display);fill:var(--gold-hi)}
 .player-frame iframe{width:100%;height:100%;border:0;display:block}
 .player-link{font-size:12px;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+
+/* ===== Quyoshli studiya (izometrik ofis) ===== */
+:root{
+  --bg:#15131c; --stone:#1c1926; --stone2:#252132; --wall:#343047; --wall-hi:#4a4566;
+  --gold:#f08a4b; --gold-hi:#ffc58f; --parch:#ffe7cf; --ink:#f2ecf7; --muted:#aca5bd;
+  --mana:#5b8cff; --blood:#e0605a; --fire:#f08a4b;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif; --body:"Nunito Sans",ui-sans-serif,system-ui,sans-serif;
+}
+body{background-image:radial-gradient(ellipse at 50% -10%,#3a2a2a 0%,transparent 60%)}
+h1{text-shadow:none;letter-spacing:0}
+.eyebrow,nav{letter-spacing:.08em}
+.crest{width:22px;height:24px;background:none;clip-path:none;border-radius:0;
+  background:linear-gradient(135deg,var(--gold-hi),var(--gold));clip-path:polygon(50% 0,100% 28%,100% 72%,50% 100%,0 72%,0 28%)}
+.top{background:rgba(21,19,28,.9)}
+.snd,.dn-btn,.iso-btn{border-radius:999px}
+.snd{background:transparent}
+.snd[aria-pressed="true"]{color:#1a1008}
+.map,.dialog,.questlog{outline:none;border:1px solid var(--wall);border-radius:14px}
+.map{background:#ffd9b8;padding:0;overflow:hidden}
+:root[data-time="night"] .map{background:#2a2440}
+.map svg,.map.iso svg,:root[data-time="day"] .map svg,:root[data-time="night"] .map svg,:root[data-time="day"] .map.iso svg{filter:none;transform:none;min-width:0}
+.dialog,.questlog,.rc,.steps li{background:var(--stone)}
+.rc,.steps li{border-radius:12px}
+.cmd,code{background:#0f0d15;border-radius:6px}
+svg text{font-family:var(--body)}
+svg .wtxt{font-family:var(--display)}
+.iso-btn{background:rgba(20,18,28,.78);color:#fff;border-color:rgba(255,255,255,.35)}
+.lg-on{background:#7dffb0}.lg-cour{background:var(--gold)}
+.qlist button[aria-current="true"]{background:rgba(240,138,75,.12)}
+.note{border-radius:12px;box-shadow:none}
+:root[data-time="day"] .hero{background:radial-gradient(circle at var(--sx) var(--sy),#fff1b8 0 20px,rgba(255,190,110,.4) 26px,rgba(255,170,90,.1) 60px,transparent 130px),linear-gradient(#3a2620,transparent 420px)}
+
+/* ofis sahnasi animatsiyalari */
+.scene{transition:opacity .33s,transform .33s;transform-box:fill-box;transform-origin:50% 55%}
+.scene.out{opacity:0;transform:scale(.94) rotate(-4deg)}
+.float{animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-6px)}}
+.scr{animation:scr 4s ease-in-out infinite}
+.scr.off{animation:none}
+@keyframes scr{0%,100%{opacity:1}46%{opacity:.8}50%{opacity:1}53%{opacity:.85}}
+.type{animation:type .28s ease-in-out infinite alternate;transform-box:fill-box}
+@keyframes type{to{transform:translateY(-1.2px)}}
+.nod{animation:nod 3.4s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes nod{40%{transform:rotate(0)}50%{transform:rotate(-7deg)}60%{transform:rotate(0)}}
+.led{animation:led 1s steps(2) infinite}
+@keyframes led{50%{opacity:.15}}
+.leaf{transform-box:fill-box;transform-origin:50% 100%;animation:leaf 3.5s ease-in-out infinite alternate}
+@keyframes leaf{to{transform:rotate(6deg)}}
+.cloud{animation:cloud 18s linear infinite}
+@keyframes cloud{from{transform:translateX(-70px)}to{transform:translateX(90px)}}
+.sunbeam{animation:sunbeam 5s ease-in-out infinite}
+@keyframes sunbeam{50%{opacity:.18}}
+.lamp.on{filter:drop-shadow(0 0 6px #ffcf80)}
+.steam{animation:steam 2.6s ease-out infinite}
+@keyframes steam{from{transform:translateY(0);opacity:.7}to{transform:translateY(-16px);opacity:0}}
+.tagb{animation:tagb 2.4s ease-in-out infinite}
+@keyframes tagb{50%{transform:translateY(-3px)}}
+.seat-ghost{opacity:.55}
+.room{cursor:pointer;outline:none}
+.room .lift{transition:transform .25s}
+.room:hover .lift,.room.sel .lift,.room:focus-visible .lift{transform:translateY(-4px)}
+.room .fl{transition:fill .25s}
+.room.sel .fl{fill:rgba(240,138,75,.32);stroke:#f08a4b;stroke-width:2}
+.room:focus-visible .fl{fill:rgba(240,138,75,.2);stroke:#fff;stroke-width:2;stroke-dasharray:5 4}
+.room .fl{stroke:none}
