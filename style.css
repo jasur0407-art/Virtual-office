@@ -244,3 +244,34 @@ svg .wtxt{font-family:var(--display)}
 .room.sel .fl{fill:rgba(240,138,75,.32);stroke:#f08a4b;stroke-width:2}
 .room:focus-visible .fl{fill:rgba(240,138,75,.2);stroke:#fff;stroke-width:2;stroke-dasharray:5 4}
 .room .fl{stroke:none}
+
+/* dam olish burchagi */
+.care{margin-top:22px;background:var(--stone);border:1px solid var(--wall);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:14px}
+.care-top{display:flex;flex-wrap:wrap;gap:12px 20px;justify-content:space-between;align-items:flex-end}
+.care h3{font-size:20px}
+.care-btns{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font:inherit;font-size:14px;font-weight:700;color:var(--ink);background:transparent;border:1px solid var(--wall-hi);border-radius:999px;padding:7px 14px;cursor:pointer}
+.pill:hover{border-color:var(--gold);color:var(--gold-hi)}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.pet-card{display:flex;gap:12px;align-items:center;background:var(--stone2);border-radius:12px;padding:10px 12px;min-width:0}
+.pet-sw{flex:none;width:34px;height:34px;border-radius:50%}
+.pet-tx{display:flex;flex-direction:column;min-width:0}
+.pet-tx small{color:var(--muted);font-size:13px}
+.pet-st{font-size:13px;color:#7dffb0}
+.birds{display:flex;flex-wrap:wrap;gap:8px}
+.bird-chip{display:inline-flex;align-items:center;gap:6px;font-size:13px;background:var(--stone2);border-radius:999px;padding:4px 10px;color:var(--ink)}
+.bird-chip i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.care-line{margin:0;color:var(--ink);font-size:15px}
+.care-rej{margin:0;color:var(--muted);font-size:13px}
+.pet{cursor:pointer}
+.tail{transform-box:fill-box;transform-origin:100% 100%;animation:tail 1.6s ease-in-out infinite alternate}
+@keyframes tail{to{transform:rotate(14deg)}}
+.zz{animation:zz 2.4s ease-out infinite}
+@keyframes zz{from{opacity:0;transform:translate(0,0)}30%{opacity:1}to{opacity:0;transform:translate(4px,-8px)}}
+.wind{animation:wind 2.2s linear infinite}
+@keyframes wind{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}
+.curtain{transform-box:fill-box;transform-origin:50% 0}
+.curtain.blow{animation:blow 1.4s ease-in-out infinite alternate}
+@keyframes blow{to{transform:skewY(-6deg) scaleX(1.25)}}
+.roll{animation:roll 3s ease-in-out infinite alternate}
+@keyframes roll{to{transform:translateX(3px)}}
