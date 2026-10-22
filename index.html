@@ -7,7 +7,7 @@
 <meta name="description" content="Jasurning virtual ofisi: izometrik studiya, agentlar o'z stolida ishlaydi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Nunito+Sans:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="style.css?v=12">
+<link rel="stylesheet" href="style.css?v=13">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3 29 10.5v11L16 29 3 21.5v-11z' fill='%23f08a4b'/%3E%3Cpath d='M16 3 29 10.5 16 18 3 10.5z' fill='%23ffd2a6'/%3E%3C/svg%3E">
 </head>
 <body>
@@ -16,7 +16,7 @@
     <a class="logo" href="#qala"><span class="crest" aria-hidden="true"></span>Jasur ofisi</a>
     <nav aria-label="Asosiy menyu">
       <a href="#qala">Ofis</a>
-      <a href="#questlar">Questlar</a>
+      <a href="#questlar">Loyihalar</a>
       <a href="#xonalar">Ish joylari</a>
       <a href="#qanday">Qanday ishlaydi</a>
     </nav>
@@ -32,11 +32,11 @@
     <div class="in">
       <div class="eyebrow">Virtual ofis · quyoshli studiya</div>
       <h1>Jasurning ofisi</h1>
-      <p class="lead">Ofisda ikki agent ishlayapti: Rejissyor va x900 serverining ustasi. Bo'sh stollarga keyin yangi agentlar o'tiradi. Stolni bosib, unda kim ishlashini ko'ring. Qabulxona xodimi esa ofis bo'ylab yurib, topshiriqlarni tarqatadi.</p>
+      <p class="lead">Ofisda uch agent ishlayapti: Rejissyor, Server ustasi va qabulxonadagi Administrator. Bo'sh stollarga keyin yangi agentlar o'tiradi. Stolni bosib, unda kim ishlashini ko'ring. Qabulxona xodimi esa ofis bo'ylab yurib, topshiriqlarni tarqatadi.</p>
       <div class="clock"><span id="clock" aria-live="polite"></span><button type="button" id="daynight" class="dn-btn">Tunni ko'rish</button></div>
       <div class="bars">
         <div class="bar"><span>Ish joylari</span><div class="track"><i style="width:100%" class="gold"></i></div><b>8 / 8</b></div>
-        <div class="bar"><span>NPC agentlar</span><div class="track"><i id="npc-fill" class="mana"></i></div><b id="agent-count">1 / 6</b></div>
+        <div class="bar"><span>Agentlar</span><div class="track"><i id="npc-fill" class="mana"></i></div><b id="agent-count">1 / 6</b></div>
       </div>
       <div class="grid">
         <div class="map" id="map"><button type="button" id="iso" class="iso-btn">↻ Burish</button><svg id="office" viewBox="0 0 580 420" role="img" aria-label="Ofisning izometrik ko'rinishi"></svg></div>
@@ -52,10 +52,10 @@
 
   <section class="band" id="questlar">
     <div class="in">
-      <div class="eyebrow">Quest jurnali</div>
-      <h2>Loyihalar topshiriq sifatida</h2>
+      <div class="eyebrow">Loyihalar</div>
+      <h2>Loyihalar holati</h2>
       <div class="questlog">
-        <ul class="qlist" id="qlist" aria-label="Questlar ro'yxati"></ul>
+        <ul class="qlist" id="qlist" aria-label="Loyihalar ro'yxati"></ul>
         <div class="qdetail" id="qdetail" aria-live="polite"></div>
       </div>
       <p class="qnote">Ro'yxat hozircha chatdagi suhbatlar asosida to'ldirildi. Yangi loyiha yoki qadam qo'shish uchun Claude'ga yozing.</p>
@@ -77,7 +77,7 @@
       <ol class="steps">
         <li><b>Siz buyruq berasiz</b><span>Qabulxonaga yozasiz. Masalan: <code>g'oya: o'yin serveri uchun sayt</code>.</span></li>
         <li><b>Qabulxona tarqatadi</b><span>Topshiriq qaysi ish joyiga tegishli ekanini aniqlaydi va o'sha stolga olib boradi.</span></li>
-        <li><b>NPC bajaradi</b><span>Stoldagi agent ishni qiladi. Kerak bo'lsa boshqa stoldan yordam so'raydi: g'oya texnik bo'limga, keyin nazoratga o'tadi.</span></li>
+        <li><b>Agent bajaradi</b><span>Stoldagi agent ishni qiladi. Kerak bo'lsa boshqa stoldan yordam so'raydi: g'oya texnik bo'limga, keyin nazoratga o'tadi.</span></li>
         <li><b>Natija omborga</b><span>Javob sizga qaytadi, qarorlar esa arxivda saqlanadi. Hech narsa yo'qolmaydi.</span></li>
       </ol>
       <div class="note">
@@ -94,7 +94,7 @@
 </div>
 <footer class="foot"><div class="in">Jasur ofisi · 2026 · Rasmlar shu sayt uchun chizilgan.</div></footer>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script src="app.js?v=12"></script>
+<script src="app.js?v=13"></script>
 <script>try{var tg=window.Telegram&&Telegram.WebApp;if(tg&&tg.initData!==undefined){tg.ready();tg.expand()}}catch(e){}</script>
 </body>
 </html>

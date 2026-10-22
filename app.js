@@ -6,27 +6,18 @@ function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttr
 
 // Xonalar. Agent qo'shilganda o'sha xonaga "ready: true" qo'yiladi.
 var ROOMS=[
- {id:"plan",name:"Urush xonasi",sub:"Rejalashtirish",x:20,y:20,w:215,h:230,door:"b",c:"--r1",prop:"wartable",cmd:"kun · hafta",agent:"Strateg",desc:"Kechki 3-4 soatingizni taqsimlaydi. Bugungi reja va haftalik xulosa shu stol ustidagi xaritada tuziladi."},
- {id:"idea",name:"Sehrgar minorasi",sub:"G'oyalar",x:235,y:20,w:215,h:230,door:"b",c:"--r2",prop:"orb",cmd:"g'oya: ...",agent:"Bashoratchi",desc:"Yangi g'oyani billur sharda ko'radi: kimga kerak, qancha vaqt oladi, qanday xavflari bor. Qilish yoki qilmaslik bo'yicha aniq xulosa beradi."},
- {id:"tech",name:"Gnomlar ustaxonasi",sub:"Texnik bo'lim",x:450,y:20,w:215,h:230,door:"b",c:"--r3",prop:"forge",cmd:"x900: ...",agent:"Server ustasi",ready:true,desc:"L2 x900 serverining ustasi: custom item va ekipirovka balansi, config fayllar (rate, drop, enchant), haftalik eventlar, loglardagi xatolar, donat do'koni va o'zbek-rus tilidagi patch notes. Server fayllari bo'lmasa, faqat maslahat beradi."},
- {id:"studio",name:"Ko'zgu zali",sub:"Media studiya",x:665,y:20,w:215,h:230,door:"b",c:"--r8",prop:"studio",cmd:"studiya: ...",agent:"Rejissyor",ready:true,desc:"Foto, video, dizayn va montaj. G'oyangizdan ssenariy, rasm va tayyor video yasaydi, kerakli joyda maslahat beradi. Shaxsiy ma'lumot va tasdiq kerak bo'lgan joyda sizdan so'raydi."},
- {id:"recep",name:"Qal'a zali",sub:"Qabulxona",x:20,y:310,w:250,h:230,door:"t",c:"--r7",prop:"throne",cmd:"istalgan xabar",agent:"Saroy boshlig'i",ready:true,desc:"Qal'aning kirishi. Siz shu yerga yozasiz, saroy boshlig'i topshiriqni kerakli xonaga yuboradi va javobni sizga qaytaradi."},
- {id:"write",name:"O'ramlar kutubxonasi",sub:"Yozuv",x:270,y:310,w:220,h:230,door:"t",c:"--r5",prop:"scrolls",cmd:"yoz: ...",agent:"Kotib",desc:"Matn, e'lon, post va hujjatlar. O'zbek, rus yoki ingliz tilida yozadi."},
- {id:"check",name:"Qorovul minorasi",sub:"Nazorat",x:490,y:310,w:200,h:230,door:"t",c:"--r6",prop:"watch",cmd:"tekshir",agent:"Qorovul",desc:"Har qanday ishni minoradan kuzatadi va zaif joyni yumshatmasdan aytadi."},
- {id:"arch",name:"Ombor",sub:"Arxiv",x:690,y:310,w:190,h:230,door:"t",c:"--r4",prop:"chests",cmd:"—",agent:null,desc:"Warehouse. Qarorlar, loyihalar ro'yxati va fayllar sandiqlarda saqlanadi. Bu yerda NPC emas, xotira turadi."}
+ {id:"plan",name:"Rejalashtirish",sub:"Kunlik va haftalik reja",cmd:"kun · hafta",agent:"Rejachi",desc:"Kechki 3-4 soatingizni taqsimlaydi. Bugungi reja va haftalik xulosani tuzadi."},
+ {id:"idea",name:"G'oyalar tahlili",sub:"G'oyalar",cmd:"g'oya: ...",agent:"Tahlilchi",desc:"Yangi g'oyani tekshiradi: kimga kerak, qancha vaqt oladi, qanday xavflari bor. Qilish yoki qilmaslik bo'yicha aniq xulosa beradi."},
+ {id:"tech",name:"Texnik bo'lim",sub:"x900 server",cmd:"x900: ...",agent:"Server ustasi",ready:true,desc:"x900 serveri bo'yicha mutaxassis: custom item va ekipirovka balansi, config fayllar (rate, drop, enchant), haftalik eventlar, loglardagi xatolar, donat do'koni va o'zbek-rus tilidagi patch notes. Server fayllari bo'lmasa, faqat maslahat beradi."},
+ {id:"studio",name:"Media studiya",sub:"Foto, video, dizayn",cmd:"studiya: ...",agent:"Rejissyor",ready:true,desc:"Foto, video, dizayn va montaj. G'oyangizdan ssenariy, rasm va tayyor video yasaydi, kerakli joyda maslahat beradi. Shaxsiy ma'lumot va tasdiq kerak bo'lgan joyda sizdan so'raydi."},
+ {id:"recep",name:"Qabulxona",sub:"Kirish",cmd:"istalgan xabar",agent:"Administrator",ready:true,desc:"Ofisning kirishi. Siz shu yerga yozasiz, administrator topshiriqni kerakli bo'limga yuboradi va javobni sizga qaytaradi."},
+ {id:"write",name:"Yozuv bo'limi",sub:"Matnlar",cmd:"yoz: ...",agent:"Kotib",desc:"Matn, e'lon, post va hujjatlar. O'zbek, rus yoki ingliz tilida yozadi."},
+ {id:"check",name:"Nazorat",sub:"Sifat tekshiruvi",cmd:"tekshir",agent:"Nazoratchi",desc:"Har qanday ishni tekshiradi va zaif joyni yumshatmasdan aytadi."},
+ {id:"arch",name:"Arxiv",sub:"Xotira",cmd:"—",agent:null,desc:"Qarorlar, loyihalar ro'yxati va fayllar shu yerda saqlanadi. Bu yerda agent emas, xotira turadi."}
 ];
 
 
-// Har xonaning qahramoni (NPC). Agent qo'shilganda "ready: true" bo'ladi va qahramon jonlanadi.
-var HEROES={
- plan:{type:"knight",cls:"Ritsar",lvl:1,hp:100,mp:30},
- idea:{type:"mage",cls:"Sehrgar",lvl:1,hp:60,mp:100},
- tech:{type:"dwarf",cls:"Gnom usta",lvl:1,hp:90,mp:40},
- recep:{type:"steward",cls:"Saroy boshlig'i",lvl:10,hp:100,mp:100},
- write:{type:"scribe",cls:"Kotib",lvl:1,hp:50,mp:80},
- check:{type:"archer",cls:"Kamonchi",lvl:1,hp:80,mp:50},
- studio:{type:"illusionist",cls:"Illyuzionist",lvl:1,hp:70,mp:100}
-};
+
 // ---------- Izometrik ofis ("Quyoshli studiya") ----------
 // Dunyo 10x10 katak. P() dunyo nuqtasini ekranga o'tkazadi.
 var N=10, S=25, OX=290, OY=112, WH=3.3;
@@ -229,7 +220,7 @@ var seats=ROOMS.filter(function(r){return r.agent}), on=seats.filter(function(r)
 document.getElementById("agent-count").textContent=on.length+" / "+seats.length;
 setTimeout(function(){document.getElementById("npc-fill").style.width=(on.length/seats.length*100)+"%"},200);
 
-// NPC dialog oynasi
+// Ish joyi haqida oyna
 var card=document.getElementById("card");
 function txt(tag,cls,t){var e=document.createElement(tag);if(cls)e.className=cls;if(t!=null)e.textContent=t;return e}
 function agentLabel(r){return !r.agent?"kerak emas":r.ready?r.agent+" (ishlayapti)":r.agent+": bo'sh"}
@@ -242,16 +233,7 @@ function select(id){
   card.appendChild(txt("h3",null,r.name));
   card.appendChild(txt("p",null,r.desc));
   var r1=txt("div","row");r1.appendChild(txt("span",null,"Buyruq"));var s=txt("span");s.appendChild(txt("span","cmd",r.cmd));r1.appendChild(s);card.appendChild(r1);
-  var r2=txt("div","row");r2.appendChild(txt("span",null,"NPC"));r2.appendChild(txt("span",r.agent&&!r.ready?"empty":null,agentLabel(r)));card.appendChild(r2);
-  var H=HEROES[r.id];
-  if(H){
-    var r3=txt("div","row");r3.appendChild(txt("span",null,"Klass"));r3.appendChild(txt("span",null,H.cls+(r.ready?" · Lv. "+H.lvl:" · chaqirilmagan")));card.appendChild(r3);
-    [["HP",H.hp,"hp"],["MP",H.mp,"mp"]].forEach(function(b){
-      var row=txt("div","stat");row.appendChild(txt("span",null,b[0]));
-      var tr=txt("div","track");var f=txt("i",b[2]);f.style.width=(r.ready?b[1]:0)+"%";tr.appendChild(f);row.appendChild(tr);
-      row.appendChild(txt("b",null,r.ready?b[1]+"%":"—"));card.appendChild(row);
-    });
-  }
+  var r2=txt("div","row");r2.appendChild(txt("span",null,"Agent"));r2.appendChild(txt("span",r.agent&&!r.ready?"empty":null,agentLabel(r)));card.appendChild(r2);
   card.appendChild(txt("p","hint","Boshqa ish joyini ko'rish uchun ofisdagi stolni bosing."));
   if(typeof pluck==="function"&&sndOn)pluck(SCALE[7],.08,.9);
   try{localStorage.setItem("qala-room",id)}catch(e){}
@@ -278,11 +260,11 @@ function startAudio(){
   // past bordun ovozi
   var lp=AC.createBiquadFilter();lp.type="lowpass";lp.frequency.value=380;var dg=AC.createGain();dg.gain.value=.035;lp.connect(dg);dg.connect(master);
   [73.42,110,146.83].forEach(function(f,i){var o=AC.createOscillator();o.type=i?"sine":"sawtooth";o.frequency.value=f;o.detune.value=(i-1)*4;o.connect(lp);o.start()});
-  // mash'al chirsillashi uchun shovqin
+  // yengil fon shovqini
   var buf=AC.createBuffer(1,AC.sampleRate*.05,AC.sampleRate),d=buf.getChannelData(0);for(var i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,3);
   function crack(){if(sndOn){var s=AC.createBufferSource();s.buffer=buf;var bp=AC.createBiquadFilter();bp.type="bandpass";bp.frequency.value=1500+Math.random()*2500;var g=AC.createGain();g.gain.value=.02+Math.random()*.05;s.connect(bp);bp.connect(g);g.connect(master);s.start()}crackTimer=setTimeout(crack,80+Math.random()*420)}
   crack();
-  // sekin lyutnya kuyi
+  // sekin kuy
   var idx=4;
   function melody(){if(sndOn){idx=Math.max(0,Math.min(SCALE.length-1,idx+[-2,-1,-1,1,1,2,0][Math.floor(Math.random()*7)]));pluck(SCALE[idx],.07,1.6);if(Math.random()<.3)setTimeout(function(){pluck(SCALE[Math.max(0,idx-2)],.045,1.2)},260)}melodyTimer=setTimeout(melody,[520,520,780,1040][Math.floor(Math.random()*4)])}
   melody();
@@ -327,11 +309,11 @@ function tick(){
 dnb.addEventListener("click",function(){var cur=root.getAttribute("data-time");override=cur==="day"?"night":"day";tick()});
 tick();setInterval(tick,30000);
 
-// Quest jurnali. Holat: active (jarayonda), done (tugagan), stuck (to'xtagan).
+// Loyihalar. Holat: active (jarayonda), done (tugagan), stuck (to'xtagan).
 // Qadam: [matn, "ok" | "now" | ""]
 var QUESTS=[
  {id:"ofis",name:"Virtual ofis",state:"active",desc:"Agentlar joylashadigan shaxsiy virtual ofis: sayt, Telegram va izometrik ofis dizayni.",
-  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Qal'a dizayni","ok"],["NPC qahramonlar","ok"],["Quest jurnali","ok"],["Kun va tun","ok"],["Ovoz","ok"],["3D ko'rinish","ok"],["Birinchi agentni chaqirish: Rejissyor","ok"],["Rejissyorga birinchi vazifa","ok"],["Ikkinchi agent: Server ustasi (x900)","ok"],["Izometrik ofis: Quyoshli studiya","ok"]],
+  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Ofis dizayni","ok"],["Agentlar uchun joylar","ok"],["Loyihalar ro'yxati","ok"],["Kun va tun","ok"],["Ovoz","ok"],["3D ko'rinish","ok"],["Birinchi agentni chaqirish: Rejissyor","ok"],["Rejissyorga birinchi vazifa","ok"],["Ikkinchi agent: Server ustasi (x900)","ok"],["Izometrik ofis: Quyoshli studiya","ok"],["L2 uslubidan oddiy uslubga o'tish","ok"]],
   reward:"Har kuni reja beradigan, agentlar ishlaydigan ofis"},
  {id:"l2",name:"L2 Interlude server",state:"stuck",desc:"O'z L2 Interlude serverini ishga tushirish. Oxirgi marta \"client topilmadi\" xatosida to'xtagan.",
   steps:[["Server fayllarini tayyorlash","ok"],["\"Client topilmadi\" xatosini tuzatish","now"],["Serverga kirib sinash",""]],
@@ -351,7 +333,7 @@ function showQuest(id){
   qdetail.appendChild(txt("h3",null,q.name));
   qdetail.appendChild(txt("p",null,q.desc));
   var ul=txt("ul","qsteps");q.steps.forEach(function(s){ul.appendChild(txt("li",s[1],s[0]))});qdetail.appendChild(ul);
-  qdetail.appendChild(txt("div","qreward","Mukofot: "+q.reward));
+  qdetail.appendChild(txt("div","qreward","Natija: "+q.reward));
 }
 QUESTS.forEach(function(q){
   var li=txt("li");var b=txt("button");b.type="button";b.setAttribute("data-q",q.id);
@@ -368,7 +350,7 @@ ROOMS.forEach(function(r){
   var top=txt("div","rc-top");top.appendChild(txt("small",null,r.sub));top.appendChild(txt("b",null,r.name));b.appendChild(top);
   b.appendChild(txt("p",null,r.desc));
   var f=txt("div","rc-foot");f.appendChild(txt("span","cmd",r.cmd));
-  f.appendChild(txt("span","badge"+(!r.agent?" na":r.ready?" on":""),!r.agent?"xotira":r.ready?"ishlayapti":"NPC kutilmoqda"));
+  f.appendChild(txt("span","badge"+(!r.agent?" na":r.ready?" on":""),!r.agent?"xotira":r.ready?"ishlayapti":"agent kutilmoqda"));
   b.appendChild(f);
   b.addEventListener("click",function(){select(r.id);document.getElementById("qala").scrollIntoView()});
   list.appendChild(b);
