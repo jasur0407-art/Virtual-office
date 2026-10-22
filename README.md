@@ -1,6 +1,6 @@
-# Jasurning virtual ofisi
+# Jasurning qal'asi (virtual ofis)
 
-Animatsiyali virtual ofis xaritasi: 7 ta xona, har birida keyinchalik AI agent uchun joy.
+Qal'a uslubidagi animatsiyali virtual ofis: 7 ta xona, har birida keyinchalik NPC agent uchun joy. Telegram Mini App sifatida ham ochiladi. Rasmlar shu sayt uchun chizilgan, o'yin grafikasi ishlatilmagan.
 
 Sayt: https://jasur0407-art.github.io/Virtual-office/
 

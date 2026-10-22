@@ -3,46 +3,45 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Jasurning virtual ofisi</title>
-<meta name="description" content="Jasurning shaxsiy virtual ofisi: 7 ta xona, har birida AI agent uchun joy.">
+<title>Jasurning qal'asi</title>
+<meta name="description" content="Jasurning virtual ofisi, qal'a uslubida: 7 ta xona, har birida NPC agent uchun joy.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Alegreya+Sans:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' rx='4' fill='%230f7a63'/%3E%3Cpath d='M3 16h26M16 3v26' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 28V10l4 3V6l4 4V4l4 6 4-6v6l4-4v7l4-3v18z' fill='%23c9a24a'/%3E%3C/svg%3E">
 </head>
 <body>
 <header class="top">
   <div class="top-in">
-    <a class="logo" href="#xarita"><span class="logo-mark" aria-hidden="true"></span>Jasur Ofis</a>
+    <a class="logo" href="#qala"><span class="crest" aria-hidden="true"></span>Jasur qal'asi</a>
     <nav aria-label="Asosiy menyu">
-      <a href="#xarita">Xarita</a>
+      <a href="#qala">Qal'a</a>
       <a href="#xonalar">Xonalar</a>
       <a href="#qanday">Qanday ishlaydi</a>
     </nav>
-    <button id="theme" class="theme" type="button" aria-label="Kun yoki tun rejimini almashtirish">◐</button>
   </div>
 </header>
 
 <main>
-  <section class="hero" id="xarita">
+  <section class="hero" id="qala">
     <div class="in">
-      <div class="eyebrow">Virtual ofis · 1-versiya</div>
-      <h1>Jasurning virtual ofisi</h1>
-      <p class="lead">Ofis qurildi, stollar hozircha bo'sh. Har xonada yashil "+" belgisi turibdi: keyin agentlar aynan shu joyga o'tiradi. Xonani bosib, unda nima ishlashini ko'ring. Sariq nuqta esa xonalar orasida vazifa tashiydigan kuryer.</p>
-      <div class="stats">
-        <span class="pill">Xonalar: <b>7</b></span>
-        <span class="pill">Agentlar: <b id="agent-count">1 / 7</b></span>
-        <span class="pill">Holat: <b>qurilmoqda</b></span>
+      <div class="eyebrow">Virtual ofis · qal'a uslubi</div>
+      <h1>Jasurning qal'asi</h1>
+      <p class="lead">Qal'a qurildi, lekin NPC'lar hali joyida yo'q. Har xonada sehrli doira yonib turibdi: keyin agentlar aynan shu yerga chaqiriladi. Xonani bosib, unda kim ishlashini ko'ring. Burgut esa xonalar orasida xat tashiydi.</p>
+      <div class="bars">
+        <div class="bar"><span>Xonalar</span><div class="track"><i style="width:100%" class="gold"></i></div><b>7 / 7</b></div>
+        <div class="bar"><span>NPC agentlar</span><div class="track"><i id="npc-fill" class="mana"></i></div><b id="agent-count">1 / 6</b></div>
       </div>
       <div class="grid">
-        <div class="map"><svg id="office" viewBox="0 0 900 560" role="img" aria-label="Ofis qavatining yuqoridan ko'rinishi"></svg></div>
-        <aside class="card" id="card" aria-live="polite"></aside>
+        <div class="map"><svg id="office" viewBox="0 0 900 560" role="img" aria-label="Qal'a qavatining yuqoridan ko'rinishi"></svg></div>
+        <aside class="dialog" id="card" aria-live="polite"></aside>
       </div>
       <p class="swipe">Xaritani chapga-o'ngga surib ko'ring</p>
       <div class="legend">
-        <span><i class="lg-slot"></i>Bo'sh agent joyi</span>
-        <span><i class="lg-cour"></i>Vazifa tashuvchi kuryer</span>
-        <span><i class="lg-on"></i>Ishlayotgan agent</span>
+        <span><i class="lg-slot"></i>Bo'sh NPC joyi</span>
+        <span><i class="lg-cour"></i>Xat tashuvchi burgut</span>
+        <span><i class="lg-on"></i>Ishlayotgan NPC</span>
+        <span><i class="lg-torch"></i>Mash'al</span>
       </div>
     </div>
   </section>
@@ -50,7 +49,7 @@
   <section class="band" id="xonalar">
     <div class="in">
       <div class="eyebrow">Xonalar</div>
-      <h2>Har bir xona va uning ishi</h2>
+      <h2>Qal'aning xonalari</h2>
       <div class="rooms" id="rooms"></div>
     </div>
   </section>
@@ -58,22 +57,22 @@
   <section class="band alt" id="qanday">
     <div class="in">
       <div class="eyebrow">Qanday ishlaydi</div>
-      <h2>Vazifa kirishdan natijagacha</h2>
+      <h2>Topshiriq darvozadan natijagacha</h2>
       <ol class="steps">
-        <li><b>Siz yozasiz</b><span>Qabulxonaga buyruq yoki savol yozasiz. Masalan: <code>g'oya: o'yin serveri uchun sayt</code>.</span></li>
-        <li><b>Koordinator tarqatadi</b><span>Vazifa qaysi xonaga tegishli ekanini aniqlaydi va kuryer orqali o'sha xonaga yuboradi.</span></li>
-        <li><b>Xona ishlaydi</b><span>Xonadagi agent vazifani bajaradi. Kerak bo'lsa, boshqa xonaga yordam so'raydi: g'oya texnik bo'limga, keyin nazoratga o'tadi.</span></li>
-        <li><b>Natija arxivga</b><span>Javob sizga qaytadi, qarorlar esa arxivga yoziladi. Hech narsa yo'qolmaydi.</span></li>
+        <li><b>Siz buyruq berasiz</b><span>Qal'a zaliga yozasiz. Masalan: <code>g'oya: o'yin serveri uchun sayt</code>.</span></li>
+        <li><b>Saroy boshlig'i tarqatadi</b><span>Topshiriq qaysi xonaga tegishli ekanini aniqlaydi va burgut orqali o'sha xonaga yuboradi.</span></li>
+        <li><b>NPC bajaradi</b><span>Xonadagi agent ishni qiladi. Kerak bo'lsa boshqa xonadan yordam so'raydi: g'oya ustaxonaga, keyin qorovulga o'tadi.</span></li>
+        <li><b>Natija omborga</b><span>Javob sizga qaytadi, qarorlar esa omborda saqlanadi. Hech narsa yo'qolmaydi.</span></li>
       </ol>
       <div class="note">
-        <b>Agentlar qachon qo'shiladi?</b>
-        <p>Ofis tayyor bo'lgach, har bir bo'sh stolga bittadan agent qo'yamiz. Avval eng ko'p ishlatiladigan xonadan boshlaymiz, odatda bu Rejalashtirish xonasi.</p>
+        <b>NPC'lar qachon keladi?</b>
+        <p>Qal'a tayyor bo'lgach, har bir sehrli doiraga bittadan agent chaqiramiz. Avval eng ko'p ishlatiladigan xonadan boshlaymiz, odatda bu Urush xonasi.</p>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="foot"><div class="in">Jasurning virtual ofisi · 2026</div></footer>
+<footer class="foot"><div class="in">Jasur qal'asi · 2026 · Rasmlar shu sayt uchun chizilgan, o'yin grafikasi ishlatilmagan.</div></footer>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script src="app.js"></script>
 <script>try{var tg=window.Telegram&&Telegram.WebApp;if(tg&&tg.initData!==undefined){tg.ready();tg.expand()}}catch(e){}</script>
