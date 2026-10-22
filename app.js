@@ -8,7 +8,7 @@ function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttr
 var ROOMS=[
  {id:"plan",name:"Urush xonasi",sub:"Rejalashtirish",x:20,y:20,w:215,h:230,door:"b",c:"--r1",prop:"wartable",cmd:"kun · hafta",agent:"Strateg",desc:"Kechki 3-4 soatingizni taqsimlaydi. Bugungi reja va haftalik xulosa shu stol ustidagi xaritada tuziladi."},
  {id:"idea",name:"Sehrgar minorasi",sub:"G'oyalar",x:235,y:20,w:215,h:230,door:"b",c:"--r2",prop:"orb",cmd:"g'oya: ...",agent:"Bashoratchi",desc:"Yangi g'oyani billur sharda ko'radi: kimga kerak, qancha vaqt oladi, qanday xavflari bor. Qilish yoki qilmaslik bo'yicha aniq xulosa beradi."},
- {id:"tech",name:"Gnomlar ustaxonasi",sub:"Texnik bo'lim",x:450,y:20,w:215,h:230,door:"b",c:"--r3",prop:"forge",cmd:"texnik: ...",agent:"Usta gnom",desc:"Server, kod va GitHub shu sandonda yasaladi. L2 server va launcher kabi texnik ishlar shu yerda."},
+ {id:"tech",name:"Gnomlar ustaxonasi",sub:"Texnik bo'lim",x:450,y:20,w:215,h:230,door:"b",c:"--r3",prop:"forge",cmd:"x900: ...",agent:"Server ustasi",ready:true,desc:"L2 x900 serverining ustasi: custom item va ekipirovka balansi, config fayllar (rate, drop, enchant), haftalik eventlar, loglardagi xatolar, donat do'koni va o'zbek-rus tilidagi patch notes. Server fayllari bo'lmasa, faqat maslahat beradi."},
  {id:"studio",name:"Ko'zgu zali",sub:"Media studiya",x:665,y:20,w:215,h:230,door:"b",c:"--r8",prop:"studio",cmd:"studiya: ...",agent:"Rejissyor",ready:true,desc:"Foto, video, dizayn va montaj. G'oyangizdan ssenariy, rasm va tayyor video yasaydi, kerakli joyda maslahat beradi. Shaxsiy ma'lumot va tasdiq kerak bo'lgan joyda sizdan so'raydi."},
  {id:"recep",name:"Qal'a zali",sub:"Qabulxona",x:20,y:310,w:250,h:230,door:"t",c:"--r7",prop:"throne",cmd:"istalgan xabar",agent:"Saroy boshlig'i",ready:true,desc:"Qal'aning kirishi. Siz shu yerga yozasiz, saroy boshlig'i topshiriqni kerakli xonaga yuboradi va javobni sizga qaytaradi."},
  {id:"write",name:"O'ramlar kutubxonasi",sub:"Yozuv",x:270,y:310,w:220,h:230,door:"t",c:"--r5",prop:"scrolls",cmd:"yoz: ...",agent:"Kotib",desc:"Matn, e'lon, post va hujjatlar. O'zbek, rus yoki ingliz tilida yozadi."},
@@ -354,7 +354,7 @@ tick();setInterval(tick,30000);
 // Qadam: [matn, "ok" | "now" | ""]
 var QUESTS=[
  {id:"ofis",name:"Virtual ofis qal'asi",state:"active",desc:"Agentlar joylashadigan shaxsiy virtual ofis: sayt, Telegram va qal'a dizayni.",
-  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Qal'a dizayni","ok"],["NPC qahramonlar","ok"],["Quest jurnali","ok"],["Kun va tun","ok"],["Ovoz","ok"],["3D ko'rinish","ok"],["Birinchi agentni chaqirish: Rejissyor","ok"],["Rejissyorga birinchi vazifa","now"]],
+  steps:[["Ofis rejasi va xonalar","ok"],["Saytni internetga chiqarish","ok"],["Telegram Mini App","ok"],["Qal'a dizayni","ok"],["NPC qahramonlar","ok"],["Quest jurnali","ok"],["Kun va tun","ok"],["Ovoz","ok"],["3D ko'rinish","ok"],["Birinchi agentni chaqirish: Rejissyor","ok"],["Rejissyorga birinchi vazifa","ok"],["Ikkinchi agent: Server ustasi (x900)","ok"]],
   reward:"Har kuni reja beradigan, agentlar ishlaydigan ofis"},
  {id:"l2",name:"L2 Interlude server",state:"stuck",desc:"O'z L2 Interlude serverini ishga tushirish. Oxirgi marta \"client topilmadi\" xatosida to'xtagan.",
   steps:[["Server fayllarini tayyorlash","ok"],["\"Client topilmadi\" xatosini tuzatish","now"],["Serverga kirib sinash",""]],
