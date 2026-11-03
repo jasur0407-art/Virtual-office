@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EGO 900 Interlude</title>
+<meta name="description" content="EGO 900: Lineage II Interlude server. EXP x300, har kuni TvT, CvC, osada va epik bosslar.">
+<meta name="theme-color" content="#120e0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Alegreya+Sans:wght@400;500;700&family=Cormorant+Garamond:ital,wght@1,500&display=swap">
+<style>
+/* Layout: one centered column of "stone" bands; game-UI panels with bronze double frames carry the data. */
+:root {
+  --night: #110d09;
+  --stone: #1a140f;
+  --stone-2: #241c15;
+  --bronze: #7d6037;
+  --gold: #d6b066;
+  --gold-hi: #f2dba0;
+  --parch: #ebdfc4;
+  --muted: #a6977c;
+  --blood: #a3362a;
+  --ok: #78b562;
+  --warn: #d89a3c;
+  --f-display: "Marcellus SC", "Trajan Pro", Georgia, serif;
+  --f-body: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  --f-quote: "Cormorant Garamond", Georgia, serif;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--parch);
+  font: 400 17px/1.6 var(--f-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 60; background: var(--night);
+}
+img { max-width: 100%; }
+a { color: var(--gold); }
+a:hover { color: var(--gold-hi); }
+:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 3px; }
+
+.wrap {
+  max-width: 1120px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap.narrow { max-width: 820px; }
+
+/* Demo notice */
+.demo-ribbon {
+  background: repeating-linear-gradient(135deg, #3a1c14 0 14px, #2d150f 14px 28px);
+  color: var(--gold-hi); text-align: center; font-size: 14px;
+  padding-block: 6px; padding-inline: 16px; border-bottom: 1px solid var(--bronze);
+}
+
+/* Header */
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
+  background: linear-gradient(#1b140e, #120d09);
+  border-bottom: 1px solid var(--bronze);
+  box-shadow: 0 1px 0 #00000080, 0 6px 18px #00000066;
+}
+.top-in { display: flex; align-items: center; gap: 20px; min-height: 64px; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--gold-hi); }
+.logo-mark { font-size: 22px; color: var(--gold); text-shadow: 0 0 10px #d6b06688; }
+.logo-text { display: flex; flex-direction: column; line-height: 1.05; }
+.logo-text b { font: 400 22px var(--f-display); letter-spacing: .06em; }
+.logo-text small { font-size: 12px; color: var(--muted); letter-spacing: .14em; text-transform: uppercase; }
+.nav { margin-left: auto; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.nav a {
+  color: var(--parch); text-decoration: none; padding: 8px 10px;
+  font: 400 15px var(--f-display); letter-spacing: .05em; border-radius: 2px;
+}
+.nav a:hover, .nav a.active { color: var(--gold-hi); background: #d6b0661a; }
+.lang { display: flex; margin-left: 8px; border: 1px solid var(--bronze); }
+.lang button {
+  background: transparent; color: var(--muted); border: 0; padding: 6px 10px; cursor: pointer;
+  font: 700 13px var(--f-body); letter-spacing: .08em;
+}
+.lang button[aria-pressed="true"] { background: var(--gold); color: var(--night); }
+.burger { display: none; margin-left: auto; background: none; border: 1px solid var(--bronze); padding: 9px 8px; cursor: pointer; }
+.burger span { display: block; width: 22px; height: 2px; background: var(--gold); margin: 4px 0; transition: transform .2s, opacity .2s; }
+.burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* Hero */
+.hero {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(ellipse 60% 55% at 50% 38%, #5a2a1666, transparent 70%),
+    radial-gradient(ellipse 90% 60% at 50% 110%, #00000099, transparent 60%),
+    linear-gradient(#1c130d, var(--night));
+  border-bottom: 1px solid var(--bronze);
+}
+.embers { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-in { position: relative; z-index: 1; text-align: center; padding-block: 72px 56px; }
+.eyebrow { margin: 0; font: 400 14px var(--f-display); letter-spacing: .32em; color: var(--gold); text-transform: uppercase; }
+.hero-title {
+  margin: 10px 0 6px; font: 400 clamp(54px, 12.5vw, 140px)/1 var(--f-display); white-space: nowrap; letter-spacing: .04em;
+  background: linear-gradient(180deg, #fff3cf 0%, var(--gold) 48%, #8d6a32 52%, #e8c77e 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 4px 0 #00000099) drop-shadow(0 0 28px #c9822f55);
+}
+.hero-sub { margin: 0 auto; max-width: 34em; font: italic 500 clamp(19px, 2.6vw, 24px)/1.4 var(--f-quote); color: var(--parch); text-wrap: balance; }
+.hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 13px 26px; min-height: 48px; text-decoration: none; cursor: pointer;
+  font: 400 17px var(--f-display); letter-spacing: .08em; border-radius: 2px;
+  transition: filter .15s, transform .15s;
+}
+.btn:active { transform: translateY(1px); }
+.btn-gold {
+  color: #1d1208; border: 1px solid #f6e1a8;
+  background: linear-gradient(#f1d68f, #c39443 55%, #9c7230);
+  box-shadow: inset 0 1px 0 #fff6d4, 0 0 0 1px #3d2a12, 0 6px 16px #00000080;
+}
+.btn-gold:hover { filter: brightness(1.08); color: #1d1208; }
+.btn-ghost { color: var(--gold-hi); border: 1px solid var(--bronze); background: #00000055; }
+.btn-ghost:hover { background: #d6b0661f; color: var(--gold-hi); }
+.btn.full { width: 100%; }
+
+/* Panel: game-UI frame */
+.panel {
+  position: relative; background: linear-gradient(#211912ee, #17110ced);
+  border: 1px solid var(--bronze);
+  box-shadow: inset 0 0 0 3px #110d09, inset 0 0 0 4px #4a3920, 0 10px 24px #00000080;
+  padding: 22px;
+}
+.panel::before, .panel::after {
+  content: "◆"; position: absolute; font-size: 10px; color: var(--gold); line-height: 1;
+}
+.panel::before { top: -6px; left: -5px; }
+.panel::after { bottom: -6px; right: -5px; }
+.panel-h { margin: 0 0 12px; font: 400 18px var(--f-display); color: var(--gold-hi); letter-spacing: .08em; }
+
+.status { margin: 44px auto 0; max-width: 760px; display: grid; grid-template-columns: 1fr 1fr 1.9fr; gap: 0; padding: 0; text-align: left; }
+.status-cell { padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; border-right: 1px solid #4a392080; min-width: 0; }
+.status-cell:last-child { border-right: 0; }
+.label { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.pill { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 16px; }
+.pill::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: currentColor; box-shadow: 0 0 8px currentColor; }
+.pill.on { color: var(--ok); }
+.pill.off { color: var(--blood); }
+.pill.soon { color: var(--warn); }
+.num, .countdown { font: 400 22px var(--f-display); color: var(--gold-hi); font-variant-numeric: tabular-nums; letter-spacing: .04em; }
+.countdown { white-space: nowrap; }
+
+/* Sections */
+.sec { padding-block: 72px; border-bottom: 1px solid #4a392066; }
+.sec-dark { background: linear-gradient(var(--stone), #140f0b); }
+.sec-title {
+  margin: 0 0 10px; text-align: center; font: 400 clamp(28px, 4.5vw, 40px)/1.15 var(--f-display);
+  color: var(--gold-hi); letter-spacing: .06em; text-wrap: balance;
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+}
+.sec-title::before, .sec-title::after {
+  content: ""; flex: 0 1 90px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold));
+}
+.sec-title::after { transform: scaleX(-1); }
+.sec-title.left { justify-content: flex-start; }
+.sec-title.left::before { display: none; }
+.sec-lead { margin: 0 auto 36px; max-width: 40em; text-align: center; color: var(--muted); text-wrap: balance; }
+
+/* Rates */
+.server-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; }
+.table-panel { min-width: 0; }
+.tbl-scroll { overflow-x: auto; }
+.rates { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.rates th, .rates td { padding: 9px 6px; border-bottom: 1px solid #4a392080; text-align: left; }
+.rates tr:last-child th, .rates tr:last-child td { border-bottom: 0; }
+.rates th { font-weight: 500; color: var(--parch); }
+.rates td { text-align: right; font: 400 18px var(--f-display); color: var(--gold-hi); white-space: nowrap; }
+.rates td.tbd { color: var(--muted); font: italic 15px var(--f-body); }
+
+.features { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #4a392066; border: 1px solid #4a392066; }
+.features li { background: var(--night); padding: 20px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.features b { font: 400 18px var(--f-display); color: var(--gold); letter-spacing: .04em; }
+.features span { color: var(--muted); font-size: 15px; }
+
+/* Schedule */
+.sch-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 24px; align-items: start; }
+.sch-grid > * { min-width: 0; }
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline li { display: grid; grid-template-columns: 7.2em 1fr; gap: 12px; padding: 9px 0; border-bottom: 1px solid #4a392080; }
+.timeline li:last-child { border-bottom: 0; }
+.timeline time { font: 400 17px var(--f-display); color: var(--gold-hi); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.timeline span { display: flex; flex-direction: column; min-width: 0; }
+.timeline small { color: var(--muted); font-size: 14px; }
+.weekly { width: 100%; border-collapse: collapse; }
+.weekly th, .weekly td { padding: 9px 6px; text-align: left; border-bottom: 1px solid #4a392080; }
+.weekly thead th { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.weekly tbody th { font-weight: 500; }
+.weekly td { color: var(--gold-hi); font-family: var(--f-display); }
+.weekly td.muted { color: var(--muted); font: italic 15px var(--f-body); }
+.weekly tr.today { background: #d6b0661a; }
+.weekly tr.today th { color: var(--gold-hi); }
+.weekly em { font-style: normal; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--night); background: var(--gold); padding: 1px 6px; margin-left: 4px; }
+.panel-note { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
+.ev-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px 24px; margin-top: 32px; }
+.ev-card { border-top: 2px solid var(--bronze); padding-top: 12px; min-width: 0; }
+.ev-card b { font: 400 20px var(--f-display); color: var(--gold-hi); }
+.ev-card .plist li { color: var(--muted); }
+.plist { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.plist li { padding-left: 20px; position: relative; }
+.plist li::before { content: "◆"; position: absolute; left: 0; top: .15em; font-size: 10px; color: var(--gold); }
+.ev-card .plist { margin-top: 10px; font-size: 15px; }
+.next-name { color: var(--gold-hi); font-weight: 500; letter-spacing: .04em; text-transform: none; font-size: 14px; }
+
+/* PvP, chests */
+.two-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+.chests { display: grid; grid-template-columns: 1.15fr 1fr; gap: 24px; align-items: start; }
+.two-col > *, .chests > * { min-width: 0; }
+.chest-side { display: grid; gap: 24px; }
+.price-tbl { width: 100%; border-collapse: collapse; margin: 6px 0 16px; font-variant-numeric: tabular-nums; }
+.price-tbl th, .price-tbl td { padding: 9px 6px; border-bottom: 1px solid #4a392080; text-align: left; white-space: nowrap; }
+.price-tbl tr:last-child th, .price-tbl tr:last-child td { border-bottom: 0; }
+.price-tbl th { font-weight: 500; }
+.price-tbl td { font: 400 19px var(--f-display); color: var(--gold-hi); }
+.price-tbl td small { font: 400 13px var(--f-body); color: var(--muted); }
+.price-tbl td.or { font: italic 14px var(--f-body); color: var(--muted); }
+.timeline li.reset time, .timeline li.reset b { color: var(--muted); }
+.chest { display: flex; flex-direction: column; gap: 6px; }
+.chest .panel-h { font-size: 22px; }
+.chest .price { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid #4a392080; font: 400 19px var(--f-display); color: var(--gold); }
+.is-off { opacity: .6; cursor: default; }
+
+/* Steps */
+.steps { list-style: none; counter-reset: s; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.steps li { counter-increment: s; display: flex; flex-direction: column; gap: 6px; min-width: 0; position: relative; }
+.steps li::before {
+  content: counter(s, upper-roman); width: 52px; height: 52px; display: grid; place-items: center;
+  font: 400 20px var(--f-display); color: var(--gold-hi); margin: 6px 0 14px 6px;
+}
+.steps li::after {
+  content: ""; position: absolute; top: 6px; left: 6px; width: 52px; height: 52px;
+  border: 1px solid var(--gold); transform: rotate(45deg); pointer-events: none;
+}
+.steps li b { font: 400 19px var(--f-display); color: var(--gold); }
+.steps li span { color: var(--muted); font-size: 15px; }
+.dl-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; justify-content: center; }
+.note { margin: 22px auto 0; max-width: 46em; text-align: center; color: var(--muted); font-size: 14px; }
+
+/* Register */
+.reg-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.reg-text { min-width: 0; }
+.ticks { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 8px; }
+.ticks li::before { content: "✦"; color: var(--gold); margin-right: 10px; }
+.reg-form { display: grid; gap: 14px; }
+.field { display: grid; gap: 5px; }
+.field label { font-size: 14px; color: var(--muted); letter-spacing: .06em; }
+.field input {
+  width: 100%; padding: 11px 12px; font: 400 16px var(--f-body); color: var(--parch);
+  background: #0c0907; border: 1px solid #5b4527; border-radius: 0;
+}
+.field input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+.field input[aria-invalid="true"] { border-color: var(--blood); }
+.err { color: #e0705f; min-height: 0; font-size: 13px; }
+.err:empty { display: none; }
+.check { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; cursor: pointer; }
+.check input { margin-top: 4px; accent-color: var(--gold); width: 18px; height: 18px; flex: none; }
+.form-msg { margin: 0; padding: 10px 12px; border: 1px solid var(--bronze); background: #d6b06614; font-size: 15px; }
+.form-msg.bad { border-color: var(--blood); background: #a3362a1f; }
+
+/* Rules */
+.rules { display: grid; gap: 0; border-top: 1px solid #4a392099; }
+.rules details { border-bottom: 1px solid #4a392099; }
+.rules summary {
+  cursor: pointer; list-style: none; padding: 16px 4px; display: flex; justify-content: space-between; gap: 12px;
+  font: 400 19px var(--f-display); color: var(--parch); letter-spacing: .03em;
+}
+.rules summary::-webkit-details-marker { display: none; }
+.rules summary::after { content: "+"; color: var(--gold); font-size: 22px; line-height: 1; }
+.rules details[open] summary::after { content: "−"; }
+.rules details[open] summary { color: var(--gold-hi); }
+.rules p { margin: 0 4px 18px; color: var(--muted); }
+
+/* Contacts */
+.contacts { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+.contact {
+  display: flex; align-items: center; gap: 14px; min-width: 0; flex: 0 1 300px;
+  padding: 16px 18px; border: 1px solid var(--bronze); background: #0f0b08; text-decoration: none; color: var(--parch);
+}
+.contact:hover { border-color: var(--gold); color: var(--parch); }
+.contact i { font-style: normal; width: 42px; height: 42px; flex: none; display: grid; place-items: center; border: 1px solid var(--gold); color: var(--gold); font: 400 15px var(--f-display); }
+.contact b { display: block; font: 400 17px var(--f-display); color: var(--gold-hi); }
+.contact small { color: var(--muted); word-break: break-all; }
+.contact.tbd { opacity: .65; pointer-events: none; }
+
+/* Footer */
+.foot { padding-block: 32px calc(32px + env(safe-area-inset-bottom, 0px)); background: #0b0806; text-align: center; color: var(--muted); }
+.foot-in p { margin: 4px 0; }
+.foot b { color: var(--gold); font-family: var(--f-display); font-weight: 400; }
+.small { font-size: 13px; max-width: 52em; margin-inline: auto !important; }
+
+.to-top {
+  position: fixed; z-index: 40;
+  right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  width: 44px; height: 44px; border: 1px solid var(--gold); background: #120d09e6; color: var(--gold); cursor: pointer; font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .ev-cards { grid-template-columns: repeat(2, 1fr); }
+  .two-col { grid-template-columns: 1fr 1fr; }
+  .two-col > :last-child { grid-column: 1 / -1; }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .burger { display: block; }
+  .nav {
+    position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; align-items: stretch; gap: 0;
+    background: #140f0b; border-bottom: 1px solid var(--bronze);
+    padding: 8px max(16px, env(safe-area-inset-right, 0px)) 16px max(16px, env(safe-area-inset-left, 0px));
+    display: none;
+  }
+  .nav.open { display: flex; }
+  .nav a { padding: 12px 6px; border-bottom: 1px solid #4a392055; font-size: 17px; }
+  .lang { margin: 12px 0 0; align-self: flex-start; }
+  .lang button { padding: 10px 16px; }
+  .server-grid, .reg-wrap, .sch-grid, .chests { grid-template-columns: 1fr; }
+  .features { grid-template-columns: repeat(2, 1fr); }
+  .status { grid-template-columns: repeat(2, 1fr); }
+  .status-cell.wide { grid-column: 1 / -1; border-right: 0; border-top: 1px solid #4a392080; align-items: center; }
+}
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .hero-in { padding-block: 48px 40px; }
+  .sec { padding-block: 52px; }
+  .features, .steps, .ev-cards, .two-col, .chests { grid-template-columns: 1fr; }
+  .timeline li { grid-template-columns: 6.6em 1fr; }
+  .price-tbl th, .price-tbl td { white-space: normal; padding: 8px 4px; }
+  .price-tbl td { font-size: 17px; }
+  .status-cell { padding: 12px 10px; }
+  .num, .countdown { font-size: 19px; }
+  .countdown { white-space: normal; text-align: center; }
+  .pill { font-size: 14px; }
+  .reg-wrap { gap: 28px; }
+  .hero-cta .btn { flex: 1 1 100%; }
+  .sec-title { gap: 10px; }
+  .sec-title::before, .sec-title::after { flex-basis: 28px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+<!--BODY-START-->
+<aside class="demo-ribbon" id="demoRibbon" aria-label="Demo" hidden><span data-i18n="demo"></span></aside>
+
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="logo" href="#home">
+      <span class="logo-mark" aria-hidden="true">✦</span>
+      <span class="logo-text"><b data-cfg="serverName"></b><small data-cfg="chronicle"></small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="#server" data-i18n="nav.server"></a>
+      <a href="#schedule" data-i18n="nav.schedule"></a>
+      <a href="#pvp" data-i18n="nav.pvp"></a>
+      <a href="#premium" data-i18n="nav.premium"></a>
+      <a href="#start" data-i18n="nav.start"></a>
+      <a href="#rules" data-i18n="nav.rules"></a>
+      <a href="#contact" data-i18n="nav.contact"></a>
+      <div class="lang" role="group" aria-label="Til / Язык">
+        <button type="button" data-lang="uz">UZ</button>
+        <button type="button" data-lang="ru">RU</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <canvas class="embers" id="embers" aria-hidden="true"></canvas>
+    <div class="wrap hero-in">
+      <p class="eyebrow" data-i18n="hero.eyebrow"></p>
+      <h1 class="hero-title"><span data-cfg="serverName"></span></h1>
+      <p class="hero-sub" data-i18n="hero.sub"></p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#start" data-i18n="cta.play"></a>
+        <a class="btn btn-ghost" href="#register" data-i18n="cta.register"></a>
+      </div>
+
+      <div class="panel status">
+        <div class="status-cell">
+          <span class="label" data-i18n="status.max"></span>
+          <span class="num" id="stMax"></span>
+        </div>
+        <div class="status-cell">
+          <span class="label" data-i18n="status.time"></span>
+          <span class="num" id="stClock">--:--:--</span>
+        </div>
+        <div class="status-cell wide">
+          <span class="label"><span data-i18n="status.next"></span> <b class="next-name" id="nextName"></b></span>
+          <span class="countdown" id="countdown"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="server">
+    <div class="wrap">
+      <h2 class="sec-title"><span data-i18n="server.title"></span></h2>
+      <p class="sec-lead" data-i18n="server.lead"></p>
+      <div class="server-grid">
+        <div class="panel table-panel">
+          <h3 class="panel-h" data-i18n="server.rates"></h3>
+          <div class="tbl-scroll"><table class="rates" id="ratesTable"></table></div>
+        </div>
+        <div class="panel table-panel">
+          <h3 class="panel-h" data-i18n="server.enchant"></h3>
+          <div class="tbl-scroll"><table class="rates" id="enchantTable"></table></div>
+        </div>
+      </div>
+      <ul class="features" id="features"></ul>
+    </div>
+  </section>
+
+  <section class="sec sec-dark" id="schedule">
+    <div class="wrap">
+      <h2 class="sec-title"><span data-i18n="sch.title"></span></h2>
+      <p class="sec-lead" data-i18n="sch.lead"></p>
+      <div class="sch-grid">
+        <div class="panel">
+          <h3 class="panel-h" data-i18n="sch.daily"></h3>
+          <ol class="timeline" id="daily"></ol>
+        </div>
+        <div class="panel table-panel">
+          <h3 class="panel-h" data-i18n="sch.weekly"></h3>
+          <div class="tbl-scroll"><table class="weekly" id="weekly"></table></div>
+          <p class="panel-note" data-i18n="sch.noSiege"></p>
+        </div>
+      </div>
+      <div class="ev-cards" id="eventCards"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="pvp">
+    <div class="wrap">
+      <h2 class="sec-title"><span data-i18n="pvp.title"></span></h2>
+      <p class="sec-lead" data-i18n="pvp.lead"></p>
+      <div class="two-col" id="pvpCols"></div>
+    </div>
+  </section>
+
+  <section class="sec sec-dark" id="premium">
+    <div class="wrap">
+      <h2 class="sec-title"><span data-i18n="prem.title"></span></h2>
+      <p class="sec-lead" data-i18n="prem.lead"></p>
+      <div class="chests" id="chests"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="start">
+    <div class="wrap">
+      <h2 class="sec-title"><span data-i18n="start.title"></span></h2>
+      <ol class="steps" id="steps"></ol>
+      <div class="dl-row" id="downloads"></div>
+      <p class="note" data-i18n="start.req"></p>
+    </div>
+  </section>
+
+  <section class="sec sec-dark" id="register">
+    <div class="wrap reg-wrap">
+      <div class="reg-text">
+        <h2 class="sec-title left"><span data-i18n="reg.title"></span></h2>
+        <p data-i18n="reg.lead"></p>
+        <ul class="ticks">
+          <li data-i18n="reg.t1"></li>
+          <li data-i18n="reg.t2"></li>
+          <li data-i18n="reg.t3"></li>
+        </ul>
+      </div>
+      <form class="panel reg-form" id="regForm" novalidate>
+        <div class="field">
+          <label for="regLogin" data-i18n="reg.login"></label>
+          <input id="regLogin" name="login" autocomplete="username" maxlength="14" required>
+          <small class="err" id="errLogin"></small>
+        </div>
+        <div class="field">
+          <label for="regEmail" data-i18n="reg.email"></label>
+          <input id="regEmail" name="email" type="email" autocomplete="email" required>
+          <small class="err" id="errEmail"></small>
+        </div>
+        <div class="field">
+          <label for="regPass" data-i18n="reg.pass"></label>
+          <input id="regPass" name="pass" type="password" autocomplete="new-password" maxlength="16" required>
+          <small class="err" id="errPass"></small>
+        </div>
+        <div class="field">
+          <label for="regPass2" data-i18n="reg.pass2"></label>
+          <input id="regPass2" name="pass2" type="password" autocomplete="new-password" maxlength="16" required>
+          <small class="err" id="errPass2"></small>
+        </div>
+        <label class="check" for="regRules"><input id="regRules" type="checkbox" required> <span data-i18n="reg.agree"></span></label>
+        <small class="err" id="errRules"></small>
+        <button class="btn btn-gold full" type="submit" data-i18n="reg.submit"></button>
+        <p class="form-msg" id="regMsg" role="status" hidden></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="sec" id="rules">
+    <div class="wrap narrow">
+      <h2 class="sec-title"><span data-i18n="rules.title"></span></h2>
+      <div class="rules" id="rulesList"></div>
+    </div>
+  </section>
+
+  <section class="sec sec-dark" id="contact">
+    <div class="wrap">
+      <h2 class="sec-title"><span data-i18n="contact.title"></span></h2>
+      <p class="sec-lead" data-i18n="contact.lead"></p>
+      <div class="contacts" id="contacts"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p><b data-cfg="serverName"></b> · <span data-cfg="chronicle"></span> · © <span id="year"></span></p>
+    <p class="small" data-i18n="foot.legal"></p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Yuqoriga" hidden>▲</button>
+<!--BODY-END-->
+<script>
+/* EGO 900 Interlude sayti.
+   Hamma server ma'lumotlari shu CONFIG ichida. Faqat shu qismni o'zgartiring. */
+const CONFIG = {
+  demo: true,                       // qoidalar va havolalar tasdiqlangach false qiling (tepadagi yozuv yo'qoladi)
+  serverName: "EGO 900",
+  chronicle: "Interlude",
+  maxOnline: 100,
+  tzOffset: 5,                      // server vaqti: O'zbekiston (UTC+5)
+  rates: [                          // [matn kaliti, qiymat]; "@kalit" = tarjima qilinadigan qiymat
+    ["rt.maxlvl", "80"], ["rt.expsp", "x300"], ["rt.quest", "x300"], ["rt.adena", "x1"],
+    ["rt.drop", "x1"], ["rt.spoil", "x1"], ["rt.autoloot", "@rt.on"]
+  ],
+  enchant: [
+    ["en.weapon", "66%"], ["en.armor", "62%"], ["en.jewel", "62%"], ["en.safe", "+4"], ["en.premium", "+5%"]
+  ],
+  daily: [                          // har kungi jadval. min = davomiyligi (daqiqa), noSun = yakshanba yo'q
+    { t: "00:00", ev: "reset" },
+    { t: "07:00", ev: "tvt", min: 20 },
+    { t: "10:00", ev: "tvt", min: 20 },
+    { t: "13:00", ev: "tvt", min: 20 },
+    { t: "16:00", ev: "tvt", min: 20 },
+    { t: "18:00", end: "20:00", ev: "oly" },
+    { t: "20:00", ev: "cvc", min: 5 },
+    { t: "20:50", end: "22:00", ev: "siege", noSun: true },
+    { t: "22:30", ev: "boss" }
+  ],
+  monday: [                         // faqat dushanba
+    { t: "09:00", ev: "olyRes" },
+    { t: "09:10", ev: "pvpWin" }
+  ],
+  sieges: { 1: "Aden", 2: "Giran", 3: "Goddard", 4: "Rune", 5: "Schuttgart", 6: "Oren", 7: null },
+  bosses: { 1: "Queen Ant", 2: "Core", 3: "Orfen", 4: "Zaken", 5: "Baium", 6: "Antharas", 7: "Valakas" },
+  premium: [                        // [muddat kaliti, Coin of Luck, PvP Coin]
+    ["pr.month", 500, 150],
+    ["pr.life", 4000, 1500]
+  ],
+  pvpShop: [["ps.color", 250], ["ps.nick", 400]],
+  downloads: [                      // url bo'sh bo'lsa tugma "tez orada" bo'lib turadi
+    { key: "dl.client", url: "" }
+  ],
+  registerApi: "",                  // server ro'yxatdan o'tkazish manzili (POST). Bo'sh = forma faqat tekshiradi
+  contacts: {
+    telegram: "",                   // masalan "https://t.me/ego900"
+    discord: "",                    // masalan "https://discord.gg/xxxx"
+    email: ""                       // masalan "support@ego900.uz"
+  }
+};
+
+const T = {
+  uz: {
+    demo: "Qoidalar, aloqa havolalari va yuklab olish hali tasdiqlanmagan.",
+    "nav.server": "Server", "nav.schedule": "Jadval", "nav.pvp": "PvP va klan", "nav.premium": "Premium",
+    "nav.start": "Boshlash", "nav.rules": "Qoidalar", "nav.contact": "Aloqa",
+    "hero.eyebrow": "Lineage II · Interlude",
+    "hero.sub": "EXP x300 bilan tez o'sish, adena va drop x1 bilan klassik iqtisod. Har kuni TvT, CvC, qal'a osadasi va epik boss.",
+    "cta.play": "O'ynashni boshlash", "cta.register": "Ro'yxatdan o'tish",
+    "status.max": "Maks. onlayn", "status.time": "Server vaqti", "status.next": "Keyingi:", "status.now": "Hozir:",
+    "status.left": "tugashiga",
+    "server.title": "Server haqida",
+    "server.lead": "Daraja tez ko'tariladi, lekin adena, drop va spoil x1: har bir item va adena qadrli. Personaj har 30 soniyada avtomatik saqlanadi.",
+    "server.rates": "Rate'lar", "server.enchant": "Enchant",
+    "rt.maxlvl": "Maks. level", "rt.expsp": "EXP / SP", "rt.quest": "Quest mukofoti", "rt.adena": "Adena", "rt.drop": "Drop", "rt.spoil": "Spoil",
+    "rt.autoloot": "Avto-loot", "rt.on": "yoqilgan",
+    "en.weapon": "Qurol imkoniyati", "en.armor": "Zirh imkoniyati", "en.jewel": "Taqinchoq imkoniyati", "en.safe": "Xavfsiz enchant",
+    "en.premium": "Premium bonusi",
+    "f1.t": "Buffer", "f1.d": "Bufflar shu yerda. Premium uchun adenasiz to'liq bufflar va 60 buff joyi.",
+    "f2.t": "Gatekeeper", "f2.d": "Shahar va lokatsiyalarga teleport. Premium uchun bepul.",
+    "f3.t": "Event va Quest Manager", "f3.d": "Eventlarga ro'yxatdan o'tish va kunlik topshiriqlar.",
+    "f4.t": "Seller", "f4.d": "Winter va Dynasty do'konlari.",
+    "f5.t": "Auksion va Market", "f5.d": "O'yinchilar o'rtasida savdo.",
+    "f6.t": "Class Master", "f6.d": "Kasbni NPC orqali almashtirish.",
+    "sch.title": "Jadval",
+    "sch.lead": "Hamma vaqt server vaqti, ya'ni O'zbekiston vaqti bilan.",
+    "sch.daily": "Har kuni", "sch.weekly": "Hafta kunlari bo'yicha",
+    "sch.day": "Kun", "sch.siege": "Osada 21:00", "sch.boss": "Epik boss 22:30", "sch.none": "osada yo'q",
+    "sch.noSiege": "Gludio, Dion va Innadril qal'alarida osada yo'q. Dushanba 09:00 Olimpiada natijasi, 09:10 haftalik PvP g'olibi.",
+    "ev.reset": "Kunlik yangilanish", "ev.tvt": "TvT (Team vs Team)", "ev.oly": "Olimpiada", "ev.cvc": "Clan vs Clan (CvC)", "ev.siege": "Qal'a osadasi",
+    "ev.boss": "Epik boss", "ev.olyRes": "Olimpiada natijasi", "ev.pvpWin": "Haftalik PvP g'olibi",
+    "d.reset": "Kunlik topshiriqlar, qal'a reputatsiyasi, Premium Chest", "d.tvt": "Aden Coliseum: 5 daqiqa ro'yxat, 15 daqiqa jang",
+    "d.cvc": "10 ga 10, ro'yxat 5 daqiqa", "d.siege": "21:00-22:00 jang. Yakshanba yo'q",
+    "days": ["Dushanba", "Seshanba", "Chorshanba", "Payshanba", "Juma", "Shanba", "Yakshanba"],
+    "today": "bugun",
+    "c.tvt.t": "TvT · Aden Coliseum",
+    "c.tvt": ["Qizil va ko'k jamoa, har birida 2-20 o'yinchi, level 40-80. Bir IP dan bitta o'yinchi.",
+      "Ro'yxat 5 daqiqa, jang 15 daqiqa. O'lgan o'yinchi 10 soniyada o'z zalida tiriladi.",
+      "Taqiq: tiriltirish, teleport, trade/store, raqib bilan party.",
+      "G'olib: 50 000 Adena, 20 PvP Coin, 15 Coin of Luck.",
+      "Yutqazgan: 25 000 Adena, 5 PvP Coin, 8 Coin of Luck. Durang: sovrin yo'q."],
+    "c.cvc.t": "Clan vs Clan",
+    "c.cvc": ["Har kuni 20:00, 10 ga 10, bitta raund.",
+      "Klan boshlig'i Event Manager orqali 5 daqiqa ichida ro'yxatga yozadi.",
+      "6 xil arena navbat bilan almashadi.",
+      "G'olib klan: +3000 reputatsiya, har a'zoga CvC Chest."],
+    "c.siege.t": "Qal'a osadasi",
+    "c.siege": ["20:50 dan tayyorgarlik, 21:00-22:00 jang.",
+      "Hamma kristallar yo'q qilinmaguncha artefakt muhrlanmaydi. Har kristal: +200 reputatsiya.",
+      "Qal'ani olish: +1000 reputatsiya. Qatnashchilarga Castle Chest.",
+      "Himoyani ushlab qolgan egaga qo'shimcha bonus."],
+    "c.oly.t": "Olimpiada",
+    "c.oly": ["Har kuni 18:00-20:00. Natija har dushanba 09:00.",
+      "Haftada 3+ g'alaba va g'alaba mag'lubiyatdan ko'p bo'lsa: Olympiad Chest (50 Coin of Luck)."],
+    "c.epic.t": "Epik boss",
+    "c.epic": ["Har kuni 22:30, kun bo'yicha boss jadvalda.",
+      "Epic Chest: bossga eng ko'p zarar bergan top-10 ga tasodifiy Coin of Luck va epik jewelry."],
+    "c.chest.t": "Event Chest",
+    "c.chest": ["Hamma sovrinlar sandiqda, to'g'ridan-to'g'ri inventarga tushadi.",
+      "Sandiqlar: PvP, Olympiad, TvT, CvC, Epic, Castle, Premium, Welcome."],
+    "pvp.title": "PvP va klan",
+    "pvp.lead": "Har bir o'ldirish hisoblanadi, klan esa reputatsiya va qal'a uchun kurashadi.",
+    "pvp.h": "PvP",
+    "pvp": ["Har o'ldirish: +1 PvP ball va +1 PvP Coin.",
+      "Ketma-ket o'ldirish unvonlari: Double Kill dan EGO gacha.",
+      "5 ta ketma-ket o'ldirgan o'yinchi WANTED bo'ladi. Uni o'ldirgan 5-200 PvP Coin bounty oladi.",
+      "Haftalik g'olib: PvP Chest (50 PvP Coin + 30 Coin of Luck) va bir hafta qora nik.",
+      "Shaharlar tinch zona, u yerda PvP yo'q."],
+    "clan.h": "Klan",
+    "clan": ["Reputatsiya: kristallar, osada, epik boss, CvC, klan urushi va Coin of Luck topshirish.",
+      "Kunlik reputatsiya chegarasi: 3000.",
+      "Qal'a egasiga har kuni: reputatsiya, +2% statlar, 5 Coin.",
+      "Qal'a egasi 5-10% soliq yig'adi."],
+    "quest.h": "Kunlik topshiriqlar",
+    "quest": ["Quest Manager NPC da olinadi, har kuni 00:00 da yangilanadi.",
+      "Pul topshirig'i (75+ level): 600 mob + 1 raid boss. Mukofot 200 000 Adena, kuniga 3 marta.",
+      "Life Stone topshirig'i (52+ level): 1000 mob, kuniga 1 marta."],
+    "prem.title": "Premium va sandiqlar",
+    "prem.lead": "Premium Coin of Luck yoki PvP Coin evaziga olinadi. Yangi o'yinchi start sandig'i bilan boshlaydi.",
+    "pr.t": "Premium akkaunt", "pr.s": "Coin of Luck yoki PvP Coin",
+    "pr.month": "1 oy", "pr.life": "Umrbod", "pr.col": "Coin of Luck", "pr.pvp": "PvP Coin", "pr.or": "yoki",
+    "pr": ["Buffer'da adenasiz to'liq bufflar va 60 buff joyi", "Bepul teleport", "Enchant imkoniyati +5%",
+      "Do'konlarda 10% chegirma", "+20 inventar va +20 ombor yacheykasi", "+25% yuk limiti", "Oltin titul rangi",
+      "Kunlik Premium Chest: 100 Greater HP, 50 MP, 50 Greater CP, 5 Scroll of Escape"],
+    "wc.t": "Welcome Chest", "wc.s": "Yangi o'yinchi uchun",
+    "wc": ["100 Greater Healing Potion", "50 MP potion", "50 CP potion", "1 soulshot", "Kasbga mos No Grade to'plam va qurol (jangchi yoki mage)"],
+    "ps.t": "PvP Coin xizmatlari", "ps.s": "Har kim uchun",
+    "ps.color": "Nik rangi", "ps.nick": "Nik almashtirish",
+    "start.title": "O'ynashni boshlash",
+    "s1.t": "Akkaunt oching", "s1.d": "Pastdagi formada login va parol tanlang.",
+    "s2.t": "Klientni yuklab oling", "s2.d": "Maxsus sozlangan Interlude klient o'rnatuvchi zip bilan beriladi.",
+    "s3.t": "O'rnating", "s3.d": "Zipni oching va o'rnatuvchini ishga tushiring.",
+    "s4.t": "O'yinga kiring", "s4.d": "Klientni ochib, akkauntingiz bilan kiring. Welcome Chest sizni kutadi.",
+    "dl.client": "Klientni yuklab olish (zip)", "dl.soon": "tez orada",
+    "start.req": "Klient shu server uchun maxsus sozlangan. Boshqa Interlude klient bilan kirib bo'lmasligi mumkin.",
+    "reg.title": "Ro'yxatdan o'tish",
+    "reg.lead": "Parolni hech kimga aytmang: GM hech qachon parol so'ramaydi.",
+    "reg.t1": "Login: 4-14 belgi, faqat lotin harf va raqam", "reg.t2": "Parol: 6-16 belgi", "reg.t3": "Email parolni tiklash uchun kerak",
+    "reg.login": "Login", "reg.email": "Email", "reg.pass": "Parol", "reg.pass2": "Parolni takrorlang",
+    "reg.agree": "Server qoidalarini o'qidim va roziman", "reg.submit": "Akkaunt ochish",
+    "err.login": "Login 4-14 belgi bo'lsin, faqat lotin harf va raqam.", "err.email": "Email manzilini to'g'ri yozing.",
+    "err.pass": "Parol 6-16 belgi bo'lsin.", "err.pass2": "Parollar bir xil emas.", "err.rules": "Qoidalarga rozilik belgisini qo'ying.",
+    "reg.offline": "Ma'lumotlar to'g'ri. Saytdan ro'yxatdan o'tish tez orada ulanadi.",
+    "reg.ok": "Akkaunt ochildi. O'yinga kirishingiz mumkin.", "reg.fail": "Server javob bermadi. Birozdan keyin qayta urinib ko'ring.",
+    "rules.title": "Server qoidalari",
+    "r1.t": "Bot va dasturlar", "r1.d": "Bot, makros dasturlari, paket va o'yin fayllarini o'zgartirish taqiqlanadi.",
+    "r2.t": "Tinch zona", "r2.d": "Shaharlarda PvP yo'q. Jang shahardan tashqarida, eventlarda va osadada.",
+    "r3.t": "Xatodan foydalanish", "r3.d": "O'yin xatosini topsangiz, GM ga yozing. Xatodan foyda olish ban bilan jazolanadi.",
+    "r4.t": "Muomala", "r4.d": "Haqorat, millat va dinga tegish, reklama taqiqlanadi.",
+    "r5.t": "Akkaunt xavfsizligi", "r5.d": "Akkauntni sotish yoki boshqaga berish sizning javobgarligingiz. GM hech qachon parol so'ramaydi.",
+    "contact.title": "Aloqa",
+    "contact.lead": "Savol, shikoyat yoki taklif bo'lsa yozing.",
+    "c.telegram": "Telegram", "c.discord": "Discord", "c.email": "Yordam emaili", "c.soon": "tez orada",
+    "copy": "Nusxa olish", "copied": "Nusxa olindi",
+    "foot.legal": "Lineage II NCSoft kompaniyasining savdo belgisi. Bu sayt NCSoft bilan bog'liq emas. Saytdagi rasm va bezaklar shu sayt uchun yaratilgan."
+  },
+  ru: {
+    demo: "Правила, ссылки на контакты и загрузка ещё не подтверждены.",
+    "nav.server": "Сервер", "nav.schedule": "Расписание", "nav.pvp": "PvP и кланы", "nav.premium": "Премиум",
+    "nav.start": "Начать", "nav.rules": "Правила", "nav.contact": "Контакты",
+    "hero.eyebrow": "Lineage II · Interlude",
+    "hero.sub": "Быстрая прокачка EXP x300 и классическая экономика: адена и дроп x1. Каждый день TvT, CvC, осады и эпик-боссы.",
+    "cta.play": "Начать играть", "cta.register": "Регистрация",
+    "status.max": "Макс. онлайн", "status.time": "Время сервера", "status.next": "Далее:", "status.now": "Сейчас:",
+    "status.left": "до конца",
+    "server.title": "О сервере",
+    "server.lead": "Уровень растёт быстро, но адена, дроп и спойл x1: каждая вещь и каждая адена ценны. Персонаж сохраняется автоматически каждые 30 секунд.",
+    "server.rates": "Рейты", "server.enchant": "Заточка",
+    "rt.maxlvl": "Макс. уровень", "rt.expsp": "EXP / SP", "rt.quest": "Награда за квесты", "rt.adena": "Адена", "rt.drop": "Дроп", "rt.spoil": "Спойл",
+    "rt.autoloot": "Автолут", "rt.on": "включён",
+    "en.weapon": "Шанс оружия", "en.armor": "Шанс брони", "en.jewel": "Шанс бижутерии", "en.safe": "Безопасная заточка",
+    "en.premium": "Бонус премиума",
+    "f1.t": "Баффер", "f1.d": "Все баффы здесь. С премиумом полный бафф без адены и 60 слотов.",
+    "f2.t": "Gatekeeper", "f2.d": "Телепорт по городам и локациям. С премиумом бесплатно.",
+    "f3.t": "Event и Quest Manager", "f3.d": "Регистрация на ивенты и ежедневные задания.",
+    "f4.t": "Seller", "f4.d": "Магазины Winter и Dynasty.",
+    "f5.t": "Аукцион и Маркет", "f5.d": "Торговля между игроками.",
+    "f6.t": "Class Master", "f6.d": "Смена профессии у NPC.",
+    "sch.title": "Расписание",
+    "sch.lead": "Всё время указано по серверу, то есть по Ташкенту.",
+    "sch.daily": "Каждый день", "sch.weekly": "По дням недели",
+    "sch.day": "День", "sch.siege": "Осада 21:00", "sch.boss": "Эпик-босс 22:30", "sch.none": "осады нет",
+    "sch.noSiege": "У замков Gludio, Dion и Innadril осад нет. В понедельник 09:00 итоги Олимпиады, 09:10 победитель недели в PvP.",
+    "ev.reset": "Ежедневный сброс", "ev.tvt": "TvT (Team vs Team)", "ev.oly": "Олимпиада", "ev.cvc": "Clan vs Clan (CvC)", "ev.siege": "Осада замка",
+    "ev.boss": "Эпик-босс", "ev.olyRes": "Итоги Олимпиады", "ev.pvpWin": "Победитель недели PvP",
+    "d.reset": "Ежедневные задания, репутация замка, Premium Chest", "d.tvt": "Aden Coliseum: 5 минут регистрация, 15 минут бой",
+    "d.cvc": "10 на 10, регистрация 5 минут", "d.siege": "бой 21:00-22:00. В воскресенье нет",
+    "days": ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
+    "today": "сегодня",
+    "c.tvt.t": "TvT · Aden Coliseum",
+    "c.tvt": ["Красная и синяя команды, по 2-20 игроков, уровень 40-80. С одного IP один игрок.",
+      "Регистрация 5 минут, бой 15 минут. Погибший воскресает в своём зале через 10 секунд.",
+      "Запрещено: воскрешение, телепорт, trade/store, пати с противником.",
+      "Победа: 50 000 Adena, 20 PvP Coin, 15 Coin of Luck.",
+      "Поражение: 25 000 Adena, 5 PvP Coin, 8 Coin of Luck. Ничья: без награды."],
+    "c.cvc.t": "Clan vs Clan",
+    "c.cvc": ["Каждый день в 20:00, 10 на 10, один раунд.",
+      "Лидер клана записывает клан через Event Manager за 5 минут.",
+      "6 арен сменяют друг друга по очереди.",
+      "Клан-победитель: +3000 репутации, каждому участнику CvC Chest."],
+    "c.siege.t": "Осада замка",
+    "c.siege": ["Подготовка с 20:50, бой 21:00-22:00.",
+      "Пока все кристаллы не уничтожены, артефакт не запечатать. Каждый кристалл: +200 репутации.",
+      "Захват замка: +1000 репутации. Участникам Castle Chest.",
+      "Владельцу, удержавшему замок, дополнительный бонус."],
+    "c.oly.t": "Олимпиада",
+    "c.oly": ["Каждый день 18:00-20:00. Итоги в понедельник 09:00.",
+      "3+ победы за неделю и побед больше, чем поражений: Olympiad Chest (50 Coin of Luck)."],
+    "c.epic.t": "Эпик-босс",
+    "c.epic": ["Каждый день в 22:30, босс по дням в таблице.",
+      "Epic Chest: топ-10 по урону получают случайно Coin of Luck и эпик-бижутерию."],
+    "c.chest.t": "Event Chest",
+    "c.chest": ["Все награды приходят в сундуке прямо в инвентарь.",
+      "Сундуки: PvP, Olympiad, TvT, CvC, Epic, Castle, Premium, Welcome."],
+    "pvp.title": "PvP и кланы",
+    "pvp.lead": "Каждое убийство на счету, а кланы бьются за репутацию и замки.",
+    "pvp.h": "PvP",
+    "pvp": ["За каждое убийство: +1 PvP очко и +1 PvP Coin.",
+      "Титулы за серию убийств: от Double Kill до EGO.",
+      "После 5 убийств подряд игрок становится WANTED. Убивший его получает награду 5-200 PvP Coin.",
+      "Победитель недели: PvP Chest (50 PvP Coin + 30 Coin of Luck) и чёрный ник на неделю.",
+      "Города мирная зона, там PvP нет."],
+    "clan.h": "Клан",
+    "clan": ["Репутация: кристаллы, осады, эпик-боссы, CvC, клановые войны и сдача Coin of Luck.",
+      "Лимит репутации в день: 3000.",
+      "Владельцу замка каждый день: репутация, +2% к статам, 5 Coin.",
+      "Владелец замка собирает налог 5-10%."],
+    "quest.h": "Ежедневные задания",
+    "quest": ["Берутся у Quest Manager, обновляются каждый день в 00:00.",
+      "Задание на адену (75+ уровень): 600 мобов + 1 рейд-босс. Награда 200 000 Adena, 3 раза в день.",
+      "Задание на Life Stone (52+ уровень): 1000 мобов, 1 раз в день."],
+    "prem.title": "Премиум и сундуки",
+    "prem.lead": "Премиум покупается за Coin of Luck или PvP Coin. Новый игрок начинает со стартовым сундуком.",
+    "pr.t": "Премиум аккаунт", "pr.s": "За Coin of Luck или PvP Coin",
+    "pr.month": "1 месяц", "pr.life": "Навсегда", "pr.col": "Coin of Luck", "pr.pvp": "PvP Coin", "pr.or": "или",
+    "pr": ["Полный бафф без адены и 60 слотов баффа", "Бесплатный телепорт", "Шанс заточки +5%",
+      "Скидка 10% в магазинах", "+20 ячеек инвентаря и +20 склада", "+25% к лимиту веса", "Золотой цвет титула",
+      "Ежедневный Premium Chest: 100 Greater HP, 50 MP, 50 Greater CP, 5 Scroll of Escape"],
+    "wc.t": "Welcome Chest", "wc.s": "Для нового игрока",
+    "wc": ["100 Greater Healing Potion", "50 MP зелий", "50 CP зелий", "1 соулшот", "Сет и оружие No Grade под профессию (воин или маг)"],
+    "ps.t": "Услуги за PvP Coin", "ps.s": "Для всех",
+    "ps.color": "Цвет ника", "ps.nick": "Смена ника",
+    "start.title": "Как начать играть",
+    "s1.t": "Создайте аккаунт", "s1.d": "Выберите логин и пароль в форме ниже.",
+    "s2.t": "Скачайте клиент", "s2.d": "Настроенный клиент Interlude выдаётся с установщиком в zip.",
+    "s3.t": "Установите", "s3.d": "Распакуйте zip и запустите установщик.",
+    "s4.t": "Войдите в игру", "s4.d": "Откройте клиент и войдите со своим аккаунтом. Вас ждёт Welcome Chest.",
+    "dl.client": "Скачать клиент (zip)", "dl.soon": "скоро",
+    "start.req": "Клиент специально настроен под этот сервер. С другим клиентом Interlude войти может не получиться.",
+    "reg.title": "Регистрация",
+    "reg.lead": "Никому не сообщайте пароль: ГМ никогда его не спрашивает.",
+    "reg.t1": "Логин: 4-14 символов, только латиница и цифры", "reg.t2": "Пароль: 6-16 символов", "reg.t3": "Email нужен для восстановления пароля",
+    "reg.login": "Логин", "reg.email": "Email", "reg.pass": "Пароль", "reg.pass2": "Повторите пароль",
+    "reg.agree": "Я прочитал правила сервера и согласен", "reg.submit": "Создать аккаунт",
+    "err.login": "Логин 4-14 символов, только латиница и цифры.", "err.email": "Введите корректный email.",
+    "err.pass": "Пароль должен быть 6-16 символов.", "err.pass2": "Пароли не совпадают.", "err.rules": "Отметьте согласие с правилами.",
+    "reg.offline": "Данные верны. Регистрация на сайте скоро заработает.",
+    "reg.ok": "Аккаунт создан. Можно заходить в игру.", "reg.fail": "Сервер не ответил. Попробуйте чуть позже.",
+    "rules.title": "Правила сервера",
+    "r1.t": "Боты и программы", "r1.d": "Запрещены боты, макро-программы, пакеты и изменение файлов игры.",
+    "r2.t": "Мирная зона", "r2.d": "В городах PvP нет. Бои за городом, на ивентах и осадах.",
+    "r3.t": "Использование багов", "r3.d": "Нашли баг, напишите ГМ. Абуз карается баном.",
+    "r4.t": "Общение", "r4.d": "Запрещены оскорбления, разжигание по нации и религии, реклама.",
+    "r5.t": "Безопасность аккаунта", "r5.d": "Продажа или передача аккаунта на вашей ответственности. ГМ никогда не спрашивает пароль.",
+    "contact.title": "Контакты",
+    "contact.lead": "Вопросы, жалобы и предложения пишите сюда.",
+    "c.telegram": "Telegram", "c.discord": "Discord", "c.email": "Email поддержки", "c.soon": "скоро",
+    "copy": "Копировать", "copied": "Скопировано",
+    "foot.legal": "Lineage II является торговой маркой NCSoft. Сайт не связан с NCSoft. Графика и оформление созданы специально для этого сайта."
+  }
+};
+
+let lang = "uz";
+try { const s = localStorage.getItem("ego900-lang"); if (s === "ru" || s === "uz") lang = s; } catch (e) {}
+const t = (k) => (T[lang][k] ?? T.uz[k] ?? k);
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const val = (v) => (typeof v === "string" && v[0] === "@" ? t(v.slice(1)) : v);
+const pad = (n) => String(n).padStart(2, "0");
+const num = (n) => Number(n).toLocaleString("ru-RU");
+const list = (k) => `<ul class="plist">${t(k).map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`;
+
+/* Server time (UTC+5, no DST) */
+function serverNow() {
+  const d = new Date(Date.now() + CONFIG.tzOffset * 3600e3);
+  return { ms: d.getTime(), wd: ((d.getUTCDay() + 6) % 7) + 1, h: d.getUTCHours(), m: d.getUTCMinutes(), s: d.getUTCSeconds(), dayStart: Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()) };
+}
+const toMin = (hm) => { const [h, m] = hm.split(":").map(Number); return h * 60 + m; };
+
+function evName(e, wd) {
+  if (e.ev === "boss") return t("ev.boss") + ": " + CONFIG.bosses[wd];
+  if (e.ev === "siege") return t("ev.siege") + ": " + CONFIG.sieges[wd];
+  return t("ev." + e.ev);
+}
+
+function dayEvents(wd) {
+  const l = CONFIG.daily.filter((e) => e.ev !== "reset" && !(e.noSun && wd === 7) && !(e.ev === "siege" && !CONFIG.sieges[wd]));
+  return (wd === 1 ? CONFIG.monday.concat(l) : l).slice().sort((a, b) => toMin(a.t) - toMin(b.t));
+}
+
+/* Running event (if any) or the next one, within 8 days */
+function nextEvent() {
+  const n = serverNow();
+  for (let k = 0; k < 8; k++) {
+    const wd = ((n.wd - 1 + k) % 7) + 1, base = n.dayStart + k * 86400e3;
+    for (const e of dayEvents(wd)) {
+      const start = base + toMin(e.t) * 60e3;
+      const end = e.end ? base + toMin(e.end) * 60e3 : e.min ? start + e.min * 60e3 : start;
+      if (k === 0 && n.ms >= start && n.ms < end) return { name: evName(e, wd), running: true, ms: end - n.ms };
+      if (start > n.ms) return { name: evName(e, wd), running: false, ms: start - n.ms };
+    }
+  }
+  return null;
+}
+
+function render() {
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach((n) => { n.textContent = t(n.dataset.i18n); });
+  document.querySelectorAll("[data-cfg]").forEach((n) => { n.textContent = CONFIG[n.dataset.cfg]; });
+  document.querySelectorAll(".lang button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+  $("demoRibbon").hidden = !CONFIG.demo;
+  $("year").textContent = new Date().getFullYear();
+  $("stMax").textContent = CONFIG.maxOnline;
+
+  const row = (k, v) => `<tr><th scope="row">${esc(t(k))}</th><td>${esc(val(v))}</td></tr>`;
+  $("ratesTable").innerHTML = "<tbody>" + CONFIG.rates.map(([k, v]) => row(k, v)).join("") + "</tbody>";
+  $("enchantTable").innerHTML = "<tbody>" + CONFIG.enchant.map(([k, v]) => row(k, v)).join("") + "</tbody>";
+
+  $("features").innerHTML = [1, 2, 3, 4, 5, 6].map((i) => `<li><b>${esc(t("f" + i + ".t"))}</b><span>${esc(t("f" + i + ".d"))}</span></li>`).join("");
+
+  const today = serverNow().wd;
+  $("daily").innerHTML = CONFIG.daily.map((e) => {
+    const time = e.end ? `${e.t}–${e.end}` : e.t;
+    const note = T.uz["d." + e.ev] ? `<small>${esc(t("d." + e.ev))}</small>` : "";
+    return `<li${e.ev === "reset" ? ' class="reset"' : ""}><time>${esc(time)}</time><span><b>${esc(t("ev." + e.ev))}</b>${note}</span></li>`;
+  }).join("");
+
+  const days = t("days");
+  $("weekly").innerHTML = `<thead><tr><th scope="col">${esc(t("sch.day"))}</th><th scope="col">${esc(t("sch.siege"))}</th><th scope="col">${esc(t("sch.boss"))}</th></tr></thead><tbody>` +
+    days.map((name, i) => {
+      const d = i + 1, sg = CONFIG.sieges[d];
+      return `<tr${d === today ? ' class="today"' : ""}><th scope="row">${esc(name)}${d === today ? ` <em>${esc(t("today"))}</em>` : ""}</th><td${sg ? "" : ' class="muted"'}>${esc(sg || t("sch.none"))}</td><td>${esc(CONFIG.bosses[d])}</td></tr>`;
+    }).join("") + "</tbody>";
+
+  $("eventCards").innerHTML = ["tvt", "cvc", "siege", "oly", "epic", "chest"].map((k) =>
+    `<div class="ev-card"><b>${esc(t("c." + k + ".t"))}</b>${list("c." + k)}</div>`).join("");
+
+  const col = (h, k) => `<div class="panel"><h3 class="panel-h">${esc(t(h))}</h3>${list(k)}</div>`;
+  $("pvpCols").innerHTML = col("pvp.h", "pvp") + col("clan.h", "clan") + col("quest.h", "quest");
+
+  const prices = CONFIG.premium.map(([k, col, pvp]) =>
+    `<tr><th scope="row">${esc(t(k))}</th><td>${num(col)} <small>${esc(t("pr.col"))}</small></td><td class="or">${esc(t("pr.or"))}</td><td>${num(pvp)} <small>${esc(t("pr.pvp"))}</small></td></tr>`).join("");
+  const shop = CONFIG.pvpShop.map(([k, n]) => `<tr><th scope="row">${esc(t(k))}</th><td>${num(n)} <small>${esc(t("pr.pvp"))}</small></td></tr>`).join("");
+  $("chests").innerHTML =
+    `<div class="panel chest prem"><span class="label">${esc(t("pr.s"))}</span><h3 class="panel-h">${esc(t("pr.t"))}</h3>` +
+      `<div class="tbl-scroll"><table class="price-tbl"><tbody>${prices}</tbody></table></div>${list("pr")}</div>` +
+    `<div class="chest-side">` +
+      `<div class="panel chest"><span class="label">${esc(t("wc.s"))}</span><h3 class="panel-h">${esc(t("wc.t"))}</h3>${list("wc")}</div>` +
+      `<div class="panel chest"><span class="label">${esc(t("ps.s"))}</span><h3 class="panel-h">${esc(t("ps.t"))}</h3><div class="tbl-scroll"><table class="price-tbl"><tbody>${shop}</tbody></table></div></div>` +
+    `</div>`;
+
+  $("steps").innerHTML = [1, 2, 3, 4].map((i) => `<li><b>${esc(t("s" + i + ".t"))}</b><span>${esc(t("s" + i + ".d"))}</span></li>`).join("");
+  $("downloads").innerHTML = CONFIG.downloads.map((d) => d.url
+    ? `<a class="btn btn-gold" href="${esc(d.url)}" target="_blank" rel="noopener">${esc(t(d.key))}</a>`
+    : `<span class="btn btn-ghost is-off" aria-disabled="true">${esc(t(d.key))} · ${esc(t("dl.soon"))}</span>`).join("");
+
+  $("rulesList").innerHTML = [1, 2, 3, 4, 5].map((i) => `<details${i === 1 ? " open" : ""}><summary>${esc(t("r" + i + ".t"))}</summary><p>${esc(t("r" + i + ".d"))}</p></details>`).join("");
+
+  const c = CONFIG.contacts;
+  const icons = { telegram: "TG", discord: "DC", email: "@" };
+  $("contacts").innerHTML = Object.keys(icons).map((k) => {
+    const v = c[k];
+    if (!v) return `<div class="contact tbd"><i>${icons[k]}</i><span><b>${esc(t("c." + k))}</b><small>${esc(t("c.soon"))}</small></span></div>`;
+    if (k === "email") return `<div class="contact"><i>${icons[k]}</i><span><b>${esc(t("c." + k))}</b><small class="sel">${esc(v)}</small></span><button type="button" class="btn btn-ghost copy" data-copy="${esc(v)}">${esc(t("copy"))}</button></div>`;
+    return `<a class="contact" href="${esc(v)}" target="_blank" rel="noopener"><i>${icons[k]}</i><span><b>${esc(t("c." + k))}</b><small>${esc(v.replace(/^https?:\/\//, ""))}</small></span></a>`;
+  }).join("");
+
+  // scrollable tables must be reachable by keyboard
+  document.querySelectorAll(".tbl-scroll").forEach((n) => { if (n.scrollWidth > n.clientWidth + 1) n.tabIndex = 0; else n.removeAttribute("tabindex"); });
+  tick();
+}
+
+let lastDay = 0;
+function tick() {
+  const n = serverNow();
+  $("stClock").textContent = `${pad(n.h)}:${pad(n.m)}:${pad(n.s)}`;
+  if (lastDay && lastDay !== n.wd) { lastDay = n.wd; render(); return; }
+  lastDay = n.wd;
+  const e = nextEvent();
+  if (!e) return;
+  const s = Math.floor(e.ms / 1000);
+  $("nextName").textContent = e.name;
+  $("nextName").previousElementSibling.textContent = t(e.running ? "status.now" : "status.next");
+  const hms = `${pad(Math.floor(s / 3600))}:${pad(Math.floor(s / 60) % 60)}:${pad(s % 60)}`;
+  $("countdown").textContent = e.running ? `${t("status.left")} ${hms}` : hms;
+}
+
+/* Registration form */
+function setErr(inputId, errId, msg) {
+  $(errId).textContent = msg || "";
+  if (inputId) $(inputId).setAttribute("aria-invalid", msg ? "true" : "false");
+  return !msg;
+}
+
+async function onSubmit(e) {
+  e.preventDefault();
+  const login = $("regLogin").value.trim(), email = $("regEmail").value.trim();
+  const pass = $("regPass").value, pass2 = $("regPass2").value;
+  const ok = [
+    setErr("regLogin", "errLogin", /^[A-Za-z0-9]{4,14}$/.test(login) ? "" : t("err.login")),
+    setErr("regEmail", "errEmail", /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email) ? "" : t("err.email")),
+    setErr("regPass", "errPass", pass.length >= 6 && pass.length <= 16 ? "" : t("err.pass")),
+    setErr("regPass2", "errPass2", pass2 === pass && pass2 ? "" : t("err.pass2")),
+    setErr(null, "errRules", $("regRules").checked ? "" : t("err.rules"))
+  ].every(Boolean);
+  const msg = $("regMsg");
+  msg.hidden = true; msg.className = "form-msg";
+  if (!ok) { document.querySelector('#regForm [aria-invalid="true"]')?.focus(); return; }
+
+  if (!CONFIG.registerApi) { msg.textContent = t("reg.offline"); msg.hidden = false; return; }
+  const btn = e.submitter || document.querySelector("#regForm button[type=submit]");
+  btn.disabled = true;
+  try {
+    const r = await fetch(CONFIG.registerApi, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ login, email, password: pass }) });
+    if (!r.ok) throw new Error(r.status);
+    msg.textContent = t("reg.ok"); e.target.reset();
+  } catch (err) {
+    msg.textContent = t("reg.fail"); msg.classList.add("bad");
+  } finally {
+    msg.hidden = false; btn.disabled = false;
+  }
+}
+
+/* Hero: castle silhouette + rising embers */
+function embers() {
+  const cv = $("embers"), ctx = cv.getContext("2d");
+  const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let w = 0, h = 0, parts = [], dpr = 1;
+  function size() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = cv.clientWidth; h = cv.clientHeight;
+    cv.width = w * dpr; cv.height = h * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const n = Math.round(Math.min(70, w / 14));
+    parts = Array.from({ length: n }, () => spawn(true));
+  }
+  function spawn(any) {
+    return { x: Math.random() * w, y: any ? Math.random() * h : h + 10, r: Math.random() * 1.8 + .6, v: Math.random() * .5 + .25, a: Math.random() * Math.PI * 2, life: Math.random() * .6 + .4 };
+  }
+  function castle() {
+    const base = h - 18, s = Math.min(1, w / 1100);
+    ctx.fillStyle = "#0a0705";
+    ctx.beginPath(); ctx.moveTo(0, h); ctx.lineTo(0, base - 10);
+    // hills
+    for (let x = 0; x <= w; x += 20) ctx.lineTo(x, base - 14 - Math.sin(x / 140) * 10 - Math.sin(x / 47) * 4);
+    ctx.lineTo(w, h); ctx.closePath(); ctx.fill();
+    // keep with towers, drawn around center-right
+    const cx = w * .72, tw = 26 * s + 10;
+    const towers = [[-5, 90], [-3.4, 120], [-1.6, 70], [0, 160], [1.6, 82], [3.2, 128], [4.8, 96]];
+    towers.forEach(([o, th]) => {
+      const x = cx + o * tw * 1.05, top = base - 20 - th * s;
+      ctx.fillRect(x - tw / 2, top, tw, base - top);
+      for (let k = 0; k < 3; k++) ctx.fillRect(x - tw / 2 + k * tw / 2.5, top - 7 * s - 3, tw / 5, 7 * s + 3);
+      if (th > 110) { ctx.beginPath(); ctx.moveTo(x - tw / 2 - 3, top - 6); ctx.lineTo(x, top - 46 * s - 14); ctx.lineTo(x + tw / 2 + 3, top - 6); ctx.fill(); }
+    });
+    ctx.fillRect(cx - 5 * tw * 1.05, base - 60 * s - 10, 9.8 * tw * 1.05, 60 * s + 30);
+    // lit windows
+    ctx.fillStyle = "#e0a84a";
+    [[-3.4, 70], [0, 110], [0, 80], [3.2, 85], [1.6, 50]].forEach(([o, y]) => ctx.fillRect(cx + o * tw * 1.05 - 2, base - y * s - 10, 4, 7));
+  }
+  function frame() {
+    ctx.clearRect(0, 0, w, h);
+    parts.forEach((p, i) => {
+      p.y -= p.v; p.a += .02; p.x += Math.sin(p.a) * .3;
+      const fade = Math.max(0, Math.min(1, p.y / h)) * p.life;
+      ctx.fillStyle = `rgba(240,170,80,${fade.toFixed(3)})`;
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+      if (p.y < -10) parts[i] = spawn(false);
+    });
+    castle();
+    if (!still) requestAnimationFrame(frame);
+  }
+  size(); frame();
+  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { size(); if (still) frame(); }, 150); });
+}
+
+function init() {
+  render();
+  setInterval(tick, 1000);
+  document.querySelectorAll(".lang button").forEach((b) => b.addEventListener("click", () => {
+    lang = b.dataset.lang;
+    try { localStorage.setItem("ego900-lang", lang); } catch (e) {}
+    render();
+    document.querySelectorAll(".err").forEach((n) => { n.textContent = ""; });
+    document.querySelectorAll("#regForm [aria-invalid]").forEach((n) => n.removeAttribute("aria-invalid"));
+    $("regMsg").hidden = true;
+  }));
+
+  const burger = $("burger"), nav = $("nav");
+  burger.addEventListener("click", () => {
+    const open = !nav.classList.contains("open");
+    nav.classList.toggle("open", open); burger.setAttribute("aria-expanded", String(open));
+  });
+  nav.addEventListener("click", (e) => {
+    if (e.target.closest("a")) { nav.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); }
+  });
+
+  $("regForm").addEventListener("submit", onSubmit);
+
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-copy]");
+    if (!b) return;
+    const done = () => { b.textContent = t("copied"); setTimeout(() => { b.textContent = t("copy"); }, 1500); };
+    navigator.clipboard?.writeText(b.dataset.copy).then(done, () => {
+      const s = b.parentElement.querySelector(".sel"); const r = document.createRange(); r.selectNodeContents(s);
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    });
+  });
+
+  const toTop = $("toTop");
+  toTop.addEventListener("click", () => window.scrollTo({ top: 0 }));
+  const links = [...nav.querySelectorAll("a")];
+  const onScroll = () => {
+    toTop.hidden = window.scrollY < 600;
+    let cur = "";
+    links.forEach((a) => { const s = document.querySelector(a.getAttribute("href")); if (s && s.getBoundingClientRect().top < 120) cur = a.getAttribute("href"); });
+    links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === cur));
+  };
+  window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+  embers();
+}
+
+if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
+</script>
+</body>
+</html>
