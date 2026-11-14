@@ -3220,7 +3220,7 @@
 120
 ]
 },
-"duration": 1.2,
+"duration": 1.7,
 "animations": {
 "position": {
 "keyframes": [
@@ -3228,15 +3228,15 @@
 "time": 15.0,
 "value": [
 560,
-900
+905
 ],
 "easing": "ease_out"
 },
 {
-"time": 16.1,
+"time": 16.6,
 "value": [
--42.60942488726323,
-630.0646910724918
+147.60907637269133,
+1160.0
 ],
 "easing": "ease_out"
 }
@@ -3255,16 +3255,16 @@
 {
 "time": 15.3,
 "value": [
-1.4,
-1.4
+1.3,
+1.3
 ],
 "easing": "ease_in_out"
 },
 {
-"time": 16.1,
+"time": 16.6,
 "value": [
-1.0,
-1.0
+0.9,
+0.9
 ],
 "easing": "ease_in_out"
 }
@@ -3283,12 +3283,12 @@
 "easing": "ease_in_out"
 },
 {
-"time": 15.8,
+"time": 16.2,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 16.15,
+"time": 16.65,
 "value": 0,
 "easing": "ease_in_out"
 }
@@ -3302,7 +3302,7 @@
 "easing": "ease_in_out"
 },
 {
-"time": 16.1,
+"time": 16.6,
 "value": 180,
 "easing": "ease_in_out"
 }
@@ -3327,7 +3327,7 @@
 120
 ]
 },
-"duration": 1.2,
+"duration": 1.7,
 "animations": {
 "position": {
 "keyframes": [
@@ -3335,15 +3335,15 @@
 "time": 15.0,
 "value": [
 560,
-900
+905
 ],
 "easing": "ease_out"
 },
 {
-"time": 16.1,
+"time": 16.6,
 "value": [
-379.5321920364372,
-155.89637202030804
+96.53266620475057,
+809.7029476131961
 ],
 "easing": "ease_out"
 }
@@ -3362,16 +3362,16 @@
 {
 "time": 15.3,
 "value": [
-1.4,
-1.4
+1.3,
+1.3
 ],
 "easing": "ease_in_out"
 },
 {
-"time": 16.1,
+"time": 16.6,
 "value": [
-1.0,
-1.0
+0.9,
+0.9
 ],
 "easing": "ease_in_out"
 }
@@ -3390,12 +3390,12 @@
 "easing": "ease_in_out"
 },
 {
-"time": 15.8,
+"time": 16.2,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 16.15,
+"time": 16.65,
 "value": 0,
 "easing": "ease_in_out"
 }
@@ -3409,7 +3409,7 @@
 "easing": "ease_in_out"
 },
 {
-"time": 16.1,
+"time": 16.6,
 "value": 240,
 "easing": "ease_in_out"
 }
@@ -3434,7 +3434,7 @@
 120
 ]
 },
-"duration": 1.2,
+"duration": 1.7,
 "animations": {
 "position": {
 "keyframes": [
@@ -3442,15 +3442,15 @@
 "time": 15.0,
 "value": [
 560,
-900
+905
 ],
 "easing": "ease_out"
 },
 {
-"time": 16.1,
+"time": 16.6,
 "value": [
-938.5283180056543,
-307.80622322957663
+243.60132783478804,
+501.6568895781315
 ],
 "easing": "ease_out"
 }
@@ -3469,16 +3469,16 @@
 {
 "time": 15.3,
 "value": [
-1.4,
-1.4
+1.3,
+1.3
 ],
 "easing": "ease_in_out"
 },
 {
-"time": 16.1,
+"time": 16.6,
 "value": [
-1.0,
-1.0
+0.9,
+0.9
 ],
 "easing": "ease_in_out"
 }
@@ -3497,12 +3497,12 @@
 "easing": "ease_in_out"
 },
 {
-"time": 15.8,
+"time": 16.2,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 16.15,
+"time": 16.65,
 "value": 0,
 "easing": "ease_in_out"
 }
@@ -3516,7 +3516,7 @@
 "easing": "ease_in_out"
 },
 {
-"time": 16.1,
+"time": 16.6,
 "value": 300,
 "easing": "ease_in_out"
 }
@@ -3526,7 +3526,7 @@
 },
 {
 "id": "gs3",
-"start": 15.65,
+"start": 15.0,
 "content": {
 "kind": "media",
 "asset": {
@@ -3541,23 +3541,23 @@
 120
 ]
 },
-"duration": 1.2,
+"duration": 1.7,
 "animations": {
 "position": {
 "keyframes": [
 {
-"time": 15.65,
+"time": 15.0,
 "value": [
 560,
-900
+905
 ],
 "easing": "ease_out"
 },
 {
-"time": 16.75,
+"time": 16.6,
 "value": [
-20.024247873837112,
-476.0743333885794
+519.9999999999999,
+380.0
 ],
 "easing": "ease_out"
 }
@@ -3566,7 +3566,7 @@
 "scale": {
 "keyframes": [
 {
-"time": 15.65,
+"time": 15.0,
 "value": [
 0.5,
 0.5
@@ -3574,18 +3574,18 @@
 "easing": "ease_in_out"
 },
 {
-"time": 15.95,
+"time": 15.3,
 "value": [
-1.4,
-1.4
+1.3,
+1.3
 ],
 "easing": "ease_in_out"
 },
 {
-"time": 16.75,
+"time": 16.6,
 "value": [
-1.0,
-1.0
+0.9,
+0.9
 ],
 "easing": "ease_in_out"
 }
@@ -3594,22 +3594,22 @@
 "opacity": {
 "keyframes": [
 {
-"time": 15.65,
+"time": 15.0,
 "value": 0,
 "easing": "ease_in_out"
 },
 {
-"time": 15.75,
+"time": 15.1,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 16.45,
+"time": 16.2,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 16.8,
+"time": 16.65,
 "value": 0,
 "easing": "ease_in_out"
 }
@@ -3618,13 +3618,13 @@
 "rotation": {
 "keyframes": [
 {
-"time": 15.65,
+"time": 15.0,
 "value": 0,
 "easing": "ease_in_out"
 },
 {
-"time": 16.75,
-"value": 180,
+"time": 16.6,
+"value": 360,
 "easing": "ease_in_out"
 }
 ]
@@ -3648,7 +3648,7 @@
 120
 ]
 },
-"duration": 1.2,
+"duration": 1.7,
 "animations": {
 "position": {
 "keyframes": [
@@ -3656,15 +3656,15 @@
 "time": 15.65,
 "value": [
 560,
-900
+905
 ],
 "easing": "ease_out"
 },
 {
-"time": 16.75,
+"time": 17.25,
 "value": [
-518.3623120444495,
-130.46297146548727
+113.42701249229378,
+1069.2954403177214
 ],
 "easing": "ease_out"
 }
@@ -3683,16 +3683,16 @@
 {
 "time": 15.95,
 "value": [
-1.4,
-1.4
+1.3,
+1.3
 ],
 "easing": "ease_in_out"
 },
 {
-"time": 16.75,
+"time": 17.25,
 "value": [
-1.0,
-1.0
+0.9,
+0.9
 ],
 "easing": "ease_in_out"
 }
@@ -3711,12 +3711,12 @@
 "easing": "ease_in_out"
 },
 {
-"time": 16.45,
+"time": 16.85,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 16.8,
+"time": 17.3,
 "value": 0,
 "easing": "ease_in_out"
 }
@@ -3730,8 +3730,8 @@
 "easing": "ease_in_out"
 },
 {
-"time": 16.75,
-"value": 240,
+"time": 17.25,
+"value": 180,
 "easing": "ease_in_out"
 }
 ]
@@ -3755,7 +3755,7 @@
 120
 ]
 },
-"duration": 1.2,
+"duration": 1.7,
 "animations": {
 "position": {
 "keyframes": [
@@ -3763,15 +3763,15 @@
 "time": 15.65,
 "value": [
 560,
-900
+905
 ],
 "easing": "ease_out"
 },
 {
-"time": 16.75,
+"time": 17.25,
 "value": [
-1035.1540162293215,
-432.6205824044433
+118.56041660620326,
+713.6486662364438
 ],
 "easing": "ease_out"
 }
@@ -3790,16 +3790,16 @@
 {
 "time": 15.95,
 "value": [
-1.4,
-1.4
+1.3,
+1.3
 ],
 "easing": "ease_in_out"
 },
 {
-"time": 16.75,
+"time": 17.25,
 "value": [
-1.0,
-1.0
+0.9,
+0.9
 ],
 "easing": "ease_in_out"
 }
@@ -3818,12 +3818,12 @@
 "easing": "ease_in_out"
 },
 {
-"time": 16.45,
+"time": 16.85,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 16.8,
+"time": 17.3,
 "value": 0,
 "easing": "ease_in_out"
 }
@@ -3837,8 +3837,8 @@
 "easing": "ease_in_out"
 },
 {
-"time": 16.75,
-"value": 300,
+"time": 17.25,
+"value": 240,
 "easing": "ease_in_out"
 }
 ]
@@ -3847,7 +3847,7 @@
 },
 {
 "id": "gs6",
-"start": 16.3,
+"start": 15.65,
 "content": {
 "kind": "media",
 "asset": {
@@ -3862,23 +3862,23 @@
 120
 ]
 },
-"duration": 1.2,
+"duration": 1.7,
 "animations": {
 "position": {
 "keyframes": [
 {
-"time": 16.3,
+"time": 15.65,
 "value": [
 560,
-900
+905
 ],
 "easing": "ease_out"
 },
 {
-"time": 17.4,
+"time": 17.25,
 "value": [
-109.31181031542172,
-343.30175174262513
+311.53186329407515,
+445.1977522875141
 ],
 "easing": "ease_out"
 }
@@ -3887,7 +3887,7 @@
 "scale": {
 "keyframes": [
 {
-"time": 16.3,
+"time": 15.65,
 "value": [
 0.5,
 0.5
@@ -3895,18 +3895,18 @@
 "easing": "ease_in_out"
 },
 {
-"time": 16.6,
+"time": 15.95,
 "value": [
-1.4,
-1.4
+1.3,
+1.3
 ],
 "easing": "ease_in_out"
 },
 {
-"time": 17.4,
+"time": 17.25,
 "value": [
-1.0,
-1.0
+0.9,
+0.9
 ],
 "easing": "ease_in_out"
 }
@@ -3915,22 +3915,22 @@
 "opacity": {
 "keyframes": [
 {
-"time": 16.3,
+"time": 15.65,
 "value": 0,
 "easing": "ease_in_out"
 },
 {
-"time": 16.4,
+"time": 15.75,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 17.1,
+"time": 16.85,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 17.45,
+"time": 17.3,
 "value": 0,
 "easing": "ease_in_out"
 }
@@ -3939,13 +3939,13 @@
 "rotation": {
 "keyframes": [
 {
-"time": 16.3,
+"time": 15.65,
 "value": 0,
 "easing": "ease_in_out"
 },
 {
-"time": 17.4,
-"value": 180,
+"time": 17.25,
+"value": 300,
 "easing": "ease_in_out"
 }
 ]
@@ -3954,7 +3954,7 @@
 },
 {
 "id": "gs7",
-"start": 16.3,
+"start": 15.65,
 "content": {
 "kind": "media",
 "asset": {
@@ -3969,23 +3969,23 @@
 120
 ]
 },
-"duration": 1.2,
+"duration": 1.7,
 "animations": {
 "position": {
 "keyframes": [
 {
-"time": 16.3,
+"time": 15.65,
 "value": [
 560,
-900
+905
 ],
 "easing": "ease_out"
 },
 {
-"time": 17.4,
+"time": 17.25,
 "value": [
-658.301577133458,
-143.9633405797755
+602.0478680119144,
+389.5538646072148
 ],
 "easing": "ease_out"
 }
@@ -3994,7 +3994,7 @@
 "scale": {
 "keyframes": [
 {
-"time": 16.3,
+"time": 15.65,
 "value": [
 0.5,
 0.5
@@ -4002,18 +4002,18 @@
 "easing": "ease_in_out"
 },
 {
-"time": 16.6,
+"time": 15.95,
 "value": [
-1.4,
-1.4
+1.3,
+1.3
 ],
 "easing": "ease_in_out"
 },
 {
-"time": 17.4,
+"time": 17.25,
 "value": [
-1.0,
-1.0
+0.9,
+0.9
 ],
 "easing": "ease_in_out"
 }
@@ -4022,22 +4022,22 @@
 "opacity": {
 "keyframes": [
 {
-"time": 16.3,
+"time": 15.65,
 "value": 0,
 "easing": "ease_in_out"
 },
 {
-"time": 16.4,
+"time": 15.75,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 17.1,
+"time": 16.85,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 17.45,
+"time": 17.3,
 "value": 0,
 "easing": "ease_in_out"
 }
@@ -4046,13 +4046,13 @@
 "rotation": {
 "keyframes": [
 {
-"time": 16.3,
+"time": 15.65,
 "value": 0,
 "easing": "ease_in_out"
 },
 {
-"time": 17.4,
-"value": 240,
+"time": 17.25,
+"value": 360,
 "easing": "ease_in_out"
 }
 ]
@@ -4076,7 +4076,7 @@
 120
 ]
 },
-"duration": 1.2,
+"duration": 1.7,
 "animations": {
 "position": {
 "keyframes": [
@@ -4084,15 +4084,15 @@
 "time": 16.3,
 "value": [
 560,
-900
+905
 ],
 "easing": "ease_out"
 },
 {
-"time": 17.4,
+"time": 17.9,
 "value": [
-1106.3981837384126,
-580.8801512623919
+94.18473044112477,
+972.370012499234
 ],
 "easing": "ease_out"
 }
@@ -4111,16 +4111,16 @@
 {
 "time": 16.6,
 "value": [
-1.4,
-1.4
+1.3,
+1.3
 ],
 "easing": "ease_in_out"
 },
 {
-"time": 17.4,
+"time": 17.9,
 "value": [
-1.0,
-1.0
+0.9,
+0.9
 ],
 "easing": "ease_in_out"
 }
@@ -4139,12 +4139,12 @@
 "easing": "ease_in_out"
 },
 {
-"time": 17.1,
+"time": 17.5,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 17.45,
+"time": 17.95,
 "value": 0,
 "easing": "ease_in_out"
 }
@@ -4158,114 +4158,7 @@
 "easing": "ease_in_out"
 },
 {
-"time": 17.4,
-"value": 300,
-"easing": "ease_in_out"
-}
-]
-}
-}
-},
-{
-"id": "gs9",
-"start": 16.95,
-"content": {
-"kind": "media",
-"asset": {
-"type": "image",
-"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/c102f0d/media/dengiz-baliq/salt.png",
-"width": 120,
-"height": 120
-},
-"fit": "contain",
-"bounds": [
-120,
-120
-]
-},
-"duration": 1.2,
-"animations": {
-"position": {
-"keyframes": [
-{
-"time": 16.95,
-"value": [
-560,
-900
-],
-"easing": "ease_out"
-},
-{
-"time": 18.05,
-"value": [
-220.6763935557662,
-238.55285146639483
-],
-"easing": "ease_out"
-}
-]
-},
-"scale": {
-"keyframes": [
-{
-"time": 16.95,
-"value": [
-0.5,
-0.5
-],
-"easing": "ease_in_out"
-},
-{
-"time": 17.25,
-"value": [
-1.4,
-1.4
-],
-"easing": "ease_in_out"
-},
-{
-"time": 18.05,
-"value": [
-1.0,
-1.0
-],
-"easing": "ease_in_out"
-}
-]
-},
-"opacity": {
-"keyframes": [
-{
-"time": 16.95,
-"value": 0,
-"easing": "ease_in_out"
-},
-{
-"time": 17.05,
-"value": 1,
-"easing": "ease_in_out"
-},
-{
-"time": 17.75,
-"value": 1,
-"easing": "ease_in_out"
-},
-{
-"time": 18.1,
-"value": 0,
-"easing": "ease_in_out"
-}
-]
-},
-"rotation": {
-"keyframes": [
-{
-"time": 16.95,
-"value": 0,
-"easing": "ease_in_out"
-},
-{
-"time": 18.05,
+"time": 17.9,
 "value": 180,
 "easing": "ease_in_out"
 }
@@ -4274,8 +4167,8 @@
 }
 },
 {
-"id": "gs10",
-"start": 16.95,
+"id": "gs9",
+"start": 16.3,
 "content": {
 "kind": "media",
 "asset": {
@@ -4290,23 +4183,23 @@
 120
 ]
 },
-"duration": 1.2,
+"duration": 1.7,
 "animations": {
 "position": {
 "keyframes": [
 {
-"time": 16.95,
+"time": 16.3,
 "value": [
 560,
-900
+905
 ],
 "easing": "ease_out"
 },
 {
-"time": 18.05,
+"time": 17.9,
 "value": [
-792.1767187069959,
-195.70545219162318
+155.33931865273678,
+624.4419825987335
 ],
 "easing": "ease_out"
 }
@@ -4315,7 +4208,7 @@
 "scale": {
 "keyframes": [
 {
-"time": 16.95,
+"time": 16.3,
 "value": [
 0.5,
 0.5
@@ -4323,18 +4216,18 @@
 "easing": "ease_in_out"
 },
 {
-"time": 17.25,
+"time": 16.6,
 "value": [
-1.4,
-1.4
+1.3,
+1.3
 ],
 "easing": "ease_in_out"
 },
 {
-"time": 18.05,
+"time": 17.9,
 "value": [
-1.0,
-1.0
+0.9,
+0.9
 ],
 "easing": "ease_in_out"
 }
@@ -4343,22 +4236,22 @@
 "opacity": {
 "keyframes": [
 {
-"time": 16.95,
+"time": 16.3,
 "value": 0,
 "easing": "ease_in_out"
 },
 {
-"time": 17.05,
+"time": 16.4,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 17.75,
+"time": 17.5,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 18.1,
+"time": 17.95,
 "value": 0,
 "easing": "ease_in_out"
 }
@@ -4367,12 +4260,12 @@
 "rotation": {
 "keyframes": [
 {
-"time": 16.95,
+"time": 16.3,
 "value": 0,
 "easing": "ease_in_out"
 },
 {
-"time": 18.05,
+"time": 17.9,
 "value": 240,
 "easing": "ease_in_out"
 }
@@ -4381,7 +4274,221 @@
 }
 },
 {
+"id": "gs10",
+"start": 16.3,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/c102f0d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.7,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 16.3,
+"value": [
+560,
+905
+],
+"easing": "ease_out"
+},
+{
+"time": 17.9,
+"value": [
+387.12269241877254,
+405.45061152652016
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 16.3,
+"value": [
+0.5,
+0.5
+],
+"easing": "ease_in_out"
+},
+{
+"time": 16.6,
+"value": [
+1.3,
+1.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.9,
+"value": [
+0.9,
+0.9
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 16.3,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 16.4,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 17.5,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 17.95,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 16.3,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.9,
+"value": 300,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
 "id": "gs11",
+"start": 16.3,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/c102f0d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.7,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 16.3,
+"value": [
+560,
+905
+],
+"easing": "ease_out"
+},
+{
+"time": 17.9,
+"value": [
+681.0808351688422,
+417.86439562527056
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 16.3,
+"value": [
+0.5,
+0.5
+],
+"easing": "ease_in_out"
+},
+{
+"time": 16.6,
+"value": [
+1.3,
+1.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.9,
+"value": [
+0.9,
+0.9
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 16.3,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 16.4,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 17.5,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 17.95,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 16.3,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.9,
+"value": 360,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs12",
 "start": 16.95,
 "content": {
 "kind": "media",
@@ -4397,7 +4504,7 @@
 120
 ]
 },
-"duration": 1.2,
+"duration": 1.7,
 "animations": {
 "position": {
 "keyframes": [
@@ -4405,15 +4512,15 @@
 "time": 16.95,
 "value": [
 560,
-900
+905
 ],
 "easing": "ease_out"
 },
 {
-"time": 18.05,
+"time": 18.55,
 "value": [
-1148.6088537375517,
-744.985163513826
+90.58930005553327,
+872.7853027536694
 ],
 "easing": "ease_out"
 }
@@ -4432,16 +4539,16 @@
 {
 "time": 17.25,
 "value": [
-1.4,
-1.4
+1.3,
+1.3
 ],
 "easing": "ease_in_out"
 },
 {
-"time": 18.05,
+"time": 18.55,
 "value": [
-1.0,
-1.0
+0.9,
+0.9
 ],
 "easing": "ease_in_out"
 }
@@ -4460,12 +4567,12 @@
 "easing": "ease_in_out"
 },
 {
-"time": 17.75,
+"time": 18.15,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 18.1,
+"time": 18.6,
 "value": 0,
 "easing": "ease_in_out"
 }
@@ -4479,114 +4586,7 @@
 "easing": "ease_in_out"
 },
 {
-"time": 18.05,
-"value": 300,
-"easing": "ease_in_out"
-}
-]
-}
-}
-},
-{
-"id": "gs12",
-"start": 17.6,
-"content": {
-"kind": "media",
-"asset": {
-"type": "image",
-"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/c102f0d/media/dengiz-baliq/salt.png",
-"width": 120,
-"height": 120
-},
-"fit": "contain",
-"bounds": [
-120,
-120
-]
-},
-"duration": 1.2,
-"animations": {
-"position": {
-"keyframes": [
-{
-"time": 17.6,
-"value": [
-560,
-900
-],
-"easing": "ease_out"
-},
-{
-"time": 18.7,
-"value": [
-348.40946348753255,
-167.19704761568335
-],
-"easing": "ease_out"
-}
-]
-},
-"scale": {
-"keyframes": [
-{
-"time": 17.6,
-"value": [
-0.5,
-0.5
-],
-"easing": "ease_in_out"
-},
-{
-"time": 17.9,
-"value": [
-1.4,
-1.4
-],
-"easing": "ease_in_out"
-},
-{
-"time": 18.7,
-"value": [
-1.0,
-1.0
-],
-"easing": "ease_in_out"
-}
-]
-},
-"opacity": {
-"keyframes": [
-{
-"time": 17.6,
-"value": 0,
-"easing": "ease_in_out"
-},
-{
-"time": 17.7,
-"value": 1,
-"easing": "ease_in_out"
-},
-{
-"time": 18.4,
-"value": 1,
-"easing": "ease_in_out"
-},
-{
-"time": 18.75,
-"value": 0,
-"easing": "ease_in_out"
-}
-]
-},
-"rotation": {
-"keyframes": [
-{
-"time": 17.6,
-"value": 0,
-"easing": "ease_in_out"
-},
-{
-"time": 18.7,
+"time": 18.55,
 "value": 180,
 "easing": "ease_in_out"
 }
@@ -4596,7 +4596,7 @@
 },
 {
 "id": "gs13",
-"start": 17.6,
+"start": 16.95,
 "content": {
 "kind": "media",
 "asset": {
@@ -4611,23 +4611,23 @@
 120
 ]
 },
-"duration": 1.2,
+"duration": 1.7,
 "animations": {
 "position": {
 "keyframes": [
 {
-"time": 17.6,
+"time": 16.95,
 "value": [
 560,
-900
+905
 ],
 "easing": "ease_out"
 },
 {
-"time": 18.7,
+"time": 18.55,
 "value": [
-913.1253143542697,
-283.0370123640573
+205.51790830375666,
+545.3608527675008
 ],
 "easing": "ease_out"
 }
@@ -4636,7 +4636,7 @@
 "scale": {
 "keyframes": [
 {
-"time": 17.6,
+"time": 16.95,
 "value": [
 0.5,
 0.5
@@ -4644,18 +4644,18 @@
 "easing": "ease_in_out"
 },
 {
-"time": 17.9,
+"time": 17.25,
 "value": [
-1.4,
-1.4
+1.3,
+1.3
 ],
 "easing": "ease_in_out"
 },
 {
-"time": 18.7,
+"time": 18.55,
 "value": [
-1.0,
-1.0
+0.9,
+0.9
 ],
 "easing": "ease_in_out"
 }
@@ -4664,22 +4664,22 @@
 "opacity": {
 "keyframes": [
 {
-"time": 17.6,
+"time": 16.95,
 "value": 0,
 "easing": "ease_in_out"
 },
 {
-"time": 17.7,
+"time": 17.05,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 18.4,
+"time": 18.15,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 18.75,
+"time": 18.6,
 "value": 0,
 "easing": "ease_in_out"
 }
@@ -4688,12 +4688,12 @@
 "rotation": {
 "keyframes": [
 {
-"time": 17.6,
+"time": 16.95,
 "value": 0,
 "easing": "ease_in_out"
 },
 {
-"time": 18.7,
+"time": 18.55,
 "value": 240,
 "easing": "ease_in_out"
 }
@@ -4703,6 +4703,220 @@
 },
 {
 "id": "gs14",
+"start": 16.95,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/c102f0d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.7,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 16.95,
+"value": [
+560,
+905
+],
+"easing": "ease_out"
+},
+{
+"time": 18.55,
+"value": [
+467.5961823357867,
+383.8760011465125
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 16.95,
+"value": [
+0.5,
+0.5
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.25,
+"value": [
+1.3,
+1.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 18.55,
+"value": [
+0.9,
+0.9
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 16.95,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.05,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.15,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.6,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 16.95,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 18.55,
+"value": 300,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs15",
+"start": 16.95,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/c102f0d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.7,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 16.95,
+"value": [
+560,
+905
+],
+"easing": "ease_out"
+},
+{
+"time": 18.55,
+"value": [
+754.1947850564615,
+463.8913046683794
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 16.95,
+"value": [
+0.5,
+0.5
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.25,
+"value": [
+1.3,
+1.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 18.55,
+"value": [
+0.9,
+0.9
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 16.95,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.05,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.15,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.6,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 16.95,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 18.55,
+"value": 360,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs16",
 "start": 17.6,
 "content": {
 "kind": "media",
@@ -4718,7 +4932,7 @@
 120
 ]
 },
-"duration": 1.2,
+"duration": 1.7,
 "animations": {
 "position": {
 "keyframes": [
@@ -4726,15 +4940,15 @@
 "time": 17.6,
 "value": [
 560,
-900
+905
 ],
 "easing": "ease_out"
 },
 {
-"time": 18.7,
+"time": 19.2,
 "value": [
-1159.6223127518392,
-916.5236174939009
+102.77283770132152,
+774.2006142881729
 ],
 "easing": "ease_out"
 }
@@ -4753,16 +4967,16 @@
 {
 "time": 17.9,
 "value": [
-1.4,
-1.4
+1.3,
+1.3
 ],
 "easing": "ease_in_out"
 },
 {
-"time": 18.7,
+"time": 19.2,
 "value": [
-1.0,
-1.0
+0.9,
+0.9
 ],
 "easing": "ease_in_out"
 }
@@ -4781,12 +4995,12 @@
 "easing": "ease_in_out"
 },
 {
-"time": 18.4,
+"time": 18.8,
 "value": 1,
 "easing": "ease_in_out"
 },
 {
-"time": 18.75,
+"time": 19.25,
 "value": 0,
 "easing": "ease_in_out"
 }
@@ -4800,8 +5014,329 @@
 "easing": "ease_in_out"
 },
 {
-"time": 18.7,
+"time": 19.2,
+"value": 180,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs17",
+"start": 17.6,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/c102f0d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.7,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 17.6,
+"value": [
+560,
+905
+],
+"easing": "ease_out"
+},
+{
+"time": 19.2,
+"value": [
+267.2523415142365,
+479.31116292502736
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 17.6,
+"value": [
+0.5,
+0.5
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.9,
+"value": [
+1.3,
+1.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 19.2,
+"value": [
+0.9,
+0.9
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 17.6,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.7,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.8,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 19.25,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 17.6,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 19.2,
+"value": 240,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs18",
+"start": 17.6,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/c102f0d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.7,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 17.6,
+"value": [
+560,
+905
+],
+"easing": "ease_out"
+},
+{
+"time": 19.2,
+"value": [
+549.9952837099738,
+381.2666938648914
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 17.6,
+"value": [
+0.5,
+0.5
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.9,
+"value": [
+1.3,
+1.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 19.2,
+"value": [
+0.9,
+0.9
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 17.6,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.7,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.8,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 19.25,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 17.6,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 19.2,
 "value": 300,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs19",
+"start": 17.6,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/c102f0d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.7,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 17.6,
+"value": [
+560,
+905
+],
+"easing": "ease_out"
+},
+{
+"time": 19.2,
+"value": [
+818.7030992973688,
+525.9433038239014
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 17.6,
+"value": [
+0.5,
+0.5
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.9,
+"value": [
+1.3,
+1.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 19.2,
+"value": [
+0.9,
+0.9
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 17.6,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.7,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.8,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 19.25,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 17.6,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 19.2,
+"value": 360,
 "easing": "ease_in_out"
 }
 ]
@@ -5106,7 +5641,7 @@
 },
 {
 "id": "shark",
-"start": 20.16,
+"start": 19.76,
 "content": {
 "kind": "media",
 "asset": {
@@ -5121,20 +5656,20 @@
 620
 ]
 },
-"duration": 6.4,
+"duration": 6.8,
 "animations": {
 "position": {
 "keyframes": [
 {
-"time": 20.16,
+"time": 19.76,
 "value": [
-1750,
+1500,
 980
 ],
 "easing": "ease_in_out"
 },
 {
-"time": 22.16,
+"time": 21.46,
 "value": [
 560,
 960
@@ -5162,7 +5697,7 @@
 "scale": {
 "keyframes": [
 {
-"time": 20.16,
+"time": 19.76,
 "value": [
 0.85,
 0.85
@@ -5170,7 +5705,7 @@
 "easing": "ease_in_out"
 },
 {
-"time": 22.16,
+"time": 21.46,
 "value": [
 0.88,
 0.88
@@ -5198,12 +5733,12 @@
 "rotation": {
 "keyframes": [
 {
-"time": 20.16,
+"time": 19.76,
 "value": -3,
 "easing": "ease_in_out"
 },
 {
-"time": 22.16,
+"time": 21.46,
 "value": 1,
 "easing": "ease_in_out"
 },
@@ -7067,7 +7602,7 @@
 "uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/c102f0d/media/dengiz-baliq/voice.mp3",
 "duration": 30.83
 },
-"volume": 100
+"volume": 160
 }
 },
 {
@@ -7080,7 +7615,7 @@
 "uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/c102f0d/media/dengiz-baliq/music.mp3",
 "duration": 30.83
 },
-"volume": 30
+"volume": 45
 }
 }
 ]
