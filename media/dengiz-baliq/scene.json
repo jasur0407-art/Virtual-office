@@ -1,0 +1,7077 @@
+{
+"version": "1.0",
+"composition": {
+"width": 1080,
+"height": 1920,
+"fps": 30,
+"duration": 30.83,
+"background": "#2a6f97"
+},
+"layers": [
+{
+"id": "bg",
+"start": 0,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bg.jpg",
+"width": 1242,
+"height": 2208
+},
+"fit": "contain",
+"bounds": [
+1242,
+2208
+]
+},
+"duration": 30.83,
+"animations": {
+"scale": {
+"keyframes": [
+{
+"time": 0,
+"value": [
+1.0,
+1.0
+],
+"easing": "ease_in_out"
+},
+{
+"time": 14.4,
+"value": [
+1.06,
+1.06
+],
+"easing": "ease_in_out"
+},
+{
+"time": 20.16,
+"value": [
+1.12,
+1.12
+],
+"easing": "ease_in_out"
+},
+{
+"time": 30.83,
+"value": [
+1.04,
+1.04
+],
+"easing": "ease_in_out"
+}
+]
+},
+"position": {
+"keyframes": [
+{
+"time": 0,
+"value": [
+540,
+900
+],
+"easing": "ease_in_out"
+},
+{
+"time": 4.41,
+"value": [
+540,
+940
+],
+"easing": "ease_in_out"
+},
+{
+"time": 6.91,
+"value": [
+540,
+1010
+],
+"easing": "ease_in_out"
+},
+{
+"time": 20.16,
+"value": [
+560,
+980
+],
+"easing": "ease_in_out"
+},
+{
+"time": 30.83,
+"value": [
+520,
+940
+],
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "rays",
+"start": 0,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/rays.jpg",
+"width": 1242,
+"height": 2208
+},
+"fit": "contain",
+"bounds": [
+1242,
+2208
+]
+},
+"duration": 30.83,
+"animations": {
+"opacity": {
+"keyframes": [
+{
+"time": 0,
+"value": 0.55,
+"easing": "ease_in_out"
+},
+{
+"time": 20.16,
+"value": 0.35,
+"easing": "ease_in_out"
+},
+{
+"time": 21.16,
+"value": 0.2,
+"easing": "ease_in_out"
+},
+{
+"time": 26.26,
+"value": 0.6,
+"easing": "ease_in_out"
+},
+{
+"time": 30.83,
+"value": 0.8,
+"easing": "ease_in_out"
+}
+]
+},
+"position": {
+"keyframes": [
+{
+"time": 0,
+"value": [
+520,
+900
+],
+"easing": "ease_in_out"
+},
+{
+"time": 8,
+"value": [
+580,
+910
+],
+"easing": "ease_in_out"
+},
+{
+"time": 16,
+"value": [
+510,
+900
+],
+"easing": "ease_in_out"
+},
+{
+"time": 24,
+"value": [
+575,
+905
+],
+"easing": "ease_in_out"
+},
+{
+"time": 30.83,
+"value": [
+530,
+900
+],
+"easing": "ease_in_out"
+}
+]
+}
+},
+"blendMode": "screen"
+},
+{
+"id": "saltfar",
+"start": 0,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/saltfar.png",
+"width": 1080,
+"height": 1920
+},
+"fit": "contain",
+"bounds": [
+1080,
+1920
+]
+},
+"duration": 30.83,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 0,
+"value": [
+540,
+1000
+],
+"easing": "linear"
+},
+{
+"time": 30.83,
+"value": [
+540,
+860
+],
+"easing": "linear"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 0,
+"value": 0.8,
+"easing": "ease_in_out"
+},
+{
+"time": 9.4,
+"value": 0.8,
+"easing": "ease_in_out"
+},
+{
+"time": 14.4,
+"value": 0.45,
+"easing": "ease_in_out"
+},
+{
+"time": 20.16,
+"value": 0.3,
+"easing": "ease_in_out"
+},
+{
+"time": 30.83,
+"value": 0.4,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "saltnear",
+"start": 0,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/saltnear.png",
+"width": 1080,
+"height": 1920
+},
+"fit": "contain",
+"bounds": [
+1080,
+1920
+]
+},
+"duration": 30.83,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 0,
+"value": [
+560,
+1100
+],
+"easing": "linear"
+},
+{
+"time": 30.83,
+"value": [
+520,
+700
+],
+"easing": "linear"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 0,
+"value": [
+1.0,
+1.0
+],
+"easing": "ease_in_out"
+},
+{
+"time": 4.41,
+"value": [
+1.0,
+1.0
+],
+"easing": "ease_in_out"
+},
+{
+"time": 6.91,
+"value": [
+1.25,
+1.25
+],
+"easing": "ease_in_out"
+},
+{
+"time": 9.4,
+"value": [
+1.1,
+1.1
+],
+"easing": "ease_in_out"
+},
+{
+"time": 30.83,
+"value": [
+1.15,
+1.15
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 0,
+"value": 0.75,
+"easing": "ease_in_out"
+},
+{
+"time": 4.41,
+"value": 1.0,
+"easing": "ease_in_out"
+},
+{
+"time": 6.91,
+"value": 1.0,
+"easing": "ease_in_out"
+},
+{
+"time": 9.4,
+"value": 0.6,
+"easing": "ease_in_out"
+},
+{
+"time": 14.4,
+"value": 0.35,
+"easing": "ease_in_out"
+},
+{
+"time": 20.16,
+"value": 0.2,
+"easing": "ease_in_out"
+},
+{
+"time": 30.83,
+"value": 0.35,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "fish",
+"start": 0,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/fish.png",
+"width": 1120,
+"height": 600
+},
+"fit": "contain",
+"bounds": [
+1120,
+600
+]
+},
+"duration": 30.83,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 0,
+"value": [
+1450,
+940
+],
+"easing": "ease_in_out"
+},
+{
+"time": 2.6,
+"value": [
+560,
+930
+],
+"easing": "ease_in_out"
+},
+{
+"time": 4.41,
+"value": [
+560,
+930
+],
+"easing": "ease_in_out"
+},
+{
+"time": 5.21,
+"value": [
+560,
+700
+],
+"easing": "ease_in_out"
+},
+{
+"time": 6.91,
+"value": [
+600,
+720
+],
+"easing": "ease_in_out"
+},
+{
+"time": 7.61,
+"value": [
+560,
+930
+],
+"easing": "ease_in_out"
+},
+{
+"time": 11.88,
+"value": [
+560,
+930
+],
+"easing": "ease_in_out"
+},
+{
+"time": 12.68,
+"value": [
+963,
+900
+],
+"easing": "ease_in_out"
+},
+{
+"time": 14.4,
+"value": [
+963,
+900
+],
+"easing": "ease_in_out"
+},
+{
+"time": 14.75,
+"value": [
+1178,
+878
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.5,
+"value": [
+1178,
+878
+],
+"easing": "ease_in_out"
+},
+{
+"time": 18.1,
+"value": [
+700,
+980
+],
+"easing": "ease_in_out"
+},
+{
+"time": 20.16,
+"value": [
+700,
+980
+],
+"easing": "ease_in_out"
+},
+{
+"time": 20.96,
+"value": [
+-400,
+1100
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.26,
+"value": [
+-400,
+1100
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.27,
+"value": [
+1500,
+1000
+],
+"easing": "ease_in_out"
+},
+{
+"time": 30.83,
+"value": [
+-350,
+820
+],
+"easing": "ease_in_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 0,
+"value": [
+0.78,
+0.78
+],
+"easing": "ease_in_out"
+},
+{
+"time": 2.6,
+"value": [
+0.88,
+0.88
+],
+"easing": "ease_in_out"
+},
+{
+"time": 4.41,
+"value": [
+0.88,
+0.88
+],
+"easing": "ease_in_out"
+},
+{
+"time": 5.21,
+"value": [
+0.62,
+0.62
+],
+"easing": "ease_in_out"
+},
+{
+"time": 6.91,
+"value": [
+0.62,
+0.62
+],
+"easing": "ease_in_out"
+},
+{
+"time": 7.61,
+"value": [
+0.92,
+0.92
+],
+"easing": "ease_in_out"
+},
+{
+"time": 11.88,
+"value": [
+0.92,
+0.92
+],
+"easing": "ease_in_out"
+},
+{
+"time": 12.68,
+"value": [
+1.3,
+1.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 14.4,
+"value": [
+1.3,
+1.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 14.75,
+"value": [
+2.2,
+2.2
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.5,
+"value": [
+2.2,
+2.2
+],
+"easing": "ease_in_out"
+},
+{
+"time": 18.1,
+"value": [
+1.6,
+1.6
+],
+"easing": "ease_in_out"
+},
+{
+"time": 20.16,
+"value": [
+1.6,
+1.6
+],
+"easing": "ease_in_out"
+},
+{
+"time": 20.96,
+"value": [
+0.7,
+0.7
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.26,
+"value": [
+0.7,
+0.7
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.27,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 30.83,
+"value": [
+0.9,
+0.9
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 0,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 7.41,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 8.01,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 11.88,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 12.38,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 14.4,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 14.6,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 26.26,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 26.27,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 30.83,
+"value": 1,
+"easing": "ease_in_out"
+}
+]
+}
+},
+"looks": [
+{
+"look": "float",
+"params": {
+"period": 2.8,
+"distance": 0.025
+}
+}
+]
+},
+{
+"id": "fishx",
+"start": 0,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/fish_xray.png",
+"width": 1120,
+"height": 600
+},
+"fit": "contain",
+"bounds": [
+1120,
+600
+]
+},
+"duration": 30.83,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 0,
+"value": [
+1450,
+940
+],
+"easing": "ease_in_out"
+},
+{
+"time": 2.6,
+"value": [
+560,
+930
+],
+"easing": "ease_in_out"
+},
+{
+"time": 4.41,
+"value": [
+560,
+930
+],
+"easing": "ease_in_out"
+},
+{
+"time": 5.21,
+"value": [
+560,
+700
+],
+"easing": "ease_in_out"
+},
+{
+"time": 6.91,
+"value": [
+600,
+720
+],
+"easing": "ease_in_out"
+},
+{
+"time": 7.61,
+"value": [
+560,
+930
+],
+"easing": "ease_in_out"
+},
+{
+"time": 11.88,
+"value": [
+560,
+930
+],
+"easing": "ease_in_out"
+},
+{
+"time": 12.68,
+"value": [
+963,
+900
+],
+"easing": "ease_in_out"
+},
+{
+"time": 14.4,
+"value": [
+963,
+900
+],
+"easing": "ease_in_out"
+},
+{
+"time": 14.75,
+"value": [
+1178,
+878
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.5,
+"value": [
+1178,
+878
+],
+"easing": "ease_in_out"
+},
+{
+"time": 18.1,
+"value": [
+700,
+980
+],
+"easing": "ease_in_out"
+},
+{
+"time": 20.16,
+"value": [
+700,
+980
+],
+"easing": "ease_in_out"
+},
+{
+"time": 20.96,
+"value": [
+-400,
+1100
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.26,
+"value": [
+-400,
+1100
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.27,
+"value": [
+1500,
+1000
+],
+"easing": "ease_in_out"
+},
+{
+"time": 30.83,
+"value": [
+-350,
+820
+],
+"easing": "ease_in_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 0,
+"value": [
+0.78,
+0.78
+],
+"easing": "ease_in_out"
+},
+{
+"time": 2.6,
+"value": [
+0.88,
+0.88
+],
+"easing": "ease_in_out"
+},
+{
+"time": 4.41,
+"value": [
+0.88,
+0.88
+],
+"easing": "ease_in_out"
+},
+{
+"time": 5.21,
+"value": [
+0.62,
+0.62
+],
+"easing": "ease_in_out"
+},
+{
+"time": 6.91,
+"value": [
+0.62,
+0.62
+],
+"easing": "ease_in_out"
+},
+{
+"time": 7.61,
+"value": [
+0.92,
+0.92
+],
+"easing": "ease_in_out"
+},
+{
+"time": 11.88,
+"value": [
+0.92,
+0.92
+],
+"easing": "ease_in_out"
+},
+{
+"time": 12.68,
+"value": [
+1.3,
+1.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 14.4,
+"value": [
+1.3,
+1.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 14.75,
+"value": [
+2.2,
+2.2
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.5,
+"value": [
+2.2,
+2.2
+],
+"easing": "ease_in_out"
+},
+{
+"time": 18.1,
+"value": [
+1.6,
+1.6
+],
+"easing": "ease_in_out"
+},
+{
+"time": 20.16,
+"value": [
+1.6,
+1.6
+],
+"easing": "ease_in_out"
+},
+{
+"time": 20.96,
+"value": [
+0.7,
+0.7
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.26,
+"value": [
+0.7,
+0.7
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.27,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 30.83,
+"value": [
+0.9,
+0.9
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 0,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 7.41,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 8.01,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.88,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 12.38,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 14.4,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 14.6,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 20.16,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 20.76,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 30.83,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+},
+"looks": [
+{
+"look": "float",
+"params": {
+"period": 2.8,
+"distance": 0.025
+}
+}
+]
+},
+{
+"id": "cr0",
+"start": 4.56,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 2.65,
+"transform": {
+"position": [
+380,
+1250
+],
+"scale": [
+0.9,
+0.9
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.45
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.4
+}
+},
+{
+"look": "float",
+"params": {
+"period": 2.0,
+"distance": 0.08
+}
+}
+]
+},
+{
+"id": "cr1",
+"start": 4.74,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 2.47,
+"transform": {
+"position": [
+620,
+1320
+],
+"scale": [
+1.3,
+1.3
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.45
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.4
+}
+},
+{
+"look": "float",
+"params": {
+"period": 2.3,
+"distance": 0.08
+}
+}
+]
+},
+{
+"id": "cr2",
+"start": 4.92,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 2.29,
+"transform": {
+"position": [
+760,
+1180
+],
+"scale": [
+0.8,
+0.8
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.45
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.4
+}
+},
+{
+"look": "float",
+"params": {
+"period": 2.6,
+"distance": 0.08
+}
+}
+]
+},
+{
+"id": "cr3",
+"start": 5.1,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 2.11,
+"transform": {
+"position": [
+470,
+1450
+],
+"scale": [
+1.1,
+1.1
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.45
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.4
+}
+},
+{
+"look": "float",
+"params": {
+"period": 2.9,
+"distance": 0.08
+}
+}
+]
+},
+{
+"id": "cr4",
+"start": 5.28,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.93,
+"transform": {
+"position": [
+300,
+1100
+],
+"scale": [
+0.7,
+0.7
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.45
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.4
+}
+},
+{
+"look": "float",
+"params": {
+"period": 3.2,
+"distance": 0.08
+}
+}
+]
+},
+{
+"id": "cr5",
+"start": 5.46,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.75,
+"transform": {
+"position": [
+700,
+1500
+],
+"scale": [
+1.0,
+1.0
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.45
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.4
+}
+},
+{
+"look": "float",
+"params": {
+"period": 3.5,
+"distance": 0.08
+}
+}
+]
+},
+{
+"id": "cr6",
+"start": 5.64,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.57,
+"transform": {
+"position": [
+560,
+1150
+],
+"scale": [
+0.75,
+0.75
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.45
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.4
+}
+},
+{
+"look": "float",
+"params": {
+"period": 3.8,
+"distance": 0.08
+}
+}
+]
+},
+{
+"id": "in0",
+"start": 7.81,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.79,
+"transform": {
+"position": [
+520,
+330
+],
+"scale": [
+0.45,
+0.45
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.4
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.3
+}
+}
+],
+"parentId": "fishx"
+},
+{
+"id": "in1",
+"start": 7.81,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.79,
+"transform": {
+"position": [
+700,
+300
+],
+"scale": [
+0.45,
+0.45
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.4
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.3
+}
+}
+],
+"parentId": "fishx"
+},
+{
+"id": "in2",
+"start": 7.81,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.79,
+"transform": {
+"position": [
+400,
+280
+],
+"scale": [
+0.45,
+0.45
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.4
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.3
+}
+}
+],
+"parentId": "fishx"
+},
+{
+"id": "dr0",
+"start": 9.6,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/drop.png",
+"width": 100,
+"height": 100
+},
+"fit": "contain",
+"bounds": [
+100,
+100
+]
+},
+"duration": 1.6,
+"transform": {
+"scale": [
+0.9,
+0.9
+]
+},
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 9.6,
+"value": [
+607.6806393908147,
+182.392010659051
+],
+"easing": "ease_out"
+},
+{
+"time": 11.1,
+"value": [
+699.0685315565429,
+-209.63462047744565
+],
+"easing": "ease_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 9.6,
+"value": 11.459155902616459
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 9.6,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 9.85,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 10.8,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.2,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+},
+"parentId": "fishx"
+},
+{
+"id": "dr1",
+"start": 9.72,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/drop.png",
+"width": 100,
+"height": 100
+},
+"fit": "contain",
+"bounds": [
+100,
+100
+]
+},
+"duration": 1.6,
+"transform": {
+"scale": [
+0.9,
+0.9
+]
+},
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 9.72,
+"value": [
+736.830930942593,
+218.8661262758028
+],
+"easing": "ease_out"
+},
+{
+"time": 11.22,
+"value": [
+1075.7568819158964,
+-51.58011947152113
+],
+"easing": "ease_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 9.719999999999999,
+"value": 47.45915590261646
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 9.72,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 9.97,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 10.92,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.32,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+},
+"parentId": "fishx"
+},
+{
+"id": "dr2",
+"start": 9.84,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/drop.png",
+"width": 100,
+"height": 100
+},
+"fit": "contain",
+"bounds": [
+100,
+100
+]
+},
+"duration": 1.6,
+"transform": {
+"scale": [
+0.9,
+0.9
+]
+},
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 9.84,
+"value": [
+798.4378171365863,
+286.3306240162559
+],
+"easing": "ease_out"
+},
+{
+"time": 11.34,
+"value": [
+1255.4436333150434,
+240.76603740377573
+],
+"easing": "ease_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 9.84,
+"value": 83.45915590261646
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 9.84,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 10.09,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.04,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.44,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+},
+"parentId": "fishx"
+},
+{
+"id": "dr3",
+"start": 9.96,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/drop.png",
+"width": 100,
+"height": 100
+},
+"fit": "contain",
+"bounds": [
+100,
+100
+]
+},
+"duration": 1.6,
+"transform": {
+"scale": [
+0.9,
+0.9
+]
+},
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 9.96,
+"value": [
+768.9695613877358,
+359.01635877749777
+],
+"easing": "ease_out"
+},
+{
+"time": 11.46,
+"value": [
+1169.4945540475626,
+555.7375547024902
+],
+"easing": "ease_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 9.959999999999999,
+"value": 119.45915590261646
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 9.96,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 10.21,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.16,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.56,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+},
+"parentId": "fishx"
+},
+{
+"id": "dr4",
+"start": 10.08,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/drop.png",
+"width": 100,
+"height": 100
+},
+"fit": "contain",
+"bounds": [
+100,
+100
+]
+},
+"duration": 1.6,
+"transform": {
+"scale": [
+0.9,
+0.9
+]
+},
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 10.08,
+"value": [
+659.6820358029278,
+409.1598503779936
+],
+"easing": "ease_out"
+},
+{
+"time": 11.58,
+"value": [
+850.7392710918728,
+773.026018304639
+],
+"easing": "ease_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 10.08,
+"value": 155.45915590261646
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 10.08,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 10.33,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.28,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.68,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+},
+"parentId": "fishx"
+},
+{
+"id": "dr5",
+"start": 10.2,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/drop.png",
+"width": 100,
+"height": 100
+},
+"fit": "contain",
+"bounds": [
+100,
+100
+]
+},
+"duration": 1.6,
+"transform": {
+"scale": [
+0.9,
+0.9
+]
+},
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 10.2,
+"value": [
+512.3193606091853,
+417.60798934094896
+],
+"easing": "ease_out"
+},
+{
+"time": 11.7,
+"value": [
+420.9314684434572,
+809.6346204774457
+],
+"easing": "ease_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 10.2,
+"value": 191.45915590261646
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 10.2,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 10.45,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.4,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.8,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+},
+"parentId": "fishx"
+},
+{
+"id": "dr6",
+"start": 10.32,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/drop.png",
+"width": 100,
+"height": 100
+},
+"fit": "contain",
+"bounds": [
+100,
+100
+]
+},
+"duration": 1.6,
+"transform": {
+"scale": [
+0.9,
+0.9
+]
+},
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 10.32,
+"value": [
+383.169069057407,
+381.1338737241972
+],
+"easing": "ease_out"
+},
+{
+"time": 11.82,
+"value": [
+44.243118084103685,
+651.5801194715211
+],
+"easing": "ease_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 10.32,
+"value": 227.4591559026165
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 10.32,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 10.57,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.52,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.92,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+},
+"parentId": "fishx"
+},
+{
+"id": "dr7",
+"start": 10.44,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/drop.png",
+"width": 100,
+"height": 100
+},
+"fit": "contain",
+"bounds": [
+100,
+100
+]
+},
+"duration": 1.6,
+"transform": {
+"scale": [
+0.9,
+0.9
+]
+},
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 10.44,
+"value": [
+321.5621828634137,
+313.66937598374403
+],
+"easing": "ease_out"
+},
+{
+"time": 11.94,
+"value": [
+-135.44363331504337,
+359.2339625962243
+],
+"easing": "ease_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 10.44,
+"value": 263.4591559026165
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 10.44,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 10.69,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.64,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 12.04,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+},
+"parentId": "fishx"
+},
+{
+"id": "dr8",
+"start": 10.56,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/drop.png",
+"width": 100,
+"height": 100
+},
+"fit": "contain",
+"bounds": [
+100,
+100
+]
+},
+"duration": 1.6,
+"transform": {
+"scale": [
+0.9,
+0.9
+]
+},
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 10.56,
+"value": [
+351.0304386122643,
+240.98364122250223
+],
+"easing": "ease_out"
+},
+{
+"time": 12.06,
+"value": [
+-49.49455404756259,
+44.262445297509686
+],
+"easing": "ease_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 10.559999999999999,
+"value": 299.4591559026165
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 10.56,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 10.81,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.76,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 12.16,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+},
+"parentId": "fishx"
+},
+{
+"id": "dr9",
+"start": 10.68,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/drop.png",
+"width": 100,
+"height": 100
+},
+"fit": "contain",
+"bounds": [
+100,
+100
+]
+},
+"duration": 1.6,
+"transform": {
+"scale": [
+0.9,
+0.9
+]
+},
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 10.68,
+"value": [
+460.31796419707223,
+190.84014962200635
+],
+"easing": "ease_out"
+},
+{
+"time": 12.18,
+"value": [
+269.26072890812736,
+-173.02601830463908
+],
+"easing": "ease_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 10.68,
+"value": 335.4591559026165
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 10.68,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 10.93,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 11.88,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 12.28,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+},
+"parentId": "fishx"
+},
+{
+"id": "bu0",
+"start": 12.58,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 1.3,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 12.58,
+"value": [
+-40,
+790
+],
+"easing": "ease_in"
+},
+{
+"time": 13.78,
+"value": [
+352,
+915
+],
+"easing": "ease_in"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 12.58,
+"value": [
+0.9,
+0.9
+],
+"easing": "ease_in_out"
+},
+{
+"time": 13.78,
+"value": [
+0.25,
+0.25
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 12.58,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 12.78,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 13.58,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 13.83,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "bu1",
+"start": 12.78,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 1.3,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 12.78,
+"value": [
+-40,
+843
+],
+"easing": "ease_in"
+},
+{
+"time": 13.98,
+"value": [
+352,
+915
+],
+"easing": "ease_in"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 12.78,
+"value": [
+1.2,
+1.2
+],
+"easing": "ease_in_out"
+},
+{
+"time": 13.98,
+"value": [
+0.25,
+0.25
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 12.78,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 12.98,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 13.78,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 14.03,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "bu2",
+"start": 12.98,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 1.3,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 12.98,
+"value": [
+-40,
+896
+],
+"easing": "ease_in"
+},
+{
+"time": 14.18,
+"value": [
+352,
+915
+],
+"easing": "ease_in"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 12.98,
+"value": [
+1.5,
+1.5
+],
+"easing": "ease_in_out"
+},
+{
+"time": 14.18,
+"value": [
+0.25,
+0.25
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 12.98,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 13.18,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 13.98,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 14.23,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "bu3",
+"start": 13.18,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 1.3,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 13.18,
+"value": [
+-40,
+809
+],
+"easing": "ease_in"
+},
+{
+"time": 14.38,
+"value": [
+352,
+915
+],
+"easing": "ease_in"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 13.18,
+"value": [
+0.9,
+0.9
+],
+"easing": "ease_in_out"
+},
+{
+"time": 14.38,
+"value": [
+0.25,
+0.25
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 13.18,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 13.38,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 14.18,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 14.43,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "bu4",
+"start": 13.38,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 1.3,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 13.38,
+"value": [
+-40,
+862
+],
+"easing": "ease_in"
+},
+{
+"time": 14.58,
+"value": [
+352,
+915
+],
+"easing": "ease_in"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 13.38,
+"value": [
+1.2,
+1.2
+],
+"easing": "ease_in_out"
+},
+{
+"time": 14.58,
+"value": [
+0.25,
+0.25
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 13.38,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 13.58,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 14.38,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 14.63,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "bu5",
+"start": 13.58,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 1.3,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 13.58,
+"value": [
+-40,
+915
+],
+"easing": "ease_in"
+},
+{
+"time": 14.78,
+"value": [
+352,
+915
+],
+"easing": "ease_in"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 13.58,
+"value": [
+1.5,
+1.5
+],
+"easing": "ease_in_out"
+},
+{
+"time": 14.78,
+"value": [
+0.25,
+0.25
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 13.58,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 13.78,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 14.58,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 14.83,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "bu6",
+"start": 13.78,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 1.3,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 13.78,
+"value": [
+-40,
+828
+],
+"easing": "ease_in"
+},
+{
+"time": 14.98,
+"value": [
+352,
+915
+],
+"easing": "ease_in"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 13.78,
+"value": [
+0.9,
+0.9
+],
+"easing": "ease_in_out"
+},
+{
+"time": 14.98,
+"value": [
+0.25,
+0.25
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 13.78,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 13.98,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 14.78,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 15.03,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "bu7",
+"start": 13.98,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 1.3,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 13.98,
+"value": [
+-40,
+881
+],
+"easing": "ease_in"
+},
+{
+"time": 15.18,
+"value": [
+352,
+915
+],
+"easing": "ease_in"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 13.98,
+"value": [
+1.2,
+1.2
+],
+"easing": "ease_in_out"
+},
+{
+"time": 15.18,
+"value": [
+0.25,
+0.25
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 13.98,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 14.18,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 14.98,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 15.23,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "bu8",
+"start": 14.18,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 1.3,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 14.18,
+"value": [
+-40,
+794
+],
+"easing": "ease_in"
+},
+{
+"time": 15.38,
+"value": [
+352,
+915
+],
+"easing": "ease_in"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 14.18,
+"value": [
+1.5,
+1.5
+],
+"easing": "ease_in_out"
+},
+{
+"time": 15.38,
+"value": [
+0.25,
+0.25
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 14.18,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 14.38,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 15.18,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 15.43,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs0",
+"start": 15.0,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 15.0,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 16.1,
+"value": [
+-42.60942488726323,
+630.0646910724918
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 15.0,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 15.3,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 16.1,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 15.0,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 15.1,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 15.8,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 16.15,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 15.0,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 16.1,
+"value": 180,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs1",
+"start": 15.0,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 15.0,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 16.1,
+"value": [
+379.5321920364372,
+155.89637202030804
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 15.0,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 15.3,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 16.1,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 15.0,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 15.1,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 15.8,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 16.15,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 15.0,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 16.1,
+"value": 240,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs2",
+"start": 15.0,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 15.0,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 16.1,
+"value": [
+938.5283180056543,
+307.80622322957663
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 15.0,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 15.3,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 16.1,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 15.0,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 15.1,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 15.8,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 16.15,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 15.0,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 16.1,
+"value": 300,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs3",
+"start": 15.65,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 15.65,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 16.75,
+"value": [
+20.024247873837112,
+476.0743333885794
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 15.65,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 15.95,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 16.75,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 15.65,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 15.75,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 16.45,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 16.8,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 15.65,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 16.75,
+"value": 180,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs4",
+"start": 15.65,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 15.65,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 16.75,
+"value": [
+518.3623120444495,
+130.46297146548727
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 15.65,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 15.95,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 16.75,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 15.65,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 15.75,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 16.45,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 16.8,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 15.65,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 16.75,
+"value": 240,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs5",
+"start": 15.65,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 15.65,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 16.75,
+"value": [
+1035.1540162293215,
+432.6205824044433
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 15.65,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 15.95,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 16.75,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 15.65,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 15.75,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 16.45,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 16.8,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 15.65,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 16.75,
+"value": 300,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs6",
+"start": 16.3,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 16.3,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 17.4,
+"value": [
+109.31181031542172,
+343.30175174262513
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 16.3,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 16.6,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.4,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 16.3,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 16.4,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 17.1,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 17.45,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 16.3,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.4,
+"value": 180,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs7",
+"start": 16.3,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 16.3,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 17.4,
+"value": [
+658.301577133458,
+143.9633405797755
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 16.3,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 16.6,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.4,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 16.3,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 16.4,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 17.1,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 17.45,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 16.3,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.4,
+"value": 240,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs8",
+"start": 16.3,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 16.3,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 17.4,
+"value": [
+1106.3981837384126,
+580.8801512623919
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 16.3,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 16.6,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.4,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 16.3,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 16.4,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 17.1,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 17.45,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 16.3,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.4,
+"value": 300,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs9",
+"start": 16.95,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 16.95,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 18.05,
+"value": [
+220.6763935557662,
+238.55285146639483
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 16.95,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.25,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 18.05,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 16.95,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.05,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 17.75,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.1,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 16.95,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 18.05,
+"value": 180,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs10",
+"start": 16.95,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 16.95,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 18.05,
+"value": [
+792.1767187069959,
+195.70545219162318
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 16.95,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.25,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 18.05,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 16.95,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.05,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 17.75,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.1,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 16.95,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 18.05,
+"value": 240,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs11",
+"start": 16.95,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 16.95,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 18.05,
+"value": [
+1148.6088537375517,
+744.985163513826
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 16.95,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.25,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 18.05,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 16.95,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.05,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 17.75,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.1,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 16.95,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 18.05,
+"value": 300,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs12",
+"start": 17.6,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 17.6,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 18.7,
+"value": [
+348.40946348753255,
+167.19704761568335
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 17.6,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.9,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 18.7,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 17.6,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.7,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.4,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.75,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 17.6,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 18.7,
+"value": 180,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs13",
+"start": 17.6,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 17.6,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 18.7,
+"value": [
+913.1253143542697,
+283.0370123640573
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 17.6,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.9,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 18.7,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 17.6,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.7,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.4,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.75,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 17.6,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 18.7,
+"value": 240,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "gs14",
+"start": 17.6,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/salt.png",
+"width": 120,
+"height": 120
+},
+"fit": "contain",
+"bounds": [
+120,
+120
+]
+},
+"duration": 1.2,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 17.6,
+"value": [
+560,
+900
+],
+"easing": "ease_out"
+},
+{
+"time": 18.7,
+"value": [
+1159.6223127518392,
+916.5236174939009
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 17.6,
+"value": [
+0.3,
+0.3
+],
+"easing": "ease_in_out"
+},
+{
+"time": 17.9,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+},
+{
+"time": 18.7,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 17.6,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 17.7,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.4,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 18.75,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 17.6,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 18.7,
+"value": 300,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "ljabra",
+"start": 15.0,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/lbl_jabra.png",
+"width": 337,
+"height": 160
+},
+"fit": "contain",
+"bounds": [
+337,
+160
+]
+},
+"duration": 2.4,
+"transform": {
+"position": [
+540,
+520
+]
+},
+"looks": [
+{
+"look": "drift",
+"params": {
+"role": "in",
+"direction": "up",
+"length": 0.8
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.4
+}
+}
+]
+},
+{
+"id": "lbuyrak",
+"start": 18.0,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/lbl_buyrak.png",
+"width": 392,
+"height": 160
+},
+"fit": "contain",
+"bounds": [
+392,
+160
+]
+},
+"duration": 2.16,
+"transform": {
+"position": [
+540,
+560
+]
+},
+"looks": [
+{
+"look": "drift",
+"params": {
+"role": "in",
+"direction": "up",
+"length": 0.8
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.4
+}
+}
+]
+},
+{
+"id": "kg0",
+"start": 18.1,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 2.06,
+"transform": {
+"position": [
+356.0,
+904.0
+],
+"scale": [
+1.4,
+1.4
+],
+"opacity": 0.9
+},
+"looks": [
+{
+"look": "fade",
+"params": {
+"role": "in",
+"length": 0.5
+}
+},
+{
+"look": "pulse",
+"params": {
+"period": 0.9,
+"amount": 0.25
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.3
+}
+}
+]
+},
+{
+"id": "kg1",
+"start": 18.1,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 2.06,
+"transform": {
+"position": [
+484.0,
+892.0
+],
+"scale": [
+1.4,
+1.4
+],
+"opacity": 0.9
+},
+"looks": [
+{
+"look": "fade",
+"params": {
+"role": "in",
+"length": 0.5
+}
+},
+{
+"look": "pulse",
+"params": {
+"period": 0.9,
+"amount": 0.25
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.3
+}
+}
+]
+},
+{
+"id": "kg2",
+"start": 18.1,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 2.06,
+"transform": {
+"position": [
+612.0,
+904.0
+],
+"scale": [
+1.4,
+1.4
+],
+"opacity": 0.9
+},
+"looks": [
+{
+"look": "fade",
+"params": {
+"role": "in",
+"length": 0.5
+}
+},
+{
+"look": "pulse",
+"params": {
+"period": 0.9,
+"amount": 0.25
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.3
+}
+}
+]
+},
+{
+"id": "kg3",
+"start": 18.1,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 2.06,
+"transform": {
+"position": [
+740.0,
+892.0
+],
+"scale": [
+1.4,
+1.4
+],
+"opacity": 0.9
+},
+"looks": [
+{
+"look": "fade",
+"params": {
+"role": "in",
+"length": 0.5
+}
+},
+{
+"look": "pulse",
+"params": {
+"period": 0.9,
+"amount": 0.25
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.3
+}
+}
+]
+},
+{
+"id": "shark",
+"start": 20.16,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/shark.png",
+"width": 1500,
+"height": 620
+},
+"fit": "contain",
+"bounds": [
+1500,
+620
+]
+},
+"duration": 6.4,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 20.16,
+"value": [
+1750,
+980
+],
+"easing": "ease_in_out"
+},
+{
+"time": 22.16,
+"value": [
+560,
+960
+],
+"easing": "ease_in_out"
+},
+{
+"time": 24.86,
+"value": [
+470,
+940
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.56,
+"value": [
+-700,
+900
+],
+"easing": "ease_in_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 20.16,
+"value": [
+0.72,
+0.72
+],
+"easing": "ease_in_out"
+},
+{
+"time": 22.16,
+"value": [
+0.72,
+0.72
+],
+"easing": "ease_in_out"
+},
+{
+"time": 24.86,
+"value": [
+0.85,
+0.85
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.56,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+}
+]
+},
+"rotation": {
+"keyframes": [
+{
+"time": 20.16,
+"value": -3,
+"easing": "ease_in_out"
+},
+{
+"time": 22.16,
+"value": 1,
+"easing": "ease_in_out"
+},
+{
+"time": 24.86,
+"value": -1,
+"easing": "ease_in_out"
+},
+{
+"time": 26.56,
+"value": -4,
+"easing": "ease_in_out"
+}
+]
+}
+},
+"looks": [
+{
+"look": "float",
+"params": {
+"period": 3.2,
+"distance": 0.02
+}
+}
+]
+},
+{
+"id": "ur0",
+"start": 21.31,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 5.25,
+"transform": {
+"position": [
+380,
+330
+],
+"scale": [
+0.8,
+0.8
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.4
+}
+},
+{
+"look": "pulse",
+"params": {
+"period": 1.2,
+"amount": 0.15
+}
+}
+],
+"parentId": "shark"
+},
+{
+"id": "ur1",
+"start": 21.43,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 5.13,
+"transform": {
+"position": [
+520,
+300
+],
+"scale": [
+0.8,
+0.8
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.4
+}
+},
+{
+"look": "pulse",
+"params": {
+"period": 1.2,
+"amount": 0.15
+}
+}
+],
+"parentId": "shark"
+},
+{
+"id": "ur2",
+"start": 21.55,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 5.01,
+"transform": {
+"position": [
+660,
+320
+],
+"scale": [
+0.8,
+0.8
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.4
+}
+},
+{
+"look": "pulse",
+"params": {
+"period": 1.2,
+"amount": 0.15
+}
+}
+],
+"parentId": "shark"
+},
+{
+"id": "ur3",
+"start": 21.67,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 4.89,
+"transform": {
+"position": [
+800,
+300
+],
+"scale": [
+0.8,
+0.8
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.4
+}
+},
+{
+"look": "pulse",
+"params": {
+"period": 1.2,
+"amount": 0.15
+}
+}
+],
+"parentId": "shark"
+},
+{
+"id": "ur4",
+"start": 21.79,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 4.77,
+"transform": {
+"position": [
+940,
+320
+],
+"scale": [
+0.8,
+0.8
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.4
+}
+},
+{
+"look": "pulse",
+"params": {
+"period": 1.2,
+"amount": 0.15
+}
+}
+],
+"parentId": "shark"
+},
+{
+"id": "ur5",
+"start": 21.91,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 4.65,
+"transform": {
+"position": [
+450,
+370
+],
+"scale": [
+0.8,
+0.8
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.4
+}
+},
+{
+"look": "pulse",
+"params": {
+"period": 1.2,
+"amount": 0.15
+}
+}
+],
+"parentId": "shark"
+},
+{
+"id": "ur6",
+"start": 22.03,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 4.53,
+"transform": {
+"position": [
+720,
+370
+],
+"scale": [
+0.8,
+0.8
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.4
+}
+},
+{
+"look": "pulse",
+"params": {
+"period": 1.2,
+"amount": 0.15
+}
+}
+],
+"parentId": "shark"
+},
+{
+"id": "ur7",
+"start": 22.15,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 4.41,
+"transform": {
+"position": [
+600,
+270
+],
+"scale": [
+0.8,
+0.8
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.4
+}
+},
+{
+"look": "pulse",
+"params": {
+"period": 1.2,
+"amount": 0.15
+}
+}
+],
+"parentId": "shark"
+},
+{
+"id": "ur8",
+"start": 22.27,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 4.29,
+"transform": {
+"position": [
+1080,
+310
+],
+"scale": [
+0.8,
+0.8
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.4
+}
+},
+{
+"look": "pulse",
+"params": {
+"period": 1.2,
+"amount": 0.15
+}
+}
+],
+"parentId": "shark"
+},
+{
+"id": "ur9",
+"start": 22.39,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 4.17,
+"transform": {
+"position": [
+300,
+320
+],
+"scale": [
+0.8,
+0.8
+]
+},
+"looks": [
+{
+"look": "pop",
+"params": {
+"role": "in",
+"length": 0.4
+}
+},
+{
+"look": "pulse",
+"params": {
+"period": 1.2,
+"amount": 0.15
+}
+}
+],
+"parentId": "shark"
+},
+{
+"id": "lmoch",
+"start": 21.41,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/lbl_mochevina.png",
+"width": 545,
+"height": 160
+},
+"fit": "contain",
+"bounds": [
+545,
+160
+]
+},
+"duration": 2.2,
+"transform": {
+"position": [
+540,
+620
+]
+},
+"looks": [
+{
+"look": "drift",
+"params": {
+"role": "in",
+"direction": "up",
+"length": 0.8
+}
+},
+{
+"look": "fade",
+"params": {
+"role": "out",
+"length": 0.4
+}
+}
+]
+},
+{
+"id": "sm0",
+"start": 23.61,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 1.8,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 23.61,
+"value": [
+360,
+930
+],
+"easing": "ease_out"
+},
+{
+"time": 25.31,
+"value": [
+300,
+560
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 23.61,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+},
+{
+"time": 25.31,
+"value": [
+1.4,
+1.4
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 23.61,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 23.91,
+"value": 0.85,
+"easing": "ease_in_out"
+},
+{
+"time": 25.41,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "sm1",
+"start": 23.79,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 1.8,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 23.79,
+"value": [
+415,
+930
+],
+"easing": "ease_out"
+},
+{
+"time": 25.49,
+"value": [
+415,
+560
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 23.79,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+},
+{
+"time": 25.49,
+"value": [
+1.4,
+1.4
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 23.79,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 24.09,
+"value": 0.85,
+"easing": "ease_in_out"
+},
+{
+"time": 25.59,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "sm2",
+"start": 23.97,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 1.8,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 23.97,
+"value": [
+470,
+930
+],
+"easing": "ease_out"
+},
+{
+"time": 25.67,
+"value": [
+530,
+560
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 23.97,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+},
+{
+"time": 25.67,
+"value": [
+1.4,
+1.4
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 23.97,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 24.27,
+"value": 0.85,
+"easing": "ease_in_out"
+},
+{
+"time": 25.77,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "sm3",
+"start": 24.15,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 1.8,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 24.15,
+"value": [
+525,
+930
+],
+"easing": "ease_out"
+},
+{
+"time": 25.85,
+"value": [
+465,
+560
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 24.15,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+},
+{
+"time": 25.85,
+"value": [
+1.4,
+1.4
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 24.15,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 24.45,
+"value": 0.85,
+"easing": "ease_in_out"
+},
+{
+"time": 25.95,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "sm4",
+"start": 24.33,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 1.8,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 24.33,
+"value": [
+580,
+930
+],
+"easing": "ease_out"
+},
+{
+"time": 26.03,
+"value": [
+580,
+560
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 24.33,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.03,
+"value": [
+1.4,
+1.4
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 24.33,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 24.63,
+"value": 0.85,
+"easing": "ease_in_out"
+},
+{
+"time": 26.13,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "sm5",
+"start": 24.51,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 1.8,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 24.51,
+"value": [
+635,
+930
+],
+"easing": "ease_out"
+},
+{
+"time": 26.21,
+"value": [
+695,
+560
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 24.51,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.21,
+"value": [
+1.4,
+1.4
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 24.51,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 24.81,
+"value": 0.85,
+"easing": "ease_in_out"
+},
+{
+"time": 26.31,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "sm6",
+"start": 24.69,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 1.8,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 24.69,
+"value": [
+690,
+930
+],
+"easing": "ease_out"
+},
+{
+"time": 26.39,
+"value": [
+630,
+560
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 24.69,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.39,
+"value": [
+1.4,
+1.4
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 24.69,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 24.99,
+"value": 0.85,
+"easing": "ease_in_out"
+},
+{
+"time": 26.49,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "sm7",
+"start": 24.87,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 1.8,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 24.87,
+"value": [
+745,
+930
+],
+"easing": "ease_out"
+},
+{
+"time": 26.57,
+"value": [
+745,
+560
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 24.87,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.57,
+"value": [
+1.4,
+1.4
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 24.87,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 25.17,
+"value": 0.85,
+"easing": "ease_in_out"
+},
+{
+"time": 26.67,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "sm8",
+"start": 25.05,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 1.8,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 25.05,
+"value": [
+800,
+930
+],
+"easing": "ease_out"
+},
+{
+"time": 26.75,
+"value": [
+860,
+560
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 25.05,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.75,
+"value": [
+1.4,
+1.4
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 25.05,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 25.35,
+"value": 0.85,
+"easing": "ease_in_out"
+},
+{
+"time": 26.85,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "sm9",
+"start": 25.23,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/urea.png",
+"width": 90,
+"height": 90
+},
+"fit": "contain",
+"bounds": [
+90,
+90
+]
+},
+"duration": 1.8,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 25.23,
+"value": [
+855,
+930
+],
+"easing": "ease_out"
+},
+{
+"time": 26.93,
+"value": [
+795,
+560
+],
+"easing": "ease_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 25.23,
+"value": [
+0.6,
+0.6
+],
+"easing": "ease_in_out"
+},
+{
+"time": 26.93,
+"value": [
+1.4,
+1.4
+],
+"easing": "ease_in_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 25.23,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 25.53,
+"value": 0.85,
+"easing": "ease_in_out"
+},
+{
+"time": 27.03,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "eb0",
+"start": 26.86,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 2.0,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 26.86,
+"value": [
+1557.1115973741787,
+960
+],
+"easing": "ease_out"
+},
+{
+"time": 28.86,
+"value": [
+1577.1115973741787,
+600
+],
+"easing": "ease_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 26.86,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 27.16,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 28.86,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 26.86,
+"value": [
+0.4,
+0.4
+],
+"easing": "ease_in_out"
+},
+{
+"time": 28.86,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "eb1",
+"start": 27.31,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 2.0,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 27.31,
+"value": [
+1374.9452954048134,
+960
+],
+"easing": "ease_out"
+},
+{
+"time": 29.31,
+"value": [
+1394.9452954048134,
+600
+],
+"easing": "ease_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 27.31,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 27.61,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 29.31,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 27.31,
+"value": [
+0.4,
+0.4
+],
+"easing": "ease_in_out"
+},
+{
+"time": 29.31,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "eb2",
+"start": 27.76,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 2.0,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 27.76,
+"value": [
+1192.7789934354482,
+960
+],
+"easing": "ease_out"
+},
+{
+"time": 29.76,
+"value": [
+1212.7789934354482,
+600
+],
+"easing": "ease_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 27.76,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 28.06,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 29.76,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 27.76,
+"value": [
+0.4,
+0.4
+],
+"easing": "ease_in_out"
+},
+{
+"time": 29.76,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "eb3",
+"start": 28.21,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 2.0,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 28.21,
+"value": [
+1010.6126914660814,
+960
+],
+"easing": "ease_out"
+},
+{
+"time": 30.21,
+"value": [
+1030.6126914660813,
+600
+],
+"easing": "ease_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 28.21,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 28.51,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 30.21,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 28.21,
+"value": [
+0.4,
+0.4
+],
+"easing": "ease_in_out"
+},
+{
+"time": 30.21,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "eb4",
+"start": 28.66,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 2.0,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 28.66,
+"value": [
+828.4463894967162,
+960
+],
+"easing": "ease_out"
+},
+{
+"time": 30.66,
+"value": [
+848.4463894967162,
+600
+],
+"easing": "ease_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 28.66,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 28.96,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 30.66,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 28.66,
+"value": [
+0.4,
+0.4
+],
+"easing": "ease_in_out"
+},
+{
+"time": 30.66,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "eb5",
+"start": 29.11,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/bubble.png",
+"width": 80,
+"height": 80
+},
+"fit": "contain",
+"bounds": [
+80,
+80
+]
+},
+"duration": 2.0,
+"animations": {
+"position": {
+"keyframes": [
+{
+"time": 29.11,
+"value": [
+646.2800875273508,
+960
+],
+"easing": "ease_out"
+},
+{
+"time": 31.11,
+"value": [
+666.2800875273508,
+600
+],
+"easing": "ease_out"
+}
+]
+},
+"opacity": {
+"keyframes": [
+{
+"time": 29.11,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 29.41,
+"value": 0.9,
+"easing": "ease_in_out"
+},
+{
+"time": 31.11,
+"value": 0,
+"easing": "ease_in_out"
+}
+]
+},
+"scale": {
+"keyframes": [
+{
+"time": 29.11,
+"value": [
+0.4,
+0.4
+],
+"easing": "ease_in_out"
+},
+{
+"time": 31.11,
+"value": [
+0.8,
+0.8
+],
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "paper",
+"start": 0,
+"content": {
+"kind": "media",
+"asset": {
+"type": "image",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/paper.jpg",
+"width": 1080,
+"height": 1920
+},
+"fit": "contain",
+"bounds": [
+1080,
+1920
+]
+},
+"duration": 30.83,
+"blendMode": "multiply"
+},
+{
+"id": "fadeout",
+"start": 30.029999999999998,
+"duration": 0.8,
+"content": {
+"kind": "color",
+"color": "#0d3550"
+},
+"animations": {
+"opacity": {
+"keyframes": [
+{
+"time": 30.03,
+"value": 0,
+"easing": "ease_in_out"
+},
+{
+"time": 30.83,
+"value": 1,
+"easing": "ease_in_out"
+}
+]
+}
+}
+},
+{
+"id": "voice",
+"start": 0,
+"content": {
+"kind": "audio",
+"asset": {
+"type": "audio",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/voice.mp3",
+"duration": 30.83
+},
+"volume": 1.0
+}
+},
+{
+"id": "music",
+"start": 0,
+"content": {
+"kind": "audio",
+"asset": {
+"type": "audio",
+"uri": "https://raw.githubusercontent.com/jasur0407-art/Virtual-office/claude/project-thread-q3015d/media/dengiz-baliq/music.mp3",
+"duration": 30.83
+},
+"volume": 0.32
+}
+}
+]
+}
