@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jasurning ofisi</title>
+<meta name="description" content="Jasurning virtual ofisi: izometrik studiya, agentlar o'z stolida ishlaydi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Nunito+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="style.css?v=15">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3 29 10.5v11L16 29 3 21.5v-11z' fill='%23f08a4b'/%3E%3Cpath d='M16 3 29 10.5 16 18 3 10.5z' fill='%23ffd2a6'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="#qala"><span class="crest" aria-hidden="true"></span>Jasur ofisi</a>
+    <nav aria-label="Asosiy menyu">
+      <a href="#qala">Ofis</a>
+      <a href="#questlar">Loyihalar</a>
+      <a href="#xonalar">Ish joylari</a>
+      <a href="#qanday">Qanday ishlaydi</a>
+    </nav>
+    <div class="snds">
+      <button type="button" id="dion" class="snd" aria-pressed="false">♫ Dion</button>
+      <button type="button" id="sound" class="snd" aria-pressed="false">♪ Ovozni yoqish</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="qala">
+    <div class="in">
+      <div class="eyebrow">Virtual ofis · quyoshli studiya</div>
+      <h1>Jasurning ofisi</h1>
+      <p class="lead">Ofisda to'rt agent ishlayapti: Rejissyor, Server ustasi, SMM menejer va qabulxonadagi Administrator. Bo'sh stollarga keyin yangi agentlar o'tiradi. Stolni bosib, kim ishlashini ko'ring. Dam olish uchun ofisda 3 ta mushuk va 10 ta qush yashaydi, Administrator ularni rejim bo'yicha parvarish qiladi.</p>
+      <div class="clock"><span id="clock" aria-live="polite"></span><button type="button" id="daynight" class="dn-btn">Tunni ko'rish</button></div>
+      <div class="bars">
+        <div class="bar"><span>Ish joylari</span><div class="track"><i style="width:100%" class="gold"></i></div><b>8 / 8</b></div>
+        <div class="bar"><span>Agentlar</span><div class="track"><i id="npc-fill" class="mana"></i></div><b id="agent-count">1 / 6</b></div>
+      </div>
+      <div class="grid">
+        <div class="map" id="map"><button type="button" id="iso" class="iso-btn">↻ Burish</button><svg id="office" viewBox="0 0 720 500" role="img" aria-label="Ofisning izometrik ko'rinishi"></svg></div>
+        <aside class="dialog" id="card" aria-live="polite"></aside>
+      </div>
+            <div class="legend">
+        <span><i class="lg-slot"></i>Bo'sh ish joyi</span>
+        <span><i class="lg-cour"></i>Qabulxona xodimi</span>
+        <span><i class="lg-on"></i>Ishlayotgan agent</span>
+      </div>
+      <div class="care" id="care">
+        <div class="care-top">
+          <div><div class="eyebrow">Dam olish burchagi</div><h3>Mushuklar, qushlar va toza havo</h3></div>
+          <div class="care-btns">
+            <button type="button" class="pill" id="c-feed">Mushuklarga ovqat</button>
+            <button type="button" class="pill" id="c-walk">Mushuklarni sayrga</button>
+            <button type="button" class="pill" id="c-bird">Qushlarga ovqat</button>
+            <button type="button" class="pill" id="c-win">Derazani ochish</button>
+          </div>
+        </div>
+        <div class="cats" id="cats"></div>
+        <div class="birds" id="birds"></div>
+        <p class="care-line" id="care-line" aria-live="polite"></p>
+        <p class="care-line" id="air"></p>
+        <p class="care-rej">Rejim (Toshkent vaqti): mushuklarga ovqat 08:00, 13:00, 19:00 · sayr 10:00, 17:00 · uyqu 23:00–07:00. Qushlarga ovqat 08:30, 18:00 · uyqu 21:00–07:00. Deraza 07:00–22:00 oralig'ida har soat boshida 10 daqiqaga ochiladi. Mushuk ustiga bossangiz, uni erkalaysiz.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="questlar">
+    <div class="in">
+      <div class="eyebrow">Loyihalar</div>
+      <h2>Loyihalar holati</h2>
+      <div class="questlog">
+        <ul class="qlist" id="qlist" aria-label="Loyihalar ro'yxati"></ul>
+        <div class="qdetail" id="qdetail" aria-live="polite"></div>
+      </div>
+      <p class="qnote">Ro'yxat hozircha chatdagi suhbatlar asosida to'ldirildi. Yangi loyiha yoki qadam qo'shish uchun Claude'ga yozing.</p>
+    </div>
+  </section>
+
+  <section class="band alt" id="xonalar">
+    <div class="in">
+      <div class="eyebrow">Xonalar</div>
+      <h2>Ofisdagi ish joylari</h2>
+      <div class="rooms" id="rooms"></div>
+    </div>
+  </section>
+
+  <section class="band" id="qanday">
+    <div class="in">
+      <div class="eyebrow">Qanday ishlaydi</div>
+      <h2>Topshiriq qabulxonadan natijagacha</h2>
+      <ol class="steps">
+        <li><b>Siz buyruq berasiz</b><span>Qabulxonaga yozasiz. Masalan: <code>g'oya: o'yin serveri uchun sayt</code>.</span></li>
+        <li><b>Qabulxona tarqatadi</b><span>Topshiriq qaysi ish joyiga tegishli ekanini aniqlaydi va o'sha stolga olib boradi.</span></li>
+        <li><b>Agent bajaradi</b><span>Stoldagi agent ishni qiladi. Kerak bo'lsa boshqa stoldan yordam so'raydi: g'oya texnik bo'limga, keyin nazoratga o'tadi.</span></li>
+        <li><b>Natija omborga</b><span>Javob sizga qaytadi, qarorlar esa arxivda saqlanadi. Hech narsa yo'qolmaydi.</span></li>
+      </ol>
+      <div class="note">
+        <b>Yangi agentlar qachon keladi?</b>
+        <p>Har bir bo'sh stolga bittadan agent o'tqazamiz. Avval eng ko'p ishlatiladigan ish joyidan boshlaymiz, odatda bu Rejalashtirish.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="player" id="player" hidden>
+  <div class="player-top"><a href="https://youtu.be/62Nl7CmdwUU" target="_blank" rel="noopener">♫ Dion ↗</a><button type="button" id="player-x" aria-label="Musiqani yopish">✕</button></div>
+  <div class="player-frame" id="player-frame"></div>
+</div>
+<footer class="foot"><div class="in">Jasur ofisi · 2026 · Rasmlar shu sayt uchun chizilgan.</div></footer>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="app.js?v=15"></script>
+<script>try{var tg=window.Telegram&&Telegram.WebApp;if(tg&&tg.initData!==undefined){tg.ready();tg.expand()}}catch(e){}</script>
+</body>
+</html>
